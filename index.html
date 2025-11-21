@@ -57,6 +57,7 @@
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes scaleUp { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
+        /* 모달 내부 스크롤바 커스텀 */
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
@@ -81,96 +82,73 @@
     <script type="text/babel" data-type="module">
         import React, { useState, useEffect } from 'react';
         import { createRoot } from 'react-dom/client';
-        import { Moon, Sun, Github, Mail, Linkedin, ExternalLink, ChevronDown, Code, Briefcase, User, Award, BookOpen, PenTool, Send, X, Loader2, CheckCircle2, ArrowRight, Calendar, Building, TrendingUp, Layout, Database } from 'lucide-react';
+        import { Moon, Sun, Github, Mail, Linkedin, ExternalLink, ChevronDown, Code, Briefcase, User, Award, BookOpen, PenTool, Send, X, Loader2, CheckCircle2, ArrowRight, Calendar, Building, TrendingUp, Layout, Database, School } from 'lucide-react';
 
-        // --- 데이터베이스 ---
+        // --- 데이터베이스 (정리해주신 내용 반영) ---
         const DB = {
             experience: [
                 {
                     id: 'crevisse',
                     company: 'Crevisse Partners',
-                    role: '디지털인텔리전스 SaaS 사업개발 인턴',
+                    role: '사업개발팀 인턴 (B2B SaaS)',
                     period: '2025.07 — 2025.12',
-                    summary: '데이터 품질 진단 파이프라인 구축 및 업무 자동화를 주도했습니다.',
+                    summary: '신규 데이터 서비스 기획부터 개발, 배포, 전략 수립까지 End-to-End 수행.',
                     description: `
-                        <h4 class="font-bold text-navy-900 mb-2">Role & Responsibility</h4>
-                        <p class="text-sm text-slate-600 mb-4">B2B SaaS 신규 서비스 기획 및 데이터 엔지니어링 업무 수행 (Project Owner)</p>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">직무: 사업개발팀 인턴</h4>
+                        <p class="text-sm text-slate-600 mb-4">신규 데이터 서비스 기획부터 개발, 배포, 전략 수립까지 End-to-End 수행</p>
                         
-                        <h4 class="font-bold text-navy-900 mb-2">Key Achievements</h4>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주요 성과 (Key Achievements)</h4>
                         <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
-                            <li><strong>DQM 파이프라인 구축:</strong> 14만 건의 고객 데이터 정제를 위해 5단계 진단 로직 설계 및 Python 구현.</li>
-                            <li><strong>업무 자동화 (DX):</strong> Google Apps Script로 스팸 신고 대응 프로세스를 100% 자동화 (소요 시간 95% 단축).</li>
-                            <li><strong>전략 수립:</strong> Microsoft, Salesforce 벤치마킹을 통한 SaaS V1→V2 전환 플레이북 수립.</li>
-                            <li><strong>데이터 엔지니어링:</strong> Snowflake 도입 및 SQL 기반 ELT 파이프라인 구축.</li>
+                            <li><strong>DQM 서비스 개발:</strong> 14만 건 고객 데이터 정제를 위한 파이프라인 아키텍처 설계 및 Python 구현 (10만 건 수정). TDD 도입으로 코드 신뢰성 확보.</li>
+                            <li><strong>사내 업무 DX:</strong> Google Apps Script로 스팸 신고 대응 프로세스 100% 자동화 (보안 웹앱 구현).</li>
+                            <li><strong>데이터 엔지니어링:</strong> Snowflake 도입 및 SQL 기반 ELT 파이프라인 구축, Streamlit 매출 대시보드 개발.</li>
+                            <li><strong>전략 기획:</strong> SaaS 전환(V1→V2) 가격 정책 수립 및 AI 자동화 시장 리서치.</li>
                         </ul>
+                        <div class="mt-4 p-3 bg-slate-50 rounded-lg">
+                            <span class="font-bold text-xs text-slate-500 uppercase">Keywords</span>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#SaaS</span>
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#ProductManagement</span>
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#DataEngineering</span>
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#DX</span>
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#Python</span>
+                            </div>
+                        </div>
                     `,
                     tags: ['Python', 'SQL', 'Apps Script', 'Strategy']
                 },
                 {
                     id: 'sustinvest',
                     company: 'Sustinvest',
-                    role: '리서치&데이터 본부 인턴',
+                    role: 'ESG 데이터 리서처 (인턴)',
                     period: '2025.04 — 2025.06',
-                    summary: 'ESG 데이터베이스 구축 및 데이터 수집 프로세스를 효율화했습니다.',
+                    summary: '상장사 ESG 데이터 구축 및 업무 프로세스 효율화.',
                     description: `
-                        <h4 class="font-bold text-navy-900 mb-2">Role & Responsibility</h4>
-                        <p class="text-sm text-slate-600 mb-4">상장사 ESG 데이터 수집/분석 및 리서치 업무 수행</p>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">직무: ESG 데이터 리서처</h4>
+                        <p class="text-sm text-slate-600 mb-4">상장사 ESG 데이터 구축 및 업무 프로세스 효율화</p>
                         
-                        <h4 class="font-bold text-navy-900 mb-2">Key Achievements</h4>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주요 성과 (Key Achievements)</h4>
                         <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
-                            <li><strong>ESG DB 구축:</strong> 150개 상장사 대상 13,500건의 정량/정성 데이터베이스 구축.</li>
-                            <li><strong>크롤러 개발:</strong> Python 기반 웹 크롤러를 직접 개발하여 인증서 수집 업무 자동화.</li>
-                            <li><strong>산업 분석:</strong> 배터리, 조선 등 4대 핵심 산업 ESG 벤치마킹 및 Best Practice 도출.</li>
+                            <li><strong>대규모 DB 구축:</strong> 150개사 대상 13,500건의 정량/정성 ESG 데이터베이스 구축 (정합성 확보).</li>
+                            <li><strong>프로세스 개선:</strong> 빈출 키워드 분석을 통한 코드북/핸드북 개선안 제안 및 채택.</li>
+                            <li><strong>업무 자동화:</strong> Python 웹 크롤러를 직접 설계/구현하여 반복적인 인증서 수집 업무 자동화.</li>
+                            <li><strong>전략 리서치:</strong> 해외 PE 동향 조사 및 핵심 산업(배터리 등) ESG 벤치마킹 리포트 작성.</li>
                         </ul>
+                        <div class="mt-4 p-3 bg-slate-50 rounded-lg">
+                            <span class="font-bold text-xs text-slate-500 uppercase">Keywords</span>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#ESG</span>
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#DataResearch</span>
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#ProcessImprovement</span>
+                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#Automation</span>
+                            </div>
+                        </div>
                     `,
                     tags: ['Data Analysis', 'Web Crawling', 'ESG Research']
                 },
             ],
-            university_activity: [
-                 {
-                    id: 'bacs',
-                    company: 'BACS (Business Analytics Society)',
-                    role: '9기 부학회장 / 8기 학회원',
-                    period: '2024.03 — 2025.02',
-                    summary: '데이터 분석 및 머신러닝 커리큘럼을 기획하고 학회를 운영했습니다.',
-                    description: `
-                        <h4 class="font-bold text-navy-900 mb-2">Role</h4>
-                        <p class="text-sm text-slate-600 mb-4">전략 중심이던 학회 커리큘럼을 데이터 분석과 AI 중심으로 개편하는 총괄 책임을 맡았습니다.</p>
-                        
-                        <h4 class="font-bold text-navy-900 mb-2">Projects</h4>
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
-                            <li><strong>커리큘럼 기획:</strong> 데이터 분석 → 머신러닝 → 딥러닝으로 이어지는 체계적인 학습 로드맵 설계.</li>
-                            <li><strong>승진 예측 모델 개발:</strong> HR 데이터를 활용해 직원 승진 여부를 예측하는 머신러닝 모델 구축 (정확도 0.93 달성).</li>
-                            <li><strong>기업 전략 분석:</strong> 이마트, 메가커피 등 실제 기업의 페인포인트를 분석하고 성장 전략 리포트 작성.</li>
-                        </ul>
-                    `,
-                    tags: ['Leadership', 'Machine Learning', 'Education']
-                },
-                 {
-                    id: 'green-society',
-                    title: '리더스오브그린소사이어티 산학연계',
-                    role: '팀원',
-                    period: '2020.12',
-                    summary: '친환경 마케팅 프로젝트 수행',
-                    description: `
-                        <p class="text-sm text-slate-600 mb-4">산학연계 프로젝트를 통해 친환경 제품 마케팅 전략을 수립하고 실행했습니다.</p>
-                    `,
-                    tags: ['Marketing', 'ESG']
-                 },
-                  {
-                    id: 'esg-contest',
-                    title: '경희대학교 교내 ESG 경진대회',
-                    role: '참가자',
-                    period: '2023.11 - 2023.12',
-                    summary: '교내 ESG 관련 아이디어 제안',
-                    description: `
-                        <p class="text-sm text-slate-600 mb-4">교내 ESG 실천을 위한 아이디어를 제안하고 발표했습니다.</p>
-                    `,
-                    tags: ['ESG', 'Idea']
-                 }
-            ],
             projects: [
-                // [NEW] 주식 자동매매 추가
+                // --- 데이터 & 개발 (Data & AI) ---
                 {
                     id: 'stock-trading',
                     type: 'data',
@@ -178,16 +156,16 @@
                     category: 'Personal Project',
                     summary: '감정을 배제한 투자를 위해 기술적 지표 기반 매매 알고리즘을 구현했습니다.',
                     description: `
-                        <h4 class="font-bold text-navy-900 mb-2">Overview</h4>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Overview</h4>
                         <p class="text-sm text-slate-600 mb-4">투자 원칙을 시스템화하여 감정적인 뇌동매매를 방지하기 위해 시작한 개인 프로젝트입니다.</p>
                         
-                        <h4 class="font-bold text-navy-900 mb-2">Key Features</h4>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Key Features</h4>
                         <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
                             <li>증권사 API 연동 및 실시간 시세 데이터 처리</li>
                             <li>이동평균선, RSI 등 기술적 지표를 활용한 매수/매도 알고리즘 구현</li>
                             <li>매매 로그 자동 기록 및 예외 처리 로직(네트워크 오류 등) 개발</li>
                         </ul>
-                        <p class="text-sm text-slate-500 italic">성과: 3개월간 누적 수익률 30% 달성 및 시스템 안정화</p>
+                        <p class="text-sm text-brand-600 font-bold">성과: 3개월간 누적 수익률 30% 달성 및 시스템 안정화</p>
                     `,
                     tags: ['Python', 'API', 'Quant'],
                     icon: '📈'
@@ -196,32 +174,42 @@
                     id: 'review-ai',
                     type: 'data',
                     title: '리뷰 유용성 예측 AI 모델',
-                    category: 'Awarded (경영과학회 장려상)',
-                    summary: '딥러닝(CNN)을 활용해 배달 앱 리뷰의 신뢰도를 평가하는 모델을 개발했습니다.',
+                    category: '경영과학회 AI/OR (장려상)',
+                    summary: '딥러닝(CNN) 기반 배달 앱 리뷰 \'유용성\' 예측 모델 개발.',
                     description: `
-                        <h4 class="font-bold text-navy-900 mb-2">Overview</h4>
-                        <p class="text-sm text-slate-600 mb-4">배달 앱의 광고성 리뷰를 걸러내기 위한 AI 모델 연구입니다.</p>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주제: AI/OR을 이용한 경영 혁신</h4>
+                        <p class="text-sm text-slate-600 mb-4">딥러닝(CNN) 기반 배달 앱 리뷰 '유용성' 예측 모델 개발</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
                         <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
-                            <li>'리뷰 유용성'을 종속변수로 재정의하고 가독성, 주관성, 감성 점수 등을 분석</li>
-                            <li>CNN(Convolutional Neural Network) 기반의 딥러닝 모델 아키텍처 설계</li>
-                            <li>기존 머신러닝 모델 대비 <strong>정확도 0.15p 향상 (0.8 달성)</strong></li>
+                            <li><strong>문제 정의:</strong> 기존 정렬 방식(최신순/평점순)의 한계를 발견하고, 고객에게 진짜 도움이 되는 리뷰를 선별하는 모델 기획.</li>
+                            <li><strong>모델링:</strong> '유용성'을 종속변수로 설정하고, CNN 모델을 직접 구축 및 학습. 기존 ML 모델 대비 성능(정확도, 정밀도) 향상 확인.</li>
+                            <li><strong>발표:</strong> 기술적 복잡성을 비즈니스 가치로 번역하여 효과적으로 전달.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 장려상 수상. AI 기술을 실제 비즈니스 문제 해결에 적용하는 역량 입증.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #DeepLearning #CNN #ReviewAnalysis #AIModeling</div>
                     `,
-                    tags: ['Deep Learning', 'NLP', 'Research'],
+                    tags: ['Deep Learning', 'CNN', 'Python'],
                     icon: '🤖'
                 },
                 {
-                    id: 'kmac',
+                     id: 'kmac',
                     type: 'data',
-                    title: 'KMAC 경영혁신 공모전',
-                    category: 'Data Analysis',
+                    title: '파인다이닝 리뷰 분석 전략',
+                    category: 'KMAC 경영혁신 공모전',
                     summary: '파인다이닝 리뷰 데이터 분석을 통해 소비자 특성별 세부 전략을 도출했습니다.',
                     description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                             <li>오픈 데이터 소스 활용 파인다이닝 및 일반 외식업 리뷰 데이터 수집</li>
-                             <li>BERTopic 활용 토픽 모델링 및 감성 분석 수행</li>
-                             <li>군집 분석을 통한 소비자 유형 분류 및 타겟별 마케팅 전략 수립</li>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주제: 파인다이닝 레스토랑 리뷰 데이터 분석</h4>
+                        <p class="text-sm text-slate-600 mb-4">텍스트 마이닝을 통해 파인다이닝과 일반 식당의 고객 경험 차이를 분석하고 맞춤형 전략 제안</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                             <li><strong>데이터 분석:</strong> 오픈소스 리뷰 데이터 전처리 및 감성 분석 수행.</li>
+                             <li><strong>토픽 모델링:</strong> BERTopic을 활용하여 각 그룹의 핵심 키워드(맛 vs. 분위기/경험) 도출.</li>
+                             <li><strong>군집 분석:</strong> 소비자를 4개 군집으로 세분화하여 타겟별 차별화 전략 수립.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 정성적 리뷰 데이터를 정량적 인사이트로 변환하여 의사결정 근거 마련.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #TextMining #BERTopic #Clustering #CustomerInsight</div>
                     `,
                     tags: ['Data Analysis', 'NLP', 'Strategy'],
                     icon: '🍽️'
@@ -230,30 +218,44 @@
                     id: 'subscription',
                     type: 'data',
                     title: '소상공인 구독 모델 제안',
-                    category: 'Data Analysis (2024 소상공인 컨설팅)',
+                    category: '소상공인 컨설팅 (수상)',
                     summary: '리뷰 데이터 군집 분석을 통해 오프라인 매장의 정기구독 수요를 발굴했습니다.',
                     description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                            <li>리뷰 데이터 전처리 및 텍스트 마이닝 수행</li>
-                            <li>군집 분석(Clustering)을 통해 '정기적 방문' 패턴이 있는 고객군 식별</li>
-                            <li>데이터 기반의 '정기 구독' 신사업 모델 역제안 및 기대 효과 산출</li>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주제: 소상공인 매출 증대 컨설팅</h4>
+                        <p class="text-sm text-slate-600 mb-4">오프라인 매장의 한계를 극복하기 위한 데이터 기반 '온라인 정기구독' 모델 제안</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                            <li><strong>데이터 분석:</strong> 상권/검색 데이터 및 3개 채널 리뷰 텍스트 수집.</li>
+                            <li><strong>인사이트 도출:</strong> 텍스트 마이닝으로 '맛'이 아닌 '운영 이슈'가 문제임을 규명하고, '정기구독' 잠재 수요 발견.</li>
+                            <li><strong>타당성 검증:</strong> Python(KoNLPy, K-Means) 군집 분석을 통해 구독 서비스의 타겟 고객군과 수요를 정량적으로 입증.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 수상. 직관이 아닌 데이터에 근거하여 실질적인 수익 모델 전환 유도.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #Consulting #SME #DataDriven #SubscriptionModel</div>
                     `,
                     tags: ['Python', 'Clustering', 'Consulting'],
                     icon: '🏪'
                 },
+
+                // --- 전략 기획 (Strategy) ---
                 {
                     id: 'yanolja',
                     type: 'strategy',
                     title: '관광 AI 슈퍼앱 기획',
-                    category: 'Strategy (야놀자 리서치)',
-                    summary: '방한 관광객의 페인포인트를 분석하고 AI 기반 통합 여행 플랫폼 전략을 수립했습니다.',
+                    category: '야놀자 리서치 공모전',
+                    summary: '방한 관광객 페인포인트 분석 및 AI 기반 통합 여행 슈퍼앱 전략 수립.',
                     description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                            <li>여행 전 과정(검색-예약-결제-이동)을 통합하는 One-Stop 솔루션 기획</li>
-                            <li>AI 기반 초개인화 여행 코스 추천 기능 설계</li>
-                            <li>Figma를 활용한 UI/UX 프로토타입 제작 및 민관 협력 비즈니스 모델 제시</li>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주제: 인바운드 관광 활성화 전략</h4>
+                        <p class="text-sm text-slate-600 mb-4">외국인 관광객의 편의를 위한 '초개인화 AI 슈퍼앱' 전략 제안</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                            <li><strong>시장 분석:</strong> '초개인화' 트렌드와 기존 여행 앱의 파편화 문제(Pain Point) 발견.</li>
+                            <li><strong>전략 수립:</strong> AI 코스 추천, 결제 통합 등을 아우르는 '슈퍼앱' 전략 도출 및 민관 협력 모델 제시.</li>
+                            <li><strong>시각화:</strong> Figma로 주요 기능과 사용자 흐름(User Flow)을 시각화하여 설득력 강화.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 논리적인 문제 해결 과정과 구체적인 서비스 기획력 인정.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #TravelTech #SuperApp #ServicePlanning #UXDesign</div>
                     `,
                     tags: ['Strategy', 'Figma', 'App Planning'],
                     icon: '🌏'
@@ -262,49 +264,91 @@
                     id: 'lg-ensol',
                     type: 'strategy',
                     title: '전기이륜차 마케팅 전략',
-                    category: 'Marketing (LG 엔솔 공모전)',
-                    summary: '전기이륜차의 부정적 인식을 개선하기 위한 \'미니멀 모빌리티\' 브랜딩 전략을 수립했습니다.',
+                    category: 'LG엔솔 BSS 공모전',
+                    summary: '전기이륜차 인식 개선을 위한 \'미니멀 모빌리티\' 브랜딩 및 마케팅 전략.',
                     description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                            <li>기존 오토바이의 부정적 이미지(소음, 매연)를 탈피한 '미니멀 모빌리티' 컨셉 도출</li>
-                            <li>Target 세분화: 직장인(B2B 경제성 강조) & 대학생(B2C 친환경/트렌드 강조)</li>
-                            <li>Figma를 활용한 앱 디자인 및 홍보 포스터 제작</li>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주제: 전기이륜차 BSS 마케팅 전략</h4>
+                        <p class="text-sm text-slate-600 mb-4">전기이륜차의 부정적 인식 개선을 위한 '미니멀 모빌리티' 리브랜딩</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                            <li><strong>인사이트 도출:</strong> 설문조사를 통해 소비자 니즈(친환경, 경제성) 및 기존 오토바이의 부정적 이미지 확인.</li>
+                            <li><strong>컨셉 도출:</strong> '미니멀 모빌리티' 포지셔닝을 통해 B2B(직장인) 및 B2C(대학생) 타겟별 전략 수립.</li>
+                            <li><strong>디자인:</strong> Figma로 앱, 포스터, 팜플렛 등 마케팅 에셋 직접 제작.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 데이터 기반 소비자 분석과 창의적인 브랜딩 전략의 결합.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #MarketingStrategy #Branding #Mobility #BSS</div>
                     `,
                     tags: ['Marketing', 'Branding', 'Analysis'],
                     icon: '🛵'
                 },
-                {
+                 {
                     id: 'fastcampus',
                     type: 'strategy',
                     title: '시니어 인재 매칭 플랫폼',
-                    category: 'AI Planning (패스트캠퍼스 GALA)',
-                    summary: 'AI 기반 시니어 인재 매칭 플랫폼 기획 및 합성 데이터 활용 방안을 제시했습니다.',
+                    category: '패스트캠퍼스 AI 공모전',
+                    summary: 'AI 기반 시니어 인재 매칭 플랫폼 기획 및 합성 데이터 활용 방안 제시.',
                     description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                             <li>시니어 재취업 및 중소기업 인재 부족 문제 해결을 위한 플랫폼 기획</li>
-                             <li>가상 비즈니스 케이스 기반 역량 평가 시스템 설계</li>
-                             <li>초기 데이터 부족 해결을 위한 합성 데이터(Synthetic Data) 활용 방안 제시</li>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주제: 사회적 가치 창출 AI 비즈니스 혁신</h4>
+                        <p class="text-sm text-slate-600 mb-4">대기업 은퇴 인력과 스타트업을 연결하는 'AI 고문 매칭 플랫폼' 기획</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                             <li><strong>문제 정의:</strong> 시니어 재취업 난항과 스타트업 인재 부족이라는 두 가지 사회 문제의 접점 발견.</li>
+                             <li><strong>솔루션 설계:</strong> AI가 가상 비즈니스 케이스 해결 과정을 평가하여 매칭하는 시스템 설계.</li>
+                             <li><strong>기술 제안:</strong> 초기 데이터 부족 문제를 해결하기 위한 '합성 데이터(Synthetic Data)' 활용 방안 제시.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 기술적 실현 가능성과 사회적 가치를 동시에 고려한 비즈니스 모델.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #AIPlatform #SocialInnovation #SyntheticData #MatchingSystem</div>
                     `,
                     tags: ['AI Planning', 'Social Impact', 'Synthetic Data'],
                     icon: '👴'
                 },
+                
+                // --- 학교 활동 (School) ---
                 {
-                    id: 'cbdc-insurance',
-                    type: 'strategy',
-                    title: 'CBDC & 보험 추천 솔루션',
-                    category: 'Awarded (아카데미쿠스 3등)',
-                    summary: 'CBDC 도입 시나리오를 분석하고 데이터 기반 맞춤형 보험 상품 추천 서비스를 기획했습니다.',
+                    id: 'bacs',
+                    type: 'school',
+                    title: 'BACS 학회 활동',
+                    category: 'Academic Society',
+                    summary: '9기 부학회장 역임. 데이터 분석/머신러닝 커리큘럼 기획 및 기업 분석.',
                     description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                            <li>CBDC 완전 도입 시나리오에 따른 결제 데이터 흐름 변화 분석</li>
-                            <li>마이데이터와 결합한 초개인화 보험 추천 알고리즘 로직 설계</li>
-                            <li>카카오페이 손해보험을 타겟으로 한 신규 비즈니스 모델 제안</li>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">역할: 2학기 부학회장 & 학회원</h4>
+                        <p class="text-sm text-slate-600 mb-4">경영전략 프레임워크 학습 및 데이터 분석 역량 강화를 위한 커리큘럼 기획/운영</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Key Projects</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                            <li><strong>[전략] 이마트/메가커피/넷플릭스:</strong> MECE, 3C, 벤치마킹 등을 활용한 기업 부진 원인 분석 및 신사업 전략 제안.</li>
+                            <li><strong>[데이터] HR 승진 예측 모델:</strong> SMOTE로 데이터 불균형 해결 후 머신러닝 모델 구축 (정확도 93%).</li>
+                            <li><strong>[데이터] 신용카드 제안 예측:</strong> 고객 군집 분석을 통한 혜택별 수락률 분석 및 개인화 전략 도출.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">성과: 데이터/머신러닝 커리큘럼 도입 주도 및 다수의 실무 프로젝트 수행.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #BusinessStrategy #DataAnalysis #MachineLearning #Leadership</div>
                     `,
-                    tags: ['Fintech', 'Scenario Planning', 'Data Biz'],
-                    icon: '💳'
+                    tags: ['Leadership', 'Data Analysis', 'Strategy'],
+                    icon: '🎓'
+                },
+                {
+                    id: 'academicus',
+                    type: 'school',
+                    title: '아카데미쿠스 (3등)',
+                    category: 'Academic Contest',
+                    summary: 'CBDC 도입 시나리오 분석 및 보험 추천 솔루션 기획.',
+                    description: `
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">주제: 금융 패러다임 변화와 기업 대응</h4>
+                        <p class="text-sm text-slate-600 mb-4">CBDC 환경에서의 데이터 가시화를 활용한 보험 산업 혁신 모델 제안</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                            <li><strong>시나리오 분석:</strong> CBDC 완전 도입 시나리오에서의 기회 요인 포착.</li>
+                            <li><strong>솔루션 기획:</strong> 마이데이터와 결제 데이터를 결합한 초개인화 보험 추천 시스템 기획 (카카오페이손해보험 타겟).</li>
+                            <li><strong>프로토타이핑:</strong> Figma를 활용하여 직관적인 UI/UX 프로토타입 제작.</li>
+                        </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 3등 수상. 미래 금융 트렌드 예측 및 데이터 기반 비즈니스 모델링 역량 입증.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #Fintech #CBDC #NewBusinessModel #Figma</div>
+                    `,
+                    tags: ['Fintech', 'Scenario', 'Planning'],
+                    icon: '🥉'
                 },
                 {
                     id: 'green-society',
@@ -313,10 +357,16 @@
                     category: 'Academic Activity',
                     summary: '산학연계 프로젝트: 친환경 소재 사용 정보 제공을 위한 마케팅 전략 기획.',
                     description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                            <li>기업과 연계하여 친환경 제품의 마케팅 캠페인 기획 및 실행.</li>
-                            <li>실전 마케팅 경험 및 ESG 경영에 대한 이해도 제고.</li>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">역할: 마케팅 전략 기획</h4>
+                        <p class="text-sm text-slate-600 mb-4">친환경 소재 사용 정보 제공을 위한 마케팅 전략 도출 및 실행 방안 기획</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                            <li><strong>아이디어 기획:</strong> QR코드 확장 디자인 및 게이미피케이션 요소를 도입하여 소비자 참여 유도.</li>
+                            <li><strong>협업 관리:</strong> 익명 피드백 시스템과 회의 문서 공유 프로세스 도입으로 커뮤니케이션 효율성 증대.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 주도적인 프로젝트 완수 및 팀워크 중요성 체득.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #MarketingStrategy #TeamCommunication #ProjectManagement</div>
                     `,
                     tags: ['Marketing', 'ESG', 'Project'],
                     icon: '🌱'
@@ -325,46 +375,22 @@
                     id: 'esg-contest-school',
                     type: 'school',
                     title: '교내 ESG 경진대회',
-                    category: 'Awarded (우수상)',
+                    category: 'Academic Contest (우수상)',
                     summary: '유학생들의 학교 적응을 돕기 위한 \'유학생 전담 또래 코칭\' 프로그램 제안.',
                     description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                            <li>문제 정의: 유학생들의 학교 적응 어려움에 공감하고, 기존 또래 코칭 수업 내용을 바탕으로 해결책 모색.</li>
-                            <li>솔루션 도출: 실제 유학생 인터뷰를 통해 실용적인 니즈를 파악하고, 맞춤형 코칭 프로그램 기획.</li>
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">역할: 사회(S) 부문 아이디어 제안</h4>
+                        <p class="text-sm text-slate-600 mb-4">유학생들의 학교 적응을 돕기 위한 '유학생 전담 또래 코칭' 프로그램 제안</p>
+                        
+                        <h4 class="font-bold text-navy-900 mb-2 text-lg">Process</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
+                            <li><strong>문제 정의:</strong> 유학생들의 학교 적응 어려움에 공감하고, 기존 또래 코칭 수업 내용을 바탕으로 해결책 모색.</li>
+                            <li><strong>솔루션 도출:</strong> 실제 유학생 인터뷰를 통해 실용적인 니즈를 파악하고, 맞춤형 코칭 프로그램 기획.</li>
                         </ul>
+                        <p class="text-sm text-brand-600 font-bold">결과: 우수상 수상. 사회 문제 해결을 위한 실질적인 아이디어 제안 능력 입증.</p>
+                        <div class="mt-4 text-xs text-slate-400">Keywords: #ESG #SocialImpact #ProblemSolving</div>
                     `,
                     tags: ['ESG', 'Idea', 'Campus'],
                     icon: '🏫'
-                },
-                {
-                    id: 'bacs-school',
-                    type: 'school',
-                    title: 'BACS 학회 활동',
-                    category: 'Academic Society',
-                    summary: '9기 부학회장 역임. 데이터 분석/머신러닝 커리큘럼 기획 및 기업 분석.',
-                    description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                            <li>부학회장으로서 학회 커리큘럼을 데이터/AI 중심으로 개편 및 운영 총괄.</li>
-                            <li>HR 데이터 승진 예측 모델, 이마트/메가커피 전략 분석 등 다양한 프로젝트 수행.</li>
-                        </ul>
-                    `,
-                    tags: ['Leadership', 'Data Analysis', 'Strategy'],
-                    icon: '🎓'
-                },
-                 {
-                    id: 'academicus-school',
-                    type: 'school',
-                    title: '경희대 아카데미쿠스',
-                    category: 'Academic Contest',
-                    summary: 'CBDC 도입 시나리오 분석 및 보험 추천 솔루션 기획 (3등 수상).',
-                    description: `
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-2">
-                            <li>CBDC 도입에 따른 금융 시장 변화 예측 및 대응 전략 수립.</li>
-                            <li>마이데이터와 결합한 초개인화 보험 추천 서비스 기획.</li>
-                        </ul>
-                    `,
-                    tags: ['Fintech', 'Scenario', 'Planning'],
-                    icon: '🥉'
                 }
             ]
         };
@@ -377,6 +403,7 @@
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm modal-overlay" onClick={onClose}>
                     <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] overflow-hidden modal-content flex flex-col relative" onClick={e => e.stopPropagation()}>
                         
+                        {/* Header */}
                         <div className="bg-slate-50 p-6 border-b border-slate-100 flex justify-between items-start">
                             <div>
                                 <div className="flex items-center gap-2 mb-2">
@@ -396,17 +423,22 @@
                             </button>
                         </div>
 
+                        {/* Body (Scrollable) */}
                         <div className="p-8 overflow-y-auto custom-scrollbar">
+                            {/* Tags */}
                             <div className="flex flex-wrap gap-2 mb-8">
-                                {item.tags?.map((tag, idx) => (
+                                {item.tags && item.tags.map((tag, idx) => (
                                     <span key={idx} className="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full font-medium">
                                         #{tag}
                                     </span>
                                 ))}
                             </div>
-                            <div className="prose prose-slate max-w-none" dangerouslySetInnerHTML={{ __html: item.description }}></div>
+
+                            {/* Description (HTML content) */}
+                            <div className="prose prose-slate max-w-none leading-relaxed" dangerouslySetInnerHTML={{ __html: item.description }}></div>
                         </div>
 
+                        {/* Footer */}
                         <div className="p-4 border-t border-slate-100 bg-slate-50 flex justify-end">
                             <button onClick={onClose} className="px-6 py-2 bg-navy-900 text-white rounded-lg hover:bg-navy-800 transition-colors font-medium">
                                 닫기
@@ -489,7 +521,6 @@
                 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
             }, []);
 
-            // 탭 필터링 로직
             const filteredProjects = activeProjectTab === 'all' 
                 ? DB.projects 
                 : DB.projects?.filter(p => p.type === activeProjectTab);
@@ -541,7 +572,6 @@
                             <div className="flex flex-col gap-6">
                                 <h2 className="text-2xl font-bold text-navy-900 flex items-center gap-2"><User className="text-brand-600" size={24} /> About</h2>
                                 <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 w-full max-w-xs mx-auto md:mx-0 transform hover:scale-105 transition-transform duration-500">
-                                    {/* 사진 비율: w-full aspect-[2/3] (세로 비율) */}
                                     <div className="w-full aspect-[2/3] relative bg-slate-100">
                                         <img src="./profile.jpg" alt="Wonjong Jo" className="absolute inset-0 w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; e.target.parentNode.className += " flex items-center justify-center"; e.target.parentNode.innerHTML = '<span class="text-6xl">👨‍💼</span>'; }} />
                                     </div>
@@ -578,7 +608,7 @@
 
                     <hr class="border-slate-100 max-w-5xl mx-auto" />
 
-                    {/* Experience Section */}
+                    {/* Experience Section (Interactive) */}
                     <section id="experience" className="py-24 px-6 max-w-5xl mx-auto">
                         <div className="grid md:grid-cols-[1fr_2fr] gap-12 reveal">
                             <div>
@@ -603,36 +633,13 @@
                                         <p className="text-slate-600 leading-relaxed line-clamp-2 text-sm">{exp.summary}</p>
                                     </div>
                                 ))}
-                                
-                                 {/* University Activity Section */}
-                                 <div className="pt-8 mt-8 border-t border-slate-100">
-                                    <h3 className="text-lg font-bold text-navy-900 mb-6 flex items-center gap-2"><Award className="text-brand-600" size={20} /> University Activities</h3>
-                                    <div className="space-y-8">
-                                    {DB.university_activity?.map((act) => (
-                                        <div key={act.id} 
-                                            onClick={() => setSelectedItem(act)}
-                                            className="group relative border-l-2 border-slate-200 pl-8 pb-2 cursor-pointer hover:border-brand-400 transition-colors"
-                                        >
-                                            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-4 border-slate-300 group-hover:border-brand-600 group-hover:scale-110 transition-all"></div>
-                                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                                <h3 className="text-lg font-bold text-navy-900 group-hover:text-brand-600 transition-colors flex items-center gap-2">
-                                                    {act.company || act.title} <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all"/>
-                                                </h3>
-                                                <span className="text-sm text-slate-500 font-mono bg-slate-100 px-2 py-1 rounded mt-1 sm:mt-0 w-fit">{act.period}</span>
-                                            </div>
-                                            <p className="text-sm text-brand-600 font-bold mb-2">{act.role}</p>
-                                            <p className="text-slate-600 leading-relaxed line-clamp-2 text-sm">{act.summary}</p>
-                                        </div>
-                                    ))}
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </section>
 
                     <hr class="border-slate-100 max-w-5xl mx-auto" />
 
-                    {/* Projects Section */}
+                    {/* Projects Section (Interactive Tabs) */}
                     <section id="projects" className="py-24 px-6 max-w-5xl mx-auto">
                         <div className="mb-8 reveal">
                             <h2 class="text-2xl font-bold text-navy-900 mb-4 flex items-center gap-2"><Code className="text-brand-600" size={24} /> Projects</h2>
