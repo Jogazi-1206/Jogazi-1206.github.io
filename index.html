@@ -286,18 +286,62 @@
                         </div>
                     </nav>
 
-                    {/* Hero Section */}
-                    <section id="home" className="pt-40 pb-20 px-6 max-w-5xl mx-auto min-h-[85vh] flex items-center">
-                        <div className="reveal active w-full">
-                            <div className="flex flex-col md:flex-row gap-16 items-center md:items-center">
-                                {/* 사진 영역 (세로로 늘림: h-72 md:h-96) */}
-                                <div className="shrink-0 relative group">
-                                    <div className="absolute -inset-1 bg-gradient-to-r from-brand-600 to-purple-600 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                                    <div className="relative w-56 h-72 md:w-72 md:h-96 rounded-[2.5rem] overflow-hidden bg-slate-100 ring-1 ring-slate-900/5 shadow-2xl">
+                    {/* Hero Section (텍스트 중심, 사진 제거) */}
+                    <section id="home" className="pt-40 pb-20 px-6 max-w-4xl mx-auto min-h-[85vh] flex items-center justify-center text-center">
+                        <div className="reveal active w-full space-y-8">
+                            {/* 배경 효과 */}
+                            <div className="absolute inset-0 -z-10 opacity-30 dark:opacity-20 pointer-events-none">
+                                <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+                                <div className="absolute top-20 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+                                <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+                            </div>
+
+                            <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-brand-600 font-bold text-sm tracking-wide uppercase mb-4 shadow-sm border border-blue-100">
+                                Tech-Strategist
+                            </div>
+                            
+                            <h1 className="text-3xl md:text-5xl font-bold text-navy-900 leading-tight tracking-tight">
+                                데이터로 문제를 정의하고,<br />
+                                전략으로 해결책을 만듭니다.
+                            </h1>
+                            
+                            <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                                안녕하세요, <strong>조원종(Wonjong Jo)</strong>입니다.<br />
+                                비즈니스와 기술의 경계에서 임팩트를 만들어내는 것을 좋아합니다.<br />
+                                Python과 SQL로 데이터를 다루고, 논리적인 사고로 전략을 수립합니다.
+                            </p>
+                            
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                                <button onClick={() => setIsModalOpen(true)} className="inline-flex h-12 items-center justify-center rounded-full bg-navy-900 px-8 text-sm font-medium text-white transition-all hover:bg-brand-600 hover:shadow-lg transform hover:-translate-y-0.5">
+                                    Contact Me
+                                </button>
+                                <a href="#projects" className="inline-flex h-12 items-center justify-center rounded-full border border-slate-200 bg-white px-8 text-sm font-medium text-navy-900 transition-all hover:bg-slate-50 hover:border-slate-300">
+                                    View Projects
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div className="absolute bottom-10 animate-bounce-slow text-slate-400">
+                            <ChevronDown size={32} />
+                        </div>
+                    </section>
+
+                    <hr class="border-slate-100 max-w-5xl mx-auto" />
+
+                    {/* About Section (사진 배치) */}
+                    <section id="about" className="py-24 px-6 max-w-5xl mx-auto">
+                        <div className="grid md:grid-cols-[1fr_2fr] gap-12 reveal">
+                            <div className="flex flex-col gap-6">
+                                <h2 className="text-2xl font-bold text-navy-900 flex items-center gap-2">
+                                    <User className="text-brand-600" size={24} /> About
+                                </h2>
+                                {/* About 섹션용 사진 (세로 비율 늘림) */}
+                                <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 w-full max-w-xs mx-auto md:mx-0 transform hover:scale-105 transition-transform duration-500">
+                                    <div className="aspect-[3/4] w-full relative bg-slate-100">
                                         <img 
                                             src="./profile.jpg" 
                                             alt="Wonjong Jo" 
-                                            className="w-full h-full object-cover"
+                                            className="absolute inset-0 w-full h-full object-cover"
                                             onError={(e) => {
                                                 e.target.style.display = 'none';
                                                 e.target.parentNode.className += " flex items-center justify-center";
@@ -306,54 +350,9 @@
                                         />
                                     </div>
                                 </div>
-
-                                {/* 텍스트 영역 (폰트 축소) */}
-                                <div className="text-center md:text-left flex-1">
-                                    <p className="text-brand-600 font-bold mb-4 tracking-wide text-sm uppercase bg-blue-50 inline-block px-3 py-1 rounded-full">Tech-Strategist</p>
-                                    <h1 className="text-2xl md:text-4xl font-bold text-navy-900 leading-tight mb-6 tracking-tight">
-                                        데이터로 문제를 정의하고,<br />
-                                        전략으로 해결책을 만듭니다.
-                                    </h1>
-                                    <p className="text-base text-slate-600 max-w-2xl leading-relaxed mb-10">
-                                        안녕하세요, <strong>조원종(Wonjong Jo)</strong>입니다. <br />
-                                        비즈니스와 기술의 경계에서 임팩트를 만들어내는 것을 좋아합니다.<br />
-                                        Python과 SQL로 데이터를 다루고, 논리적인 사고로 전략을 수립합니다.
-                                    </p>
-                                    
-                                    <div className="flex gap-4 justify-center md:justify-start">
-                                        <button onClick={() => setIsModalOpen(true)} className="inline-flex h-12 items-center justify-center rounded-full bg-navy-900 px-8 text-sm font-medium text-white transition-all hover:bg-brand-600 hover:shadow-lg transform hover:-translate-y-0.5">
-                                            Contact Me
-                                        </button>
-                                        <a href="#projects" className="inline-flex h-12 items-center justify-center rounded-full border border-slate-200 bg-white px-8 text-sm font-medium text-navy-900 transition-all hover:bg-slate-50 hover:border-slate-300">
-                                            View Projects
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <hr class="border-slate-100 max-w-5xl mx-auto" />
-
-                    {/* About Section */}
-                    <section id="about" className="py-24 px-6 max-w-5xl mx-auto">
-                        <div className="grid md:grid-cols-[1fr_2fr] gap-12 reveal">
-                            <div>
-                                <h2 class="text-2xl font-bold text-navy-900 mb-6 flex items-center gap-2">
-                                    <User className="text-brand-600" size={24} /> About
-                                </h2>
-                                {/* About 섹션용 작은 프로필 사진 */}
-                                <div className="hidden md:block rounded-2xl overflow-hidden shadow-md border border-slate-100 w-48 mx-auto md:mx-0">
-                                    <img 
-                                        src="./profile.jpg" 
-                                        alt="Wonjong Jo" 
-                                        className="w-full h-auto object-cover"
-                                        onError={(e) => e.target.style.display = 'none'}
-                                    />
-                                </div>
                             </div>
                             <div className="space-y-8">
-                                <div className="prose prose-slate text-slate-600 leading-relaxed text-lg">
+                                <div className="prose prose-slate text-slate-600 leading-relaxed text-lg pt-2">
                                     <p>
                                         경희대학교 경영학과에 재학 중입니다. 경영학을 전공했지만, 데이터가 주는 명확함에 매료되어 프로그래밍을 독학했습니다. 
                                         단순히 코드를 짜는 것을 넘어, <strong>"이 기술이 비즈니스에 어떤 가치를 줄 수 있는가?"</strong>를 끊임없이 고민합니다.
