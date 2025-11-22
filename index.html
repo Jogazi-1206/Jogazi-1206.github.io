@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wonjong Jo | Portfolio</title>
+    <meta name="description" content="데이터로 문제를 정의하고 전략으로 해결하는 Tech-Strategist, 조원종의 포트폴리오입니다.">
+    <meta property="og:title" content="Wonjong Jo | Portfolio">
+    <meta property="og:description" content="Data Analyst & Strategist Portfolio">
+    <meta property="og:image" content="./images/profile.jpg">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -57,10 +61,18 @@
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes scaleUp { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-        /* 모달 내부 스크롤바 커스텀 */
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
     </style>
 </head>
 <body class="bg-white selection:bg-brand-600 selection:text-white">
@@ -82,9 +94,9 @@
     <script type="text/babel" data-type="module">
         import React, { useState, useEffect } from 'react';
         import { createRoot } from 'react-dom/client';
-        import { Moon, Sun, Github, Mail, Linkedin, ExternalLink, ChevronDown, Code, Briefcase, User, Award, BookOpen, PenTool, Send, X, Loader2, CheckCircle2, ArrowRight, Calendar, Building, TrendingUp, Layout, Database, School } from 'lucide-react';
+        import { Moon, Sun, Github, Mail, Linkedin, ExternalLink, ChevronDown, Code, Briefcase, User, Award, BookOpen, PenTool, Send, X, Loader2, CheckCircle2, ArrowRight, Calendar, Building, TrendingUp, Layout, Database, School, FileText, Download } from 'lucide-react';
 
-        // --- 데이터베이스 (정리해주신 내용 반영) ---
+        // --- 데이터베이스 ---
         const DB = {
             experience: [
                 {
@@ -104,18 +116,9 @@
                             <li><strong>데이터 엔지니어링:</strong> Snowflake 도입 및 SQL 기반 ELT 파이프라인 구축, Streamlit 매출 대시보드 개발.</li>
                             <li><strong>전략 기획:</strong> SaaS 전환(V1→V2) 가격 정책 수립 및 AI 자동화 시장 리서치.</li>
                         </ul>
-                        <div class="mt-4 p-3 bg-slate-50 rounded-lg">
-                            <span class="font-bold text-xs text-slate-500 uppercase">Keywords</span>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#SaaS</span>
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#ProductManagement</span>
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#DataEngineering</span>
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#DX</span>
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#Python</span>
-                            </div>
-                        </div>
                     `,
-                    tags: ['Python', 'SQL', 'Apps Script', 'Strategy']
+                    tags: ['Python', 'SQL', 'Apps Script', 'Strategy'],
+                    images: [] 
                 },
                 {
                     id: 'sustinvest',
@@ -132,23 +135,13 @@
                             <li><strong>대규모 DB 구축:</strong> 150개사 대상 13,500건의 정량/정성 ESG 데이터베이스 구축 (정합성 확보).</li>
                             <li><strong>프로세스 개선:</strong> 빈출 키워드 분석을 통한 코드북/핸드북 개선안 제안 및 채택.</li>
                             <li><strong>업무 자동화:</strong> Python 웹 크롤러를 직접 설계/구현하여 반복적인 인증서 수집 업무 자동화.</li>
-                            <li><strong>전략 리서치:</strong> 해외 PE 동향 조사 및 핵심 산업(배터리 등) ESG 벤치마킹 리포트 작성.</li>
                         </ul>
-                        <div class="mt-4 p-3 bg-slate-50 rounded-lg">
-                            <span class="font-bold text-xs text-slate-500 uppercase">Keywords</span>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#ESG</span>
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#DataResearch</span>
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#ProcessImprovement</span>
-                                <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded text-slate-600">#Automation</span>
-                            </div>
-                        </div>
                     `,
-                    tags: ['Data Analysis', 'Web Crawling', 'ESG Research']
+                    tags: ['Data Analysis', 'Web Crawling', 'ESG Research'],
+                    images: []
                 },
             ],
             projects: [
-                // --- 데이터 & 개발 (Data & AI) ---
                 {
                     id: 'stock-trading',
                     type: 'data',
@@ -168,7 +161,11 @@
                         <p class="text-sm text-brand-600 font-bold">성과: 3개월간 누적 수익률 30% 달성 및 시스템 안정화</p>
                     `,
                     tags: ['Python', 'API', 'Quant'],
-                    icon: '📈'
+                    icon: '📈',
+                    images: [
+                        'https://via.placeholder.com/600x300/f1f5f9/94a3b8?text=Trading+Log+Dashboard',
+                        'https://via.placeholder.com/600x300/f1f5f9/94a3b8?text=Algorithm+Architecture'
+                    ]
                 },
                 {
                     id: 'review-ai',
@@ -184,16 +181,15 @@
                         <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
                             <li><strong>문제 정의:</strong> 기존 정렬 방식(최신순/평점순)의 한계를 발견하고, 고객에게 진짜 도움이 되는 리뷰를 선별하는 모델 기획.</li>
                             <li><strong>모델링:</strong> '유용성'을 종속변수로 설정하고, CNN 모델을 직접 구축 및 학습. 기존 ML 모델 대비 성능(정확도, 정밀도) 향상 확인.</li>
-                            <li><strong>발표:</strong> 기술적 복잡성을 비즈니스 가치로 번역하여 효과적으로 전달.</li>
                         </ul>
                         <p class="text-sm text-brand-600 font-bold">결과: 장려상 수상. AI 기술을 실제 비즈니스 문제 해결에 적용하는 역량 입증.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #DeepLearning #CNN #ReviewAnalysis #AIModeling</div>
                     `,
                     tags: ['Deep Learning', 'CNN', 'Python'],
-                    icon: '🤖'
+                    icon: '🤖',
+                    images: []
                 },
                 {
-                     id: 'kmac',
+                      id: 'kmac',
                     type: 'data',
                     title: '파인다이닝 리뷰 분석 전략',
                     category: 'KMAC 경영혁신 공모전',
@@ -208,11 +204,10 @@
                              <li><strong>토픽 모델링:</strong> BERTopic을 활용하여 각 그룹의 핵심 키워드(맛 vs. 분위기/경험) 도출.</li>
                              <li><strong>군집 분석:</strong> 소비자를 4개 군집으로 세분화하여 타겟별 차별화 전략 수립.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">결과: 정성적 리뷰 데이터를 정량적 인사이트로 변환하여 의사결정 근거 마련.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #TextMining #BERTopic #Clustering #CustomerInsight</div>
                     `,
                     tags: ['Data Analysis', 'NLP', 'Strategy'],
-                    icon: '🍽️'
+                    icon: '🍽️',
+                    images: []
                 },
                 {
                     id: 'subscription',
@@ -230,14 +225,11 @@
                             <li><strong>인사이트 도출:</strong> 텍스트 마이닝으로 '맛'이 아닌 '운영 이슈'가 문제임을 규명하고, '정기구독' 잠재 수요 발견.</li>
                             <li><strong>타당성 검증:</strong> Python(KoNLPy, K-Means) 군집 분석을 통해 구독 서비스의 타겟 고객군과 수요를 정량적으로 입증.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">결과: 수상. 직관이 아닌 데이터에 근거하여 실질적인 수익 모델 전환 유도.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #Consulting #SME #DataDriven #SubscriptionModel</div>
                     `,
                     tags: ['Python', 'Clustering', 'Consulting'],
-                    icon: '🏪'
+                    icon: '🏪',
+                    images: []
                 },
-
-                // --- 전략 기획 (Strategy) ---
                 {
                     id: 'yanolja',
                     type: 'strategy',
@@ -254,11 +246,10 @@
                             <li><strong>전략 수립:</strong> AI 코스 추천, 결제 통합 등을 아우르는 '슈퍼앱' 전략 도출 및 민관 협력 모델 제시.</li>
                             <li><strong>시각화:</strong> Figma로 주요 기능과 사용자 흐름(User Flow)을 시각화하여 설득력 강화.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">결과: 논리적인 문제 해결 과정과 구체적인 서비스 기획력 인정.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #TravelTech #SuperApp #ServicePlanning #UXDesign</div>
                     `,
                     tags: ['Strategy', 'Figma', 'App Planning'],
-                    icon: '🌏'
+                    icon: '🌏',
+                    images: []
                 },
                 {
                     id: 'lg-ensol',
@@ -276,11 +267,10 @@
                             <li><strong>컨셉 도출:</strong> '미니멀 모빌리티' 포지셔닝을 통해 B2B(직장인) 및 B2C(대학생) 타겟별 전략 수립.</li>
                             <li><strong>디자인:</strong> Figma로 앱, 포스터, 팜플렛 등 마케팅 에셋 직접 제작.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">결과: 데이터 기반 소비자 분석과 창의적인 브랜딩 전략의 결합.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #MarketingStrategy #Branding #Mobility #BSS</div>
                     `,
                     tags: ['Marketing', 'Branding', 'Analysis'],
-                    icon: '🛵'
+                    icon: '🛵',
+                    images: []
                 },
                  {
                     id: 'fastcampus',
@@ -298,14 +288,11 @@
                              <li><strong>솔루션 설계:</strong> AI가 가상 비즈니스 케이스 해결 과정을 평가하여 매칭하는 시스템 설계.</li>
                              <li><strong>기술 제안:</strong> 초기 데이터 부족 문제를 해결하기 위한 '합성 데이터(Synthetic Data)' 활용 방안 제시.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">결과: 기술적 실현 가능성과 사회적 가치를 동시에 고려한 비즈니스 모델.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #AIPlatform #SocialInnovation #SyntheticData #MatchingSystem</div>
                     `,
                     tags: ['AI Planning', 'Social Impact', 'Synthetic Data'],
-                    icon: '👴'
+                    icon: '👴',
+                    images: []
                 },
-                
-                // --- 학교 활동 (School) ---
                 {
                     id: 'bacs',
                     type: 'school',
@@ -322,11 +309,10 @@
                             <li><strong>[데이터] HR 승진 예측 모델:</strong> SMOTE로 데이터 불균형 해결 후 머신러닝 모델 구축 (정확도 93%).</li>
                             <li><strong>[데이터] 신용카드 제안 예측:</strong> 고객 군집 분석을 통한 혜택별 수락률 분석 및 개인화 전략 도출.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">성과: 데이터/머신러닝 커리큘럼 도입 주도 및 다수의 실무 프로젝트 수행.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #BusinessStrategy #DataAnalysis #MachineLearning #Leadership</div>
                     `,
                     tags: ['Leadership', 'Data Analysis', 'Strategy'],
-                    icon: '🎓'
+                    icon: '🎓',
+                    images: []
                 },
                 {
                     id: 'academicus',
@@ -344,11 +330,10 @@
                             <li><strong>솔루션 기획:</strong> 마이데이터와 결제 데이터를 결합한 초개인화 보험 추천 시스템 기획 (카카오페이손해보험 타겟).</li>
                             <li><strong>프로토타이핑:</strong> Figma를 활용하여 직관적인 UI/UX 프로토타입 제작.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">결과: 3등 수상. 미래 금융 트렌드 예측 및 데이터 기반 비즈니스 모델링 역량 입증.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #Fintech #CBDC #NewBusinessModel #Figma</div>
                     `,
                     tags: ['Fintech', 'Scenario', 'Planning'],
-                    icon: '🥉'
+                    icon: '🥉',
+                    images: []
                 },
                 {
                     id: 'green-society',
@@ -365,11 +350,10 @@
                             <li><strong>아이디어 기획:</strong> QR코드 확장 디자인 및 게이미피케이션 요소를 도입하여 소비자 참여 유도.</li>
                             <li><strong>협업 관리:</strong> 익명 피드백 시스템과 회의 문서 공유 프로세스 도입으로 커뮤니케이션 효율성 증대.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">결과: 주도적인 프로젝트 완수 및 팀워크 중요성 체득.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #MarketingStrategy #TeamCommunication #ProjectManagement</div>
                     `,
                     tags: ['Marketing', 'ESG', 'Project'],
-                    icon: '🌱'
+                    icon: '🌱',
+                    images: []
                 },
                 {
                     id: 'esg-contest-school',
@@ -386,16 +370,15 @@
                             <li><strong>문제 정의:</strong> 유학생들의 학교 적응 어려움에 공감하고, 기존 또래 코칭 수업 내용을 바탕으로 해결책 모색.</li>
                             <li><strong>솔루션 도출:</strong> 실제 유학생 인터뷰를 통해 실용적인 니즈를 파악하고, 맞춤형 코칭 프로그램 기획.</li>
                         </ul>
-                        <p class="text-sm text-brand-600 font-bold">결과: 우수상 수상. 사회 문제 해결을 위한 실질적인 아이디어 제안 능력 입증.</p>
-                        <div class="mt-4 text-xs text-slate-400">Keywords: #ESG #SocialImpact #ProblemSolving</div>
                     `,
                     tags: ['ESG', 'Idea', 'Campus'],
-                    icon: '🏫'
+                    icon: '🏫',
+                    images: []
                 }
             ]
         };
 
-        // --- 컴포넌트: 프로젝트 상세 모달 ---
+        // --- 컴포넌트: 프로젝트 상세 모달 (이미지 갤러리 추가) ---
         const DetailModal = ({ item, onClose }) => {
             if (!item) return null;
 
@@ -435,7 +418,41 @@
                             </div>
 
                             {/* Description (HTML content) */}
-                            <div className="prose prose-slate max-w-none leading-relaxed" dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                            <div className="prose prose-slate max-w-none leading-relaxed mb-8" dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                            
+                            {/* Gallery Section */}
+                            {item.images && item.images.length > 0 && (
+                                <div className="mt-8 pt-8 border-t border-slate-100">
+                                    <h4 className="font-bold text-navy-900 mb-4 flex items-center gap-2">
+                                        <Layout size={18} className="text-brand-600"/> Project Gallery
+                                    </h4>
+                                    <div className="grid gap-4">
+                                        {item.images.map((img, idx) => (
+                                            <div key={idx} className="rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                                                <img src={img} alt={`${item.title} screenshot ${idx + 1}`} className="w-full h-auto object-cover" loading="lazy" 
+                                                     onError={(e) => {
+                                                         e.target.onerror = null; 
+                                                         e.target.src='https://via.placeholder.com/800x400/f1f5f9/94a3b8?text=Image+Not+Found';
+                                                     }}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                            
+                            {/* Image Placeholder Notice (If no images) */}
+                            {(!item.images || item.images.length === 0) && (
+                                <div className="mt-8 pt-8 border-t border-slate-100">
+                                     <div className="bg-slate-50 border border-dashed border-slate-300 rounded-xl p-8 text-center">
+                                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 text-slate-400 mb-3">
+                                            <Layout size={24} />
+                                        </div>
+                                        <p className="text-slate-500 text-sm font-medium">Project Gallery</p>
+                                        <p className="text-slate-400 text-xs mt-1">No screenshots available yet.</p>
+                                     </div>
+                                </div>
+                            )}
                         </div>
 
                         {/* Footer */}
@@ -531,35 +548,49 @@
                     <DetailModal item={selectedItem} onClose={() => setSelectedItem(null)} />
 
                     {/* 네비게이션 */}
-                    <nav className="fixed w-full z-40 top-0 bg-white/90 backdrop-blur-sm border-b border-slate-100">
+                    <nav className="fixed w-full z-40 top-0 bg-white/90 backdrop-blur-sm border-b border-slate-100 transition-all duration-300">
                         <div className="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
-                            <a href="#home" className="text-lg font-bold text-navy-900 tracking-tight hover:text-brand-600 transition-colors">Wonjong Jo</a>
-                            <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
-                                {['About', 'Experience', 'Projects', 'Contact'].map((item) => (
-                                    <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-navy-900 transition-colors">{item}</a>
-                                ))}
+                            <a href="#home" className="text-lg font-bold text-navy-900 tracking-tight hover:text-brand-600 transition-colors flex items-center gap-2">
+                                Wonjong Jo
+                            </a>
+                            
+                            <div className="flex items-center gap-6">
+                                <div className="hidden md:flex space-x-6 text-sm font-medium text-slate-500">
+                                    {['About', 'Experience', 'Projects'].map((item) => (
+                                        <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-navy-900 transition-colors">{item}</a>
+                                    ))}
+                                </div>
+                                
+                                {/* Resume Button & Mobile Contact */}
+                                <div className="flex items-center gap-3">
+                                     <a href="./resume.pdf" download className="hidden sm:flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-navy-900 px-4 py-2 rounded-full text-xs font-bold transition-all border border-slate-200">
+                                        <FileText size={16} /> Resume
+                                    </a>
+                                    <button className="p-2 text-slate-600 hover:text-navy-900 transition-colors" onClick={() => setIsContactOpen(true)}>
+                                        <Mail size={20} />
+                                    </button>
+                                </div>
                             </div>
-                            <button className="md:hidden p-2 text-slate-600" onClick={() => setIsContactOpen(true)}><Mail size={20} /></button>
                         </div>
                     </nav>
 
                     {/* Hero Section */}
-                    <section id="home" className="pt-40 pb-20 px-6 max-w-4xl mx-auto min-h-[85vh] flex items-center justify-center text-center">
-                        <div className="reveal active w-full space-y-8">
-                            <div className="absolute inset-0 -z-10 opacity-30 pointer-events-none">
-                                <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-                                <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+                    <section id="home" className="pt-28 pb-12 px-6 max-w-4xl mx-auto flex flex-col items-center justify-center text-center">
+                        <div className="reveal active w-full space-y-6">
+                            <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none overflow-hidden">
+                                <div className="absolute top-20 left-1/4 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+                                <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
                             </div>
-                            <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-brand-600 font-bold text-sm tracking-wide uppercase mb-4 shadow-sm border border-blue-100">Tech-Strategist</div>
+                            <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-brand-600 font-bold text-xs tracking-wide uppercase mb-2 shadow-sm border border-blue-100">Tech-Strategist</div>
                             <h1 className="text-2xl md:text-4xl font-bold text-navy-900 leading-tight tracking-tight">데이터로 문제를 정의하고,<br />전략으로 해결책을 만듭니다.</h1>
-                            <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                            <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
                                 안녕하세요, <strong>조원종(Wonjong Jo)</strong>입니다.<br />
                                 비즈니스와 기술의 경계에서 임팩트를 만들어내는 것을 좋아합니다.<br />
                                 Python과 SQL로 데이터를 다루고, 논리적인 사고로 전략을 수립합니다.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                                <button onClick={() => setIsContactOpen(true)} className="inline-flex h-12 items-center justify-center rounded-full bg-navy-900 px-8 text-sm font-medium text-white transition-all hover:bg-brand-600 hover:shadow-lg transform hover:-translate-y-0.5">Contact Me</button>
-                                <a href="#projects" className="inline-flex h-12 items-center justify-center rounded-full border border-slate-200 bg-white px-8 text-sm font-medium text-navy-900 transition-all hover:bg-slate-50 hover:border-slate-300">View Projects</a>
+                            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+                                <button onClick={() => setIsContactOpen(true)} className="inline-flex h-10 items-center justify-center rounded-full bg-navy-900 px-6 text-sm font-medium text-white transition-all hover:bg-brand-600 hover:shadow-lg transform hover:-translate-y-0.5">Contact Me</button>
+                                <a href="#projects" className="inline-flex h-10 items-center justify-center rounded-full border border-slate-200 bg-white px-6 text-sm font-medium text-navy-900 transition-all hover:bg-slate-50 hover:border-slate-300">View Projects</a>
                             </div>
                         </div>
                     </section>
@@ -573,7 +604,8 @@
                                 <h2 className="text-2xl font-bold text-navy-900 flex items-center gap-2"><User className="text-brand-600" size={24} /> About</h2>
                                 <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 w-full max-w-xs mx-auto md:mx-0 transform hover:scale-105 transition-transform duration-500">
                                     <div className="w-full aspect-[2/3] relative bg-slate-100">
-                                        <img src="./profile.jpg" alt="Wonjong Jo" className="absolute inset-0 w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; e.target.parentNode.className += " flex items-center justify-center"; e.target.parentNode.innerHTML = '<span class="text-6xl">👨‍💼</span>'; }} />
+                                        {/* 프로필 이미지 경로 수정 */}
+                                        <img src="./images/profile.jpg" alt="Wonjong Jo" className="absolute inset-0 w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; e.target.parentNode.className += " flex items-center justify-center"; e.target.parentNode.innerHTML = '<span class="text-6xl">👨‍💼</span>'; }} />
                                     </div>
                                 </div>
                             </div>
