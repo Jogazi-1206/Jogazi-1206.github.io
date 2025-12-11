@@ -575,7 +575,8 @@
                 e.preventDefault();
                 setStatus('submitting');
                 try {
-                    const response = await fetch("https://formsubmit.co/ajax/fleasbase35@naver.com", {
+                    // 이메일 수신 주소 변경: fleasbase35 -> hwa7366
+                    const response = await fetch("https://formsubmit.co/ajax/hwa7366@naver.com", {
                         method: "POST",
                         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                         body: JSON.stringify({
