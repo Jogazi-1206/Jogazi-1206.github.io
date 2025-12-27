@@ -127,38 +127,49 @@ window.DB = {
         {
             id: 'stock-trading',
             type: 'data',
-            title: '주식 예측 모델 개발',
+            title: '주식 급등 예측 퀀트 모델',
             category: 'Personal Project',
-            summary: '기술적 지표와 과거 데이터를 머신러닝으로 학습시켜 주가 등락을 예측하는 모델 개발.',
-            tags: ['Machine Learning', 'Python', 'Feature Engineering'],
+            summary: '기술적 지표와 과거 데이터의 상관관계를 분석하여 주가 급등 시점을 포착하는 머신러닝 분류 모델 개발.',
+            tags: ['Quant Trading', 'Machine Learning', 'Feature Importance'],
             icon: '📈',
 
             overview: {
-                period: '2023.00 ~ 2023.00',
+                period: '2025.08 ~ 2025.11', // 기간 수정 필요
                 team: '개인 프로젝트',
-                role: 'Modeling & Analysis'
+                role: 'Quant Developer & Analyst'
             },
-            keyResult: '📊 테스트 데이터 기준 예측 정확도 60% 달성 및 핵심 지표 발굴',
-            catchphrase: '"데이터로 주가의 흐름을 읽다: 머신러닝 예측 모델"',
-            description_new: "단순한 감이 아닌, 과거 10년 치 데이터와 기술적 지표를 기반으로 주가 등락을 예측하는 분류 모델을 구축했습니다.",
+            
+            // 결과: 수익률보다는 '모델 구축'과 '핵심 지표 발굴' 자체를 성과로 정의
+            keyResult: '📊 급등주 패턴을 학습한 "이진 분류(Binary Classification) 모델" 구축 및 핵심 변수 발굴',
+            
+            catchphrase: '"감이 아닌 데이터로 투자의 승률을 높이다"',
+            
+            description_new: "주식 시장의 수많은 보조 지표 중, 실제 '급등'과 통계적 유의성이 높은 지표를 선별하기 위해 시작했습니다. 과거 데이터를 전수 조사하여 승리하는 패턴을 학습시키고, 상승 여부(1/0)를 예측하는 자동화 모델을 구현했습니다.",
+            
             problemSolving: [
                 {
-                    title: 'Feature Eng',
-                    keyword: '지표 생성',
-                    desc: '이동평균선(MA), RSI, MACD 등 15가지 핵심 기술적 지표를 직접 계산하여 학습 데이터(Feature)로 가공.'
+                    title: '가설 수립', // Hypothesis
+                    keyword: 'Quant Indicators',
+                    desc: '이동평균선, RSI, MACD, 볼린저밴드 등 다양한 기술적 지표를 선정하고, "특정 지표들의 시그널이 겹칠 때 주가가 급등한다"는 퀀트 가설 수립.'
                 },
                 {
-                    title: '모델링',
-                    keyword: 'Scikit-learn',
-                    desc: '과거 데이터를 학습하여 다음 날의 주가 등락(Up/Down)을 예측하는 분류 모델 구축 및 최적화.'
+                    title: '분석', // Feature Selection
+                    keyword: 'Feature Importance',
+                    desc: '과거 급등 구간의 데이터를 역추적(Back-testing)하여, 실제 주가 상승에 가장 큰 영향을 미친 "핵심 지표"가 무엇인지 통계적으로 규명.'
                 },
                 {
-                    title: '검증',
-                    keyword: 'TimeSeriesSplit',
-                    desc: '시계열 데이터의 특성을 고려한 교차 검증(Cross Validation)을 수행하여 과적합 방지 및 신뢰성 확보.'
+                    title: '모델링', // Classification
+                    keyword: 'Binary Learning',
+                    desc: '도출된 핵심 지표를 기반으로 상승(1)과 하락/보합(0)을 예측하는 머신러닝 분류 모델을 학습시키고, 지속적인 파라미터 튜닝으로 예측 정확도 고도화.'
                 }
             ],
-            images: []
+            
+            // 이미지 3장 준비 가이드 참고
+            images: [
+                './images/stock-trading_1.jpg', // 분석 프로세스 (데이터 흐름도)
+                './images/stock-trading_2.jpg', // 변수 중요도(Feature Importance) 그래프
+                './images/stock-trading_3.jpg'  // 모델 학습 결과 (Confusion Matrix 등)
+            ]
         },
 
         // 3. 리뷰 유용성 예측 (Data)
