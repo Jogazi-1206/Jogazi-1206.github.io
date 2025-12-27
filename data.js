@@ -367,7 +367,7 @@ window.DB = {
             icon: '👴',
 
             overview: {
-                period: '2023.00 ~ 2023.00', 
+                period: '2024.11 ~ 2024.12', 
                 team: '팀 프로젝트(3명)',
                 role: 'Service Planner (기획 총괄)'
             },
@@ -407,38 +407,54 @@ window.DB = {
         {
             id: 'bacs',
             type: 'school',
-            title: 'BACS 학회 활동',
+            title: '경영전략학회 BACS 활동',
             category: 'Academic Society',
-            summary: '9기 부학회장 역임. 데이터 분석/머신러닝 커리큘럼 기획 및 기업 분석.',
-            tags: ['Leadership', 'Data Analysis', 'Strategy'],
+            summary: '9기 부학회장 역임. 팀 프로젝트 중심의 전략 도출, 데이터 분석 수행.',
+            tags: ['Leadership', 'Business Strategy', 'Data Analytics', 'Machine Learning'],
             icon: '🎓',
 
             overview: {
-                period: '202X.XX ~ 202X.XX',
-                team: '경영전략학회 BACS',
-                role: '9기 부학회장 (Vice President)'
+                period: '2024.03 ~ 2025.02', // 기간 수정 필요
+                team: 'BACS',
+                role: '부학회장 (Vice President)'
             },
-            keyResult: '📚 학회 커리큘럼 리뉴얼 및 신입 기수 역대 최고 경쟁률 달성',
-            catchphrase: '"데이터와 전략의 융합을 이끄는 리더십"',
-            description_new: "부학회장으로서 조직을 운영하며, 경영 전략 프레임워크 학습뿐만 아니라 실질적인 데이터 분석 역량을 기를 수 있도록 커리큘럼을 고도화했습니다.",
+            
+            // 요청하신 대로 '운영 성과'와 '대외 활동' 위주로 Key Result 수정
+            keyResult: '🚀 관심사별 "팀 서브 세션" 신설 주도 및 외부 공모전 2회 참가',
+            
+            catchphrase: '"전략과 데이터를 아우르는 융합형 인재로 성장하다"',
+            
+            description_new: "경영 전략 수립부터 데이터 분석, 머신러닝 모델링까지 비즈니스와 기술을 폭넓게 학습했습니다. 특히 부학회장으로서 '팀 프로젝트 중심의 서브 세션'을 도입하여 학회의 실무 역량을 한 단계 끌어올렸습니다.",
+            
+            // 4단계 구성: [컨설팅] -> [분석] -> [ML/DL] -> [리더십]
             problemSolving: [
                 {
+                    title: '컨설팅 세션',
+                    keyword: 'Logical Thinking',
+                    desc: '이마트(부진 원인), 넷플릭스(신사업), 현대카드(타겟팅) 등 실제 기업 사례를 리서치하여, 경영 전략 프레임워크에 맞춰 분석, 논리적인 전략 방향성을 도출.'
+                },
+                {
+                    title: '데이터 분석',
+                    keyword: 'Python & Stats',
+                    desc: 'Python을 활용해 고객 데이터를 시각화하고, T-test 등 통계적 검정 기법을 적용하여 데이터 기반의 의사결정 근거 마련.'
+                },
+                {
+                    title: 'ML & 딥러닝',
+                    keyword: 'Predictive Modeling',
+                    desc: 'HR 승진 예측(Random Forest, 정확도 93%) 및 신용카드 이탈률 분석(Clustering) 프로젝트를 수행하고, CNN 등 딥러닝 모델을 학습하여 외부 공모전 활용.'
+                },
+                {
                     title: '리더십',
-                    keyword: 'Curriculum',
-                    desc: '기존 이론 중심 학습에서 탈피, Python/SQL 세션을 신설하여 실무 지향적 학회로 체질 개선.'
-                },
-                {
-                    title: '기업 분석',
-                    keyword: 'Strategic Thinking',
-                    desc: '이마트, 넷플릭스 등 주요 기업의 부진 원인을 MECE, 3C 등으로 분석하고 신사업 전략 제안.'
-                },
-                {
-                    title: '데이터',
-                    keyword: 'HR Analytics',
-                    desc: '인사 데이터 불균형을 SMOTE로 해결하고, 직원 승진 여부를 93% 정확도로 예측하는 머신러닝 프로젝트 수행.'
+                    keyword: 'Operation & Planning',
+                    desc: '부학회장으로서 기존 이론 중심 커리큘럼의 한계를 보완하기 위해 "관심사별 팀 서브 세션"을 신규 기획 및 도입하여 학회원들의 자발적 프로젝트 참여를 유도.'
                 }
             ],
-            images: []
+            
+            // 이미지는 각 4단계에 맞는 걸로 4장 준비하시면 베스트입니다.
+            images: [
+                './images/bacs_1.jpg', // [컨설팅] 이마트/넷플릭스 등 전략 장표
+                './images/bacs_2.jpg' // [분석] 통계 분석/시각화 결과
+            ]
         },
 
         // 9. 아카데미쿠스 (School)
