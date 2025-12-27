@@ -37,7 +37,7 @@ window.DB = {
                     desc: '회사의 신규 수익원이 된 [데이터 품질 관리(DQM) 솔루션]과 업무 시간을 90% 단축한 [KISA 스팸 신고 자동화] 프로젝트를 리딩했습니다. (상세 내용은 Project 섹션 참조)'
                 }
             ],
-            images: [] 
+            images: [./images/crevisse-dqm.jpg'] 
         },
         {
             id: 'sustinvest',
