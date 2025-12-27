@@ -79,7 +79,7 @@ window.DB = {
             type: 'strategy',
             title: '인바운드 관광 AI 슈퍼앱 전략',
             category: '야놀자 리서치 공모전',
-            summary: '파편화된 방한 관광 경험을 해결하기 위한 민관 협력(PPP) 기반의 AI 슈퍼앱 전략 수립.',
+            summary: '파편화된 방한 관광 경험을 해결하기 위한 민관 협력 기반의 AI 슈퍼앱 전략 수립.',
             tags: ['Strategy', 'Figma', 'Public-Private Partnership'],
             icon: '🌏',
 
@@ -140,7 +140,7 @@ window.DB = {
             },
             
             // 결과: 수익률보다는 '모델 구축'과 '핵심 지표 발굴' 자체를 성과로 정의
-            keyResult: '📊 급등주 패턴을 학습한 "이진 분류(Binary Classification) 모델" 구축 및 핵심 변수 발굴',
+            keyResult: '📊 급등주 패턴을 학습한 "이진 분류 모델" 구축 및 핵심 변수 발굴',
             
             catchphrase: '"감이 아닌 데이터로 투자의 승률을 높이다"',
             
