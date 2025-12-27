@@ -84,12 +84,11 @@ window.DB = {
             icon: '🌏',
 
             overview: {
-                period: '2023.10 ~ 2023.11', // 기간은 확인 후 수정해주세요
+                period: '2023.10 ~ 2023.11', 
                 team: '팀 KHUPER (4명)',
                 role: '전략 기획, UI/UX 디자인'
             },
             
-            // [Key Result] 수상 여부보다, 제안서가 도출한 '구조적 해결책'을 강조
             keyResult: '💡 공공(Visit Korea)과 민간(야놀자)의 강점을 결합한 "PPP 비즈니스 모델" 정립',
             
             catchphrase: '"인증·결제 장벽을 넘어, 한국 여행을 하나의 앱으로"',
@@ -100,27 +99,27 @@ window.DB = {
                 {
                     title: 'Pain Point',
                     keyword: '디지털 경험의 단절',
-                    [cite_start]desc: '시장 분석 결과, 외국인 관광객은 한국 전화번호 인증 불가로 예약/결제에 실패하고, 구글맵 대신 불친절한 로컬 앱을 써야 하는 "이중고"를 겪고 있음을 규명[cite: 188, 229].'
+                    desc: '시장 분석 결과, 외국인 관광객은 한국 전화번호 인증 불가로 예약/결제에 실패하고, 구글맵 대신 불친절한 로컬 앱을 써야 하는 "이중고"를 겪고 있음을 규명.'
                 },
                 {
                     title: '전략 수립',
                     keyword: 'PPP Ecosystem',
-                    [cite_start]desc: '공공(Visit Korea)의 데이터 신뢰성과 민간(야놀자)의 기술/플랫폼을 결합하여, 하나의 앱에서 예약부터 MaaS(교통)까지 해결하는 협력 생태계 설계[cite: 524, 527].'
+                    desc: '공공(Visit Korea)의 데이터 신뢰성과 민간(야놀자)의 기술/플랫폼을 결합하여, 하나의 앱에서 예약부터 MaaS(교통)까지 해결하는 협력 생태계 설계.'
                 },
                 {
                     title: '솔루션',
                     keyword: 'Barrier-Free UX',
-                    [cite_start]desc: '외국인 전용 간편 결제, 알러지/비건을 위한 바코드 성분 번역, AI 맞춤 코스 추천 등 실질적 편의 기능을 Figma로 구체화하여 구현[cite: 444, 461, 304].'
+                    desc: '외국인 전용 간편 결제, 알러지/비건을 위한 바코드 성분 번역, AI 맞춤 코스 추천 등 실질적 편의 기능을 Figma로 구체화하여 구현.'
                 }
             ],
             
-            // 아까 캡처하기로 한 이미지 3장 (파일명이 맞는지 확인하세요)
+            // 이미지 설정
             images: [
-                './images/yanolja_1.jpg', // P.24 구조도
-                './images/yanolja_2.jpg' // P.16 AI 코스 UI
+                './images/yanolja_1.jpg', 
+                './images/yanolja_2.jpg',
+                './images/yanolja_3.jpg'
             ],
             
-            // PDF 파일이 있다면 링크 연결 (선택사항)
             link: "" 
         },
 
