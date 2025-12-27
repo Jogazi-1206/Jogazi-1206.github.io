@@ -281,36 +281,45 @@ window.DB = {
             type: 'strategy',
             title: '전기이륜차 마케팅 전략',
             category: 'LG엔솔 BSS 공모전',
-            summary: '전기이륜차 인식 개선을 위한 \'미니멀 모빌리티\' 브랜딩 전략.',
-            tags: ['Marketing', 'Branding', 'Analysis'],
+            summary: '전기이륜차 인식 개선을 위한 \'미니멀 모빌리티\' 리브랜딩 및 시각화.',
+            tags: ['Marketing', 'Branding', 'Figma'], // Analysis 대신 Figma 강조
             icon: '🛵',
 
             overview: {
-                period: '2023.00 ~ 2023.00',
+                period: '2023.00 ~ 2023.00', // 기간 수정 필요
                 team: '팀 프로젝트(4명)',
-                role: 'Marketer & Designer'
+                role: 'Main PM, 전략 기획, 디자인(100%)' // 역할 구체화
             },
-            keyResult: '🎨 부정적 인식을 뒤집는 "미니멀 모빌리티" 리브랜딩 전략 수립',
-            catchphrase: '"배달 오토바이에서 친환경 미니멀 모빌리티로"',
-            description_new: "기존 오토바이의 '시끄럽고 위험하다'는 편견을 깨기 위해, 2030 세대의 미니멀 라이프 트렌드와 결합한 새로운 브랜드 이미지를 구축했습니다.",
+            
+            // 결과: 내가 만든 컨셉과 결과물 강조
+            keyResult: '🎨 "미니멀 모빌리티" 컨셉 도출 및 앱/홍보물(Figma) 직접 제작',
+            
+            catchphrase: '"배달 오토바이의 편견을 깨다: 도심형 미니멀 모빌리티"',
+            
+            description_new: "전기이륜차의 부정적 이미지(배달/위험)를 탈피하기 위해, 2030 세대를 타겟으로 한 '미니멀 모빌리티'라는 새로운 포지셔닝을 제안하고 디자인까지 직접 수행했습니다.",
+            
             problemSolving: [
                 {
-                    title: '인사이트',
-                    keyword: 'FGI & Survey',
-                    desc: '설문조사를 통해 타겟 소비자가 친환경과 경제성(유지비 절감)에 높은 관심을 보임을 확인.'
+                    title: '데이터 분석', // '인사이트' -> '데이터 분석' (행동 강조)
+                    keyword: 'Own Survey',
+                    desc: '자체 설문조사를 직접 설계/수행하여, 소비자들이 전기이륜차를 기피하는 핵심 원인이 성능이 아닌 "배달용 오토바이"라는 낙인(Stigma) 효과임을 규명.'
                 },
                 {
-                    title: '컨셉 도출',
+                    title: '전략 수립',
                     keyword: 'Re-branding',
-                    desc: "단순 운송 수단이 아닌, 스마트하고 가벼운 이동 경험을 제공하는 '미니멀 모빌리티'로 포지셔닝."
+                    desc: '기존 오토바이의 문법을 버리고 "가볍고 스마트한 이동수단(Minimal Mobility)"으로 재정의. 타겟을 직장인(B2B/경제성)과 대학생(B2C/힙함)으로 이원화하여 공략.'
                 },
                 {
                     title: '실행',
-                    keyword: 'Design Assets',
-                    desc: 'Figma를 활용하여 직관적인 앱 UI와 감각적인 홍보 포스터 등 마케팅 에셋을 직접 제작하여 설득력 제고.'
+                    keyword: 'Visual Making',
+                    desc: '기획한 전략의 설득력을 높이기 위해 Figma를 활용하여 BSS 앱 UI, 홍보 포스터, 팜플렛 등 마케팅 에셋(Asset) 전체를 직접 제작 및 시각화.'
                 }
             ],
-            images: []
+            
+            images: [
+                './images/lg-ensol_1.jpg', // B2B/B2C 전략 구조도 or Before/After 장표
+                './images/lg-ensol_2.jpg'
+            ]
         },
 
         // 7. 시니어 인재 매칭 (Strategy)
