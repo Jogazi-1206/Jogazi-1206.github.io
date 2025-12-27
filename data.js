@@ -77,41 +77,52 @@ window.DB = {
         {
             id: 'yanolja',
             type: 'strategy',
-            title: '관광 AI 슈퍼앱 기획',
+            title: '인바운드 관광 AI 슈퍼앱 전략',
             category: '야놀자 리서치 공모전',
-            summary: '방한 관광객 페인포인트 분석 및 AI 기반 통합 여행 슈퍼앱 전략 수립.',
-            tags: ['Strategy', 'Figma', 'App Planning'],
+            summary: '파편화된 방한 관광 경험을 해결하기 위한 민관 협력(PPP) 기반의 AI 슈퍼앱 전략 수립.',
+            tags: ['Strategy', 'Figma', 'Public-Private Partnership'],
             icon: '🌏',
 
             overview: {
-                period: '2023.10 ~ 2023.11',
-                team: '팀 프로젝트(4명)',
-                role: 'PM, UX기획 (기여도 40%)'
+                period: '2023.10 ~ 2023.11', // 기간은 확인 후 수정해주세요
+                team: '팀 KHUPER (4명)',
+                role: '전략 기획, UI/UX 디자인'
             },
-            keyResult: '🏆 야놀자 리서치 공모전 [장려상] 수상 (상위 5% 선정)',
-            catchphrase: '"파편화된 한국 여행 경험을 잇는 AI 비서"',
-            description_new: "외국인 관광객이 정보 탐색부터 결제까지 단절 없이 이용 가능한 '초개인화 슈퍼앱'을 제안했습니다. 파편화된 결제 시스템을 통합하여 이탈률을 획기적으로 낮추는 전략입니다.",
+            
+            // [Key Result] 수상 여부보다, 제안서가 도출한 '구조적 해결책'을 강조
+            keyResult: '💡 공공(Visit Korea)과 민간(야놀자)의 강점을 결합한 "PPP 비즈니스 모델" 정립',
+            
+            catchphrase: '"인증·결제 장벽을 넘어, 한국 여행을 하나의 앱으로"',
+            
+            description_new: "방한 관광객이 겪는 가장 큰 어려움인 '본인 인증'과 '결제 시스템'의 장벽을 해결하기 위해, 공공 데이터와 민간 기술력을 결합한 통합 슈퍼앱 모델을 제안했습니다.",
+            
             problemSolving: [
                 {
-                    title: '문제 정의',
-                    keyword: '파편화된 경험',
-                    desc: '방한 관광객 인터뷰 결과, 앱 간 이동(지도↔결제) 시 45%가 불편을 느낌을 데이터로 확인.'
+                    title: 'Pain Point',
+                    keyword: '디지털 경험의 단절',
+                    [cite_start]desc: '시장 분석 결과, 외국인 관광객은 한국 전화번호 인증 불가로 예약/결제에 실패하고, 구글맵 대신 불친절한 로컬 앱을 써야 하는 "이중고"를 겪고 있음을 규명[cite: 188, 229].'
                 },
                 {
-                    title: '핵심 전략',
-                    keyword: 'Seamless UX',
-                    desc: "AI가 일정에 맞춰 숙소·티켓을 자동 추천하고, '인앱 원클릭 결제'가 가능한 통합 비즈니스 모델 설계."
+                    title: '전략 수립',
+                    keyword: 'PPP Ecosystem',
+                    [cite_start]desc: '공공(Visit Korea)의 데이터 신뢰성과 민간(야놀자)의 기술/플랫폼을 결합하여, 하나의 앱에서 예약부터 MaaS(교통)까지 해결하는 협력 생태계 설계[cite: 524, 527].'
                 },
                 {
-                    title: '실행',
-                    keyword: '설득력 강화',
-                    desc: 'Figma로 사용자 시나리오(User Journey)를 시각화하여, 심사위원들로부터 "실현 가능성이 높다"는 호평 획득.'
+                    title: '솔루션',
+                    keyword: 'Barrier-Free UX',
+                    [cite_start]desc: '외국인 전용 간편 결제, 알러지/비건을 위한 바코드 성분 번역, AI 맞춤 코스 추천 등 실질적 편의 기능을 Figma로 구체화하여 구현[cite: 444, 461, 304].'
                 }
             ],
+            
+            // 아까 캡처하기로 한 이미지 3장 (파일명이 맞는지 확인하세요)
             images: [
-                './images/yanolja_1.jpg', // 민관협력 구조도 (Page 24)
-                './images/yanolja_2.jpg' // AI 코스 추천 UI (Page 16)
-            ]
+                './images/yanolja_1.jpg', // P.24 구조도
+                './images/yanolja_2.jpg', // P.16 AI 코스 UI
+                './images/yanolja_3.jpg'  // P.21 결제 UI
+            ],
+            
+            // PDF 파일이 있다면 링크 연결 (선택사항)
+            link: "" 
         },
 
         // 2. 주식 예측 (Data)
