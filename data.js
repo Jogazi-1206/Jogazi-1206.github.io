@@ -84,7 +84,7 @@ window.DB = {
             icon: '🌏',
 
             overview: {
-                period: '2023.10 ~ 2023.11', 
+                period: '2024.06 ~ 2024.07', 
                 team: '팀 KHUPER (4명)',
                 role: '전략 기획, UI/UX 디자인'
             },
