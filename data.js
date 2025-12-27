@@ -165,38 +165,52 @@ window.DB = {
         {
             id: 'review-ai',
             type: 'data',
-            title: '리뷰 유용성 예측 AI',
+            title: '리뷰 유용성 예측 AI 모델',
             category: '경영과학회 AI/OR (장려상)',
-            summary: '딥러닝(CNN) 기반 배달 앱 리뷰 \'유용성\' 예측 모델 개발.',
+            summary: '딥러닝(CNN)을 활용하여 배달 앱 리뷰의 실질적 도움 여부(Usefulness)를 예측하는 모델 개발.',
             tags: ['Deep Learning', 'CNN', 'Python'],
             icon: '🤖',
 
             overview: {
-                period: '2023.00 ~ 2023.00',
+                period: '2024.09 ~ 2024.11', // 기간 수정 필요
                 team: '팀 프로젝트(3명)',
-                role: 'AI Modeling'
+                role: 'Modeling & Logic Design'
             },
-            keyResult: '🏆 경영과학회 AI/OR 공모전 [장려상] 수상',
-            catchphrase: '"단순 평점을 넘어, 진짜 도움이 되는 리뷰를 찾아내다"',
-            description_new: "기존의 최신순/평점순 정렬 방식의 한계를 극복하기 위해, 텍스트 내용을 기반으로 '유용성(Helpfulness)'을 예측하는 CNN 모델을 개발했습니다.",
+            
+            keyResult: '🏆 경영과학회 장려상 | 정확도 0.76 달성 (ML 대비 15% 성능 향상)',
+            
+            catchphrase: '"단순 별점을 넘어, 진짜 도움이 되는 리뷰를 찾아내다"',
+            
+            description_new: "기존의 정렬 방식(최신순/별점순)이 스팸성 리뷰를 걸러내지 못한다는 문제에서 출발했습니다. 텍스트의 맥락과 파생 변수를 결합한 딥러닝 모델로 리뷰의 '유용성'을 예측했습니다.",
+            
             problemSolving: [
                 {
-                    title: '문제 정의',
-                    keyword: '정보 비대칭',
-                    desc: '고객에게 실질적인 도움이 되는 리뷰가 스팸성 리뷰에 묻히는 문제를 발견하고 해결책 모색.'
+                    title: '문제 정의', // Pain Point
+                    keyword: 'Filtering Failure',
+                    desc: '기존 배달 앱의 최신순/별점순 정렬은 영양가 없는 짧은 글이나 스팸성 리뷰를 상단에 노출시켜, 사용자의 정보 탐색 비용을 높이는 문제(Pain Point) 발견.'
                 },
                 {
-                    title: '모델링',
-                    keyword: 'CNN Architecture',
-                    desc: '한국어 리뷰 텍스트를 임베딩(Word2Vec)하고 CNN 알고리즘에 학습시켜 유용성 점수를 예측.'
+                    title: '리서치', // Research & Hypothesis
+                    keyword: 'Strategic Pivot',
+                    desc: '초기 단순 텍스트 분류 시도 실패 후, 문헌 조사를 통해 리뷰의 가치를 판단하는 핵심 지표가 "유용성(Helpfulness)"임을 도출하고 예측 모델로 방향 전환(Pivot).'
                 },
                 {
-                    title: '성과',
-                    keyword: '성능 향상',
-                    desc: '기존 머신러닝 모델 대비 정확도와 정밀도가 향상됨을 확인하며 AI의 비즈니스 적용 가능성 입증.'
+                    title: '모델링', // Modeling
+                    keyword: 'Hybrid CNN',
+                    desc: '텍스트 임베딩(Word2Vec)을 CNN에 학습시키는 동시에, "가독성, 주관성, 감성 점수"라는 3가지 정량적 파생 변수를 결합하여 모델의 예측력을 극대화.'
+                },
+                {
+                    title: '검증', // Verification
+                    keyword: 'Quantitative Result',
+                    desc: '동일 데이터셋 기준 머신러닝(SVM, RF) 대비 정확도(+0.15)와 정밀도(+0.14)가 대폭 향상된 0.76을 기록하며 딥러닝 도입의 타당성 입증.'
                 }
             ],
-            images: []
+            
+            images: [
+                './images/review-ai_1.jpg', // 문제 상황 도식 (기존 정렬의 문제)
+                './images/review-ai_2.jpg', // CNN 모델 구조도
+                './images/review-ai_3.jpg'  // 성능 비교 그래프
+            ]
         },
 
         // 4. 파인다이닝 분석 (Data/Strategy)
