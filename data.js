@@ -108,7 +108,10 @@ window.DB = {
                     desc: 'Figma로 사용자 시나리오(User Journey)를 시각화하여, 심사위원들로부터 "실현 가능성이 높다"는 호평 획득.'
                 }
             ],
-            images: [] // 예: ['./images/yanolja_main.png']
+            images: [
+                './images/yanolja_1.jpg', // 민관협력 구조도 (Page 24)
+                './images/yanolja_2.jpg' // AI 코스 추천 UI (Page 16)
+            ]
         },
 
         // 2. 주식 예측 (Data)
