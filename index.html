@@ -97,17 +97,17 @@
         import { createRoot } from 'react-dom/client';
         import { Moon, Sun, Github, Mail, Linkedin, ExternalLink, ChevronDown, Code, Briefcase, User, Award, BookOpen, PenTool, Send, X, Loader2, CheckCircle2, ArrowRight, Calendar, Building, TrendingUp, Layout, Database, School, FileText, Download, Newspaper, Users, Target, Trophy } from 'lucide-react';
 
-        // --- [NEW] 컴포넌트: 통합 인트로 섹션 (Hero + About) - 수정됨 ---
+        // --- [NEW] 컴포넌트: 통합 인트로 섹션 (Hero + About) - 수정됨 (소개글 삭제, 이름/생년월일 추가) ---
         const HeroSection = ({ setIsContactOpen }) => {
             return (
                 <section id="home" className="pt-32 pb-20 px-6 max-w-5xl mx-auto">
                     <div className="flex flex-col md:flex-row gap-12 items-start justify-between reveal active">
                         
-                        {/* [Left] 프로필 사진 & 스킬 (왼쪽으로 이동) */}
+                        {/* [Left] 프로필 사진 & 정보 */}
                         <div className="w-full md:w-80 shrink-0">
                             <div className="bg-white p-4 rounded-2xl shadow-lg border border-slate-100">
-                                {/* 사진: 기교 없이 정직하게 */}
-                                <div className="aspect-[3/4] rounded-xl overflow-hidden mb-6 bg-slate-100 relative">
+                                {/* 사진 */}
+                                <div className="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-slate-100 relative">
                                     <img 
                                         src="./images/profile.jpg" 
                                         alt="Wonjong Jo" 
@@ -115,12 +115,17 @@
                                         onError={(e) => { e.target.style.display = 'none'; e.target.parentNode.className += " flex items-center justify-center"; e.target.parentNode.innerHTML = '<span class="text-6xl">👨‍💼</span>'; }}
                                     />
                                 </div>
+
+                                {/* [NEW] 이름 & 생년월일 */}
+                                <div className="text-center mb-6 pb-4 border-b border-slate-50">
+                                    <h2 className="text-2xl font-bold text-navy-900">조원종</h2>
+                                    <p className="text-sm text-slate-500 font-mono mt-1">2001.12.06</p>
+                                </div>
                                 
                                 <div className="space-y-4">
                                     <div>
                                         <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Main Skills</h3>
-                                        <div className="flex flex-wrap gap-2">
-                                            {/* 스킬셋 업데이트 */}
+                                        <div className="flex flex-wrap gap-2 justify-center">
                                             {['Excel', 'Python', 'SQL', 'Strategy', 'Research'].map(skill => (
                                                 <span key={skill} className="px-2 py-1 bg-slate-100 text-slate-700 text-[11px] font-bold rounded border border-slate-200">
                                                     {skill}
@@ -139,10 +144,10 @@
                             </div>
                         </div>
 
-                        {/* [Right] 텍스트 & 타임라인 (오른쪽으로 이동) */}
+                        {/* [Right] 텍스트 & 타임라인 */}
                         <div className="flex-1 space-y-8">
                             
-                            {/* 1. Headline */}
+                            {/* 1. Headline (소개글 삭제됨) */}
                             <div className="space-y-4">
                                 <div className="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 font-bold text-xs tracking-wide uppercase border border-brand-100">
                                     Tech-Strategist
@@ -151,14 +156,10 @@
                                     데이터로 증명하고,<br />
                                     <span className="text-brand-600">전략</span>으로 해결합니다.
                                 </h1>
-                                <p className="text-lg text-slate-600 leading-relaxed max-w-xl">
-                                    안녕하세요, <strong>조원종</strong>입니다.<br/>
-                                    경영학의 <strong>[비즈니스 감각]</strong>과 엔지니어링의 <strong>[데이터 기술]</strong>을 결합하여,
-                                    모호한 문제를 명확한 솔루션으로 바꾸는 과정을 즐깁니다.
-                                </p>
+                                {/* 줄글 삭제됨 */}
                             </div>
 
-                            {/* 2. Career Path (타임라인 수정됨) */}
+                            {/* 2. Career Path */}
                             <div className="pt-4">
                                 <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-6">Growth Path</h3>
                                 <div className="space-y-8 border-l-2 border-slate-100 pl-6 ml-2 relative">
@@ -702,4 +703,5 @@
     </script>
 </body>
 </html>
+
 
