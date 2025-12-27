@@ -3,34 +3,38 @@ window.DB = {
         {
             id: 'crevisse',
             company: 'Crevisse Partners',
-            role: '사업개발팀 인턴 (B2B SaaS)',
-            summary: '신규 데이터 서비스 기획부터 개발, 배포, 전략 수립까지 End-to-End 수행.',
-            tags: ['Python', 'SQL', 'Apps Script', 'Strategy'],
+            role: 'SaaS 사업개발 인턴',
+            summary: '신규 비즈니스 전략 수립 및 사내 데이터 인프라 구축 총괄.',
+            tags: ['Snowflake', 'Streamlit', 'SaaS Strategy', 'Salesforce'],
             
-            // [New Structure]
             overview: {
                 period: '2025.07 — 2025.12',
-                team: 'Business Dev Team',
-                role: 'Intern (Full-stack Support)'
+                team: 'Digital Intelligence',
+                role: 'Business Development Intern'
             },
-            keyResult: '🚀 14만 건 데이터 정제 파이프라인 구축 및 사내 업무 100% 자동화',
-            catchphrase: '"기획부터 개발까지, B2B SaaS의 A to Z를 주도하다"',
-            description_new: '신규 데이터 비즈니스의 런칭 과정을 함께하며, 기술적 문제 해결(Engineering)과 사업적 의사결정(Strategy)을 동시에 경험했습니다.',
+            
+            // 핵심 성과: Snowflake 이관과 전략 수립을 메인으로
+            keyResult: '🚀 Spreadsheet → Snowflake 데이터 이관 및 실시간 매출 대시보드 구축',
+            
+            catchphrase: '"데이터 파이프라인 구축부터 신규 사업 전략까지, A to Z를 경험하다"',
+            
+            description_new: "SaaS 비즈니스의 성장을 위해 기술과 사업 양쪽에서 문제를 해결했습니다. 수동으로 관리되던 매출 데이터를 Snowflake로 이관하여 데이터 인프라를 구축했고, 신규 비즈니스 모델(DQM)과 업무 자동화 프로젝트를 주도하여 매출과 효율을 동시에 잡았습니다.",
+            
             problemSolving: [
                 {
-                    title: 'DQM 개발',
-                    keyword: '데이터 신뢰성 확보',
-                    desc: '14만 건의 고객 데이터 정제를 위해 Python 파이프라인 아키텍처를 설계하고, TDD를 도입하여 10만 건 이상의 오류 데이터를 수정.'
-                },
-                {
-                    title: 'DX 혁신',
-                    keyword: '업무 자동화',
-                    desc: 'Google Apps Script로 보안 웹앱을 구현하여, 수동으로 처리하던 스팸 신고 대응 프로세스를 100% 자동화.'
-                },
-                {
-                    title: '데이터 분석',
+                    title: 'Data Ops', // Snowflake 내용 통합
                     keyword: 'Snowflake & Streamlit',
-                    desc: 'Snowflake 기반 ELT 파이프라인을 구축하고, Streamlit으로 실시간 매출 대시보드를 개발하여 의사결정 데이터 제공.'
+                    desc: '기존 구글 시트 기반의 매출 데이터를 Snowflake로 이관하여 대용량 처리 기반을 마련. Python Streamlit으로 실시간 매출 대시보드를 직접 개발하여, 데이터 집계 시간을 단축하고 휴먼 에러를 0%로 제거.'
+                },
+                {
+                    title: 'SaaS Strategy', // 리서치 & 전략
+                    keyword: 'Salesforce & Market Research',
+                    desc: 'Salesforce(Agentforce) 도입을 위한 PoC를 수행하여 젠데스크 데이터 마이그레이션 전략을 수립. 또한, 레거시 제품 고객의 전환(Migration) 유도를 위해 글로벌 SaaS 선도 기업들의 GTM 전략을 벤치마킹하여 제안.'
+                },
+                {
+                    title: 'Key Projects', // DQM & KISA 연결 고리
+                    keyword: 'See Project Section',
+                    desc: '회사의 신규 수익원이 된 [데이터 품질 관리(DQM) 솔루션]과 업무 시간을 90% 단축한 [KISA 스팸 신고 자동화] 프로젝트를 리딩했습니다. (상세 내용은 Project 섹션 참조)'
                 }
             ],
             images: [] 
@@ -76,7 +80,86 @@ window.DB = {
         },
 
     projects: [
-        // 1. 야놀자 (Strategy)
+        // [New 1] 데이터 품질 관리 (DQM) - 가장 강력한 프로젝트
+        {
+            id: 'crevisse-dqm',
+            type: 'data', // 혹은 strategy
+            title: '데이터 품질 관리(DQM) 솔루션',
+            category: 'Crevisse Partners',
+            summary: '고객사 데이터 진단/정제/보고서 생성을 위한 Python 기반 DQM 솔루션 개발.',
+            tags: ['Python', 'TDD', 'Product Management', 'Revenue Generation'],
+            icon: '💎',
+
+            overview: {
+                period: '2025.08 ~ 2025.11',
+                team: 'Business Dev (PM/Dev 1인)',
+                role: '기획, 개발, 고객 커뮤니케이션'
+            },
+            
+            keyResult: '💰 신규 비즈니스 모델 발굴 및 솔루션 상용화로 실제 매출 발생',
+            catchphrase: '"비전공자가 만든 소프트웨어: 기획부터 개발, 수익 창출까지"',
+            description_new: "고객사의 데이터 웨어하우스 도입 니즈를 포착하여, 선행 단계인 '데이터 품질 관리'를 신규 비즈니스 모델로 제안했습니다. 단순 컨설팅에 그치지 않고, 진단부터 정제, 보고서 생성까지 전 과정을 자동화하는 Python 솔루션을 직접 개발하여 납품했습니다.",
+            
+            problemSolving: [
+                {
+                    title: '기획', 
+                    keyword: 'Biz Model',
+                    desc: '국내외 선도 기업 리서치를 통해 6가지 핵심 진단 필드를 정의하고, [진단 → 자동 정제 → 외부 데이터 매칭]으로 이어지는 3단계 품질 관리 아키텍처 설계.'
+                },
+                {
+                    title: '개발', 
+                    keyword: 'Python & TDD',
+                    desc: 'AI(Vibe Coding)를 활용해 개발하되, 비전공자의 한계를 극복하고자 100개 이상의 테스트 케이스(TDD)를 작성하여 코드의 무결성 검증. V1(개별 스크립트)에서 V2(통합 모듈)로 고도화.'
+                },
+                {
+                    title: '성과', 
+                    keyword: 'Report Automation',
+                    desc: '20페이지 분량의 품질 진단 보고서 생성을 코드로 자동화하여 작업 시간을 획기적으로 단축. 성공적인 PoC를 통해 고객사 계약 체결 및 실제 매출 확보.'
+                }
+            ],
+            images: [] // DQM 아키텍처나 보고서 샘플 이미지 넣으면 Best
+        },
+
+        // [New 2] KISA 스팸 신고 자동화
+        {
+            id: 'crevisse-kisa',
+            type: 'data',
+            title: 'KISA 스팸 신고 대응 자동화',
+            category: 'Crevisse Partners',
+            summary: 'Google Apps Script와 Web App을 활용한 스팸 신고 처리 프로세스 100% 자동화.',
+            tags: ['Google Apps Script', 'Web App', 'Automation', 'Process Innovation'],
+            icon: '⚡',
+
+            overview: {
+                period: '2025.10 ~ 2025.12',
+                team: 'Business Dev',
+                role: '프로세스 설계 및 개발'
+            },
+            
+            keyResult: '⚙️ 수동 소명 업무 제거 및 고객사 전용 소명 Web App 구축',
+            catchphrase: '"반복되는 비효율을 코드로 삭제하다: 사내 DX 혁신"',
+            description_new: "매주 반복되는 스팸 신고 처리 업무(메일 수신 → 고객사 전달 → 소명 취합 → 회신)의 비효율을 해결하기 위해 시작했습니다. 단순 스크립트를 넘어, 고객사가 직접 소명할 수 있는 웹 애플리케이션(UI)까지 구현하여 담당자의 개입을 0으로 만들었습니다.",
+            
+            problemSolving: [
+                {
+                    title: '설계', 
+                    keyword: 'Pain Point',
+                    desc: '메일 수신부터 고객사 안내까지 4단계의 수동 프로세스를 분석하여, 사람의 개입 없이 데이터가 흐를 수 있는 완전 자동화 파이프라인 설계.'
+                },
+                {
+                    title: '개발', 
+                    keyword: 'GAS & Parsing',
+                    desc: 'Google Apps Script로 KISA 신고 메일을 파싱하여 DB(Spreadsheet)에 적재하고, 매주 월요일 고객사별 내역을 API로 자동 발송하는 로직 구현.'
+                },
+                {
+                    title: '구현', 
+                    keyword: 'Web App UI',
+                    desc: '고객사가 메일 회신 대신 직접 접속하여 소명 내용을 입력할 수 있는 [고객 전용 Web App]을 개발. 입력 데이터가 즉시 DB에 동기화되도록 하여 커뮤니케이션 비용 제로화.'
+                }
+            ],
+            images: [] // 웹앱 UI 캡처나 프로세스 흐름도 넣으면 Best
+        },
+        // 3. 야놀자 (Strategy)
         {
             id: 'yanolja',
             type: 'strategy',
@@ -126,7 +209,7 @@ window.DB = {
             link: "" 
         },
 
-        // 2. 주식 예측 (Data)
+        // 4. 주식 예측 (Data)
         {
             id: 'stock-trading',
             type: 'data',
@@ -175,7 +258,7 @@ window.DB = {
             ]
         },
 
-        // 3. 리뷰 유용성 예측 (Data)
+        // 5. 리뷰 유용성 예측 (Data)
         {
             id: 'review-ai',
             type: 'data',
@@ -227,7 +310,7 @@ window.DB = {
             ]
         },
 
-        // 4. 파인다이닝 분석 (Data/Strategy)
+        // 6. 파인다이닝 분석 (Data/Strategy)
         {
             id: 'kmac',
             type: 'data',
@@ -275,7 +358,7 @@ window.DB = {
             ]
         },
 
-        // 5. 소상공인 구독 모델 (Data/Consulting)
+        // 7. 소상공인 구독 모델 (Data/Consulting)
         {
             id: 'subscription',
             type: 'data',
@@ -323,7 +406,7 @@ window.DB = {
                 './images/subscription_3.jpg'  // 구독 서비스 제안 장표 or 군집 분석 결과
             ]
         },
-        // 6. 전기이륜차 마케팅 (Strategy)
+        // 8. 전기이륜차 마케팅 (Strategy)
         {
             id: 'lg-ensol',
             type: 'strategy',
@@ -370,7 +453,7 @@ window.DB = {
             ]
         },
 
-        // 7. 시니어 인재 매칭 (Strategy)
+        // 9. 시니어 인재 매칭 (Strategy)
         {
             id: 'fastcampus',
             type: 'strategy',
@@ -417,7 +500,7 @@ window.DB = {
                 './images/fastcampus_3.jpg'  // 합성 데이터 생성 및 학습 흐름도
             ]
         },
-        // 8. BACS 학회 (School)
+        // 10. BACS 학회 (School)
         {
             id: 'bacs',
             type: 'school',
@@ -471,7 +554,7 @@ window.DB = {
             ]
         },
 
-        // 9. 아카데미쿠스 (School)
+        // 11. 아카데미쿠스 (School)
         {
             id: 'academicus',
             type: 'school',
@@ -519,7 +602,7 @@ window.DB = {
                 './images/academicus_3.jpg'  // Figma 프로토타입 화면 (보험 추천 UI)
             ]
         },
-        // 10. 교내 ESG 경진대회 (School)
+        // 12. 교내 ESG 경진대회 (School)
         {
             id: 'esg-contest-school',
             type: 'school',
