@@ -117,8 +117,7 @@ window.DB = {
             // 아까 캡처하기로 한 이미지 3장 (파일명이 맞는지 확인하세요)
             images: [
                 './images/yanolja_1.jpg', // P.24 구조도
-                './images/yanolja_2.jpg', // P.16 AI 코스 UI
-                './images/yanolja_3.jpg'  // P.21 결제 UI
+                './images/yanolja_2.jpg' // P.16 AI 코스 UI
             ],
             
             // PDF 파일이 있다면 링크 연결 (선택사항)
