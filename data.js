@@ -265,40 +265,50 @@ window.DB = {
         {
             id: 'subscription',
             type: 'data',
-            title: '소상공인 구독 모델 제안',
-            category: '소상공인 컨설팅 (수상)',
-            summary: '리뷰 데이터 군집 분석을 통해 오프라인 매장의 정기구독 수요 발굴.',
-            tags: ['Python', 'Clustering', 'Consulting'],
+            title: '소상공인 매출 증대 구독 전략',
+            category: '소상공인 컨설팅 프로젝트',
+            summary: '오프라인 상권의 한계를 극복하기 위해 리뷰 데이터를 분석하여 "정기 구독" 비즈니스 모델로 전환 제안.',
+            tags: ['Text Mining', 'Clustering', 'Business Pivot'],
             icon: '🏪',
 
             overview: {
-                period: '2023.00 ~ 2023.00',
-                team: '팀 프로젝트(4명)',
-                role: 'Data Analysis'
+                period: '2024.10 ~ 2023.11', // 기간 수정 필요
+                team: '팀 프로젝트(2명)',
+                role: 'Data Analyst (데이터 분석 총괄)'
             },
-            keyResult: '🏆 소상공인 컨설팅 공모전 [수상] 및 실현 가능성 입증',
-            catchphrase: '"오프라인 매장의 한계를 넘는 정기구독 비즈니스 모델"',
-            description_new: "일회성 방문에 그치는 오프라인 매장의 한계를 극복하기 위해, 충성 고객을 확보할 수 있는 '데이터 기반 온-오프라인 연계 구독 모델'을 기획했습니다.",
+            
+            // 결과: 수상보다 더 중요한 '비즈니스 문제 해결(BM 전환)'을 강조
+            keyResult: '💡 "오프라인의 한계 극복": 텍스트 마이닝으로 잠재된 "구독 수요" 발견 및 BM 전환',
+            
+            catchphrase: '"죽은 상권의 건강 주스 가게, 데이터로 구독 경제를 입히다"',
+            
+            description_new: "유동인구가 적은 불리한 입지 조건으로 고전하던 건강 주스 매장의 매출 증대를 위해, 리뷰 텍스트 속에 숨겨진 '고객의 진짜 니즈'를 발굴하고 온라인 정기 구독 모델을 제안했습니다.",
+            
             problemSolving: [
                 {
-                    title: '진단',
-                    keyword: 'Pain Point',
-                    desc: '텍스트 마이닝을 통해 소비자의 불만이 맛이 아닌 불규칙한 운영 시간에 있음을 발견.'
+                    title: '진단', // Diagnosis
+                    keyword: 'Location Risk',
+                    desc: '상권 데이터 분석 결과, 타 밀집 지역 대비 유동인구가 현저히 적어 "오프라인 방문객 유치"만으로는 성장에 한계가 있음을 냉철하게 진단.'
                 },
                 {
-                    title: '검증',
-                    keyword: '수요 예측',
-                    desc: 'K-Means 군집 분석을 통해 정기 구독 서비스에 지불 용의가 있는 잠재 고객군을 정량적으로 파악.'
+                    title: '발굴', // Discovery
+                    keyword: 'Text Mining',
+                    desc: '3개 채널의 고객 리뷰를 분석하여, 특정 메뉴(프룬주스)에 대한 충성도와 "매일 마시고 싶다(정기 구독)"는 반복된 잠재 니즈를 텍스트 마이닝으로 포착.'
                 },
                 {
-                    title: '솔루션',
-                    keyword: 'BM 설계',
-                    desc: '안정적인 매출 확보가 가능한 월 정기 구독 모델(멤버십)을 구체화하여 제안.'
+                    title: '검증', // Technical Growth
+                    keyword: 'Clustering & Learning',
+                    desc: '비전공자의 기술적 한계를 극복하기 위해 생성형 AI와 관련 강의로 군집 분석(Clustering)을 독학. 고객군을 정량적으로 분류하여 구독 서비스의 타당성을 입증.'
                 }
             ],
-            images: []
+            
+            // 이미지 3장 준비 가이드 참고
+            images: [
+                './images/subscription_1.jpg', // 상권 분석 지도 (위치의 불리함 시각화)
+                './images/subscription_2.jpg', // 리뷰 워드클라우드 ('구독' 키워드 강조)
+                './images/subscription_3.jpg'  // 구독 서비스 제안 장표 or 군집 분석 결과
+            ]
         },
-
         // 6. 전기이륜차 마케팅 (Strategy)
         {
             id: 'lg-ensol',
