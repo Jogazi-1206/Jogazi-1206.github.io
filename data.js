@@ -461,40 +461,50 @@ window.DB = {
         {
             id: 'academicus',
             type: 'school',
-            title: '아카데미쿠스 공모전',
-            category: 'Academic Contest (3등)',
-            summary: 'CBDC 도입 시나리오 분석 및 보험 추천 솔루션 기획.',
-            tags: ['Fintech', 'Scenario', 'Planning'],
+            title: 'CBDC 기반 보험 혁신 전략',
+            category: '아카데미쿠스 학술 공모전 (3등)',
+            summary: 'CBDC 완전 도입 시나리오 분석을 통해, 결제 데이터 기반의 초개인화 보험 추천 솔루션 제안.',
+            tags: ['Fintech', 'CBDC', 'Data Strategy', 'Figma'],
             icon: '🥉',
 
             overview: {
-                period: '2023.00 ~ 2023.00',
-                team: '팀 프로젝트(5명)',
-                role: 'Scenario Planner'
+                period: '2024.09 ~ 2024.11', // 기간 수정 필요
+                team: '팀 프로젝트(4명)',
+                role: 'Strategic Planning & UX Design'
             },
-            keyResult: '🥉 교내 학술 공모전 [3등] 수상',
-            catchphrase: '"디지털 화폐(CBDC) 시대, 보험 산업의 기회를 찾다"',
-            description_new: "가까운 미래에 도래할 CBDC(중앙은행 디지털 화폐) 환경을 가정하고, 결제 데이터의 투명성을 활용한 초개인화 보험 추천 모델을 제안했습니다.",
+            
+            // 결과: 미래 기술(CBDC)을 실무적 비즈니스 기회(보험)로 연결했음을 강조
+            keyResult: '🥉 교내 학술 공모전 3등 | CBDC 데이터 가시성을 활용한 "초개인화 보험 추천" BM 수립',
+            
+            catchphrase: '"금융의 미래 CBDC, 투명해진 결제 데이터로 보험의 사각지대를 없애다"',
+            
+            description_new: "중앙은행 디지털 화폐(CBDC)가 상용화될 미래 시나리오를 분석했습니다. 모든 결제 데이터가 투명해지는 변화 속에서, 정보 비대칭 문제를 겪는 보험 산업(카카오페이 손해보험)에 '데이터 기반 맞춤형 추천 솔루션'이라는 새로운 기회를 제안했습니다.",
+            
             problemSolving: [
                 {
-                    title: '시나리오',
+                    title: '시나리오 분석', // Scenario Planning
                     keyword: 'Future Landscape',
-                    desc: 'CBDC 완전 도입 시 발생할 금융 데이터의 흐름 변화를 시나리오 기법으로 예측.'
+                    desc: 'CBDC "완전 도입" 시나리오를 설정하고, 금융 흐름의 투명성이 가져올 변화를 예측. 결제 데이터의 가시화가 보험업계의 난제인 "정보 비대칭"을 해결할 핵심 열쇠임을 도출.'
                 },
                 {
-                    title: '솔루션',
+                    title: '솔루션', // Business Model
                     keyword: 'Hyper-personalization',
-                    desc: '마이데이터와 결제 내역을 결합하여, 고객 라이프스타일에 딱 맞는 보험을 실시간 추천하는 서비스 기획.'
+                    desc: '카카오페이 손해보험을 타겟으로, CBDC 결제 데이터와 마이데이터를 결합한 딥러닝 추천 알고리즘을 기획. 고객의 소비/지출 패턴을 분석해 최적의 보험 상품을 자동 매칭하는 시스템 설계.'
                 },
                 {
-                    title: '구체화',
-                    keyword: 'Prototyping',
-                    desc: '카카오페이손해보험을 타겟으로 설정하고, Figma로 직관적인 UI 프로토타입을 제작하여 설득력 확보.'
+                    title: '구체화', // Prototyping
+                    keyword: 'Figma UX',
+                    desc: '금융 앱(토스)을 벤치마킹하여, 어려운 보험 상품을 직관적으로 보여주는 UI/UX를 Figma로 프로토타이핑하여 제안서의 설득력을 시각적으로 강화.'
                 }
             ],
-            images: []
+            
+            // 이미지 3장 준비 가이드 참고
+            images: [
+                './images/academicus_1.jpg', // CBDC 도입 시나리오 구조도 (흐름도)
+                './images/academicus_2.jpg', // 데이터 기반 보험 추천 BM 구조도
+                './images/academicus_3.jpg'  // Figma 프로토타입 화면 (보험 추천 UI)
+            ]
         },
-
         // 10. 교내 ESG 경진대회 (School)
         {
             id: 'esg-contest-school',
@@ -506,7 +516,7 @@ window.DB = {
             icon: '🏫',
 
             overview: {
-                period: '2023.00 ~ 2023.00',
+                period: '2023.10 ~ 2023.12',
                 team: '팀 프로젝트(4명)',
                 role: 'Idea Proposal'
             },
