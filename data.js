@@ -38,39 +38,42 @@ window.DB = {
         {
             id: 'sustinvest',
             company: 'Sustinvest',
-            role: 'ESG 데이터 리서처 (인턴)',
-            summary: '상장사 ESG 데이터 구축 및 업무 프로세스 효율화.',
-            tags: ['Data Analysis', 'Web Crawling', 'ESG Research'],
+            role: 'ESG 리서치 & 데이터 인턴',
+            summary: '상장사 ESG 데이터 구축 자동화 및 산업별 전략 리서치 수행.',
+            tags: ['ESG Analysis', 'Python', 'Web Crawling', 'Strategic Research'],
 
-            // [New Structure]
             overview: {
-                period: '2025.04 — 2025.06',
-                team: 'Research Team',
+                period: '2025.04 — 2025.05',
+                team: 'Research & Data 본부',
                 role: 'Research Intern'
             },
-            keyResult: '⚡ Python 크롤러 도입으로 단순 반복 업무 시간 80% 단축',
-            catchphrase: '"데이터의 정합성을 지키며 프로세스를 혁신하다"',
-            description_new: '150개 상장사의 ESG 데이터를 분석하고 검증하는 과정에서, 비효율적인 수작업 방식을 기술로 개선했습니다.',
+            
+            // 단순 데이터 입력이 아니라, '자동화'와 '전략 리서치'까지 확장했음을 강조
+            keyResult: '⚡ 13,500건 데이터 구축 및 Python 자동화, 전략 리서치 참여',
+            
+            catchphrase: '"단순 수집을 넘어, 프로세스를 혁신하고 인사이트를 더하다"',
+            
+            description_new: "초기엔 ESG 데이터 구축 업무로 시작했으나, 업무 효율화와 데이터 정합성 개선 성과를 인정받아 심화 업무까지 수행 범위를 주도적으로 확장했습니다.",
+            
             problemSolving: [
                 {
-                    title: 'DB 구축',
-                    keyword: '정합성 확보',
-                    desc: '150개사 대상 13,500건의 방대한 정량/정성 ESG 데이터베이스를 구축하며 데이터 무결성 검증 수행.'
+                    title: '데이터 구축', // Foundation
+                    keyword: 'Data Integrity',
+                    desc: '100개 상장사의 S/G 10,000건 데이터를 수집, DART 공시와 교차 검증하여 결함 없는 ESG 데이터베이스 구축 및 클렌징 진행'
                 },
                 {
-                    title: '자동화',
-                    keyword: 'Web Crawling',
-                    desc: 'Python(Selenium) 웹 크롤러를 직접 설계 및 구현하여, 반복적인 인증서 수집 업무를 자동화하고 휴먼 에러 제거.'
+                    title: '업무 혁신', // Innovation (Tech)
+                    keyword: 'Python & Codebook',
+                    desc: '반복되는 인증서 수집 업무를 Python 크롤러로 자동화 설계하고, 지표별 빈출 키워드를 분석해 코드북(가이드라인)을 개선하여 팀 전체 효율성 증대.'
                 },
                 {
-                    title: '프로세스',
-                    keyword: '매뉴얼 개선',
-                    desc: '데이터 입력 오류 패턴을 분석하여 코드북 및 핸드북 개선안을 제안하고 팀 내 표준으로 채택됨.'
+                    title: '전략 리서치', // Advanced Strategy (Expansion)
+                    keyword: 'Insight & Project',
+                    desc: '수출입은행 GP 선정 기준 관련 해외 동향 리서치, 4대 핵심 산업 벤치마킹 등 리서치 과제에 추가 투입되어 전략적 인사이트 제공.'
                 }
             ],
             images: []
         },
-    ],
 
     projects: [
         // 1. 야놀자 (Strategy)
