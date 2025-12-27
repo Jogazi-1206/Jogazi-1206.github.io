@@ -203,38 +203,48 @@ window.DB = {
         {
             id: 'kmac',
             type: 'data',
-            title: '파인다이닝 리뷰 분석',
+            title: '파인다이닝 리뷰 분석 전략',
             category: 'KMAC 경영혁신 공모전',
-            summary: '리뷰 데이터 분석을 통해 소비자 특성별 세부 전략 도출.',
-            tags: ['Data Analysis', 'NLP', 'Strategy'],
+            summary: '리뷰 데이터의 텍스트 마이닝(BERTopic)을 통해 파인다이닝의 핵심 성공 요인을 규명하고 차별화 전략 도출.',
+            tags: ['Text Mining', 'BERTopic', 'Clustering'],
             icon: '🍽️',
 
             overview: {
-                period: '2022.00 ~ 2022.00',
-                team: '팀 프로젝트(3명)',
-                role: 'Data Analysis & Strategy'
+                period: '2024.08 ~ 2024.10', // 기간 수정 필요
+                team: '팀 프로젝트(2명)',
+                role: 'Main Data Analyst (전처리, 모델링)'
             },
-            keyResult: '💡 텍스트 마이닝으로 고객 경험(CX)의 핵심 요인을 정량화',
-            catchphrase: '"데이터로 증명한 맛과 분위기의 가치 차이"',
-            description_new: "파인다이닝과 일반 식당의 리뷰 데이터를 비교 분석하여, 고객이 기대하는 경험의 차이를 규명하고 맞춤형 마케팅 전략을 제안했습니다.",
+            
+            keyResult: '💡 텍스트 마이닝으로 "맛"과 "분위기"의 가치 차이를 정량화하여 4가지 맞춤 전략 도출',
+            
+            catchphrase: '"경험을 팝니다: 파인다이닝과 일반 식당의 결정적 차이"',
+            
+            description_new: "초기 기획 단계에서 데이터 부족 문제를 발견하고 빠르게 주제를 전환(Pivot)하는 결단력을 발휘했습니다. 오픈 리뷰 데이터를 활용하여, 파인다이닝 소비자는 '맛'보다 '경험과 분위기'에 민감하다는 사실을 데이터로 증명했습니다.",
+            
             problemSolving: [
                 {
-                    title: '분석',
-                    keyword: 'BERTopic',
-                    desc: '오픈소스 리뷰 데이터를 수집하고 토픽 모델링을 수행하여 각 그룹의 핵심 키워드(맛 vs 분위기/서비스) 추출.'
+                    title: 'Agile Pivot',
+                    keyword: '데이터 검증',
+                    desc: '초기 주제(스타트업 평가)의 데이터 확보 불가능성을 빠르게 판단하고, 오픈 데이터 활용 전략으로 신속하게 선회하여 프로젝트 완주.'
                 },
                 {
-                    title: '세분화',
-                    keyword: 'Clustering',
-                    desc: '소비자를 성향에 따라 4개 군집으로 나누어, 타겟별로 차별화된 소구 포인트(Selling Point) 도출.'
+                    title: '분석 기술',
+                    keyword: 'BERTopic & NLP',
+                    desc: '딥러닝 기반 토픽 모델링(BERTopic)과 감성 분석을 수행하여, 일반 식당은 "맛/친절"이, 파인다이닝은 "분위기/경험"이 핵심 키워드임을 도출.'
                 },
                 {
-                    title: '제안',
-                    keyword: '맞춤 전략',
-                    desc: '단순 할인이 아닌 경험 중심의 마케팅 전략을 수립하여 경영 혁신 아이디어로 제안.'
+                    title: '전략 도출',
+                    keyword: 'Segmentation',
+                    desc: '소비자 특성에 따라 4개의 군집(Cluster)으로 세분화하고, 각 타겟의 니즈(가성비 vs 가심비 등)에 맞춘 구체적인 마케팅 전략 수립.'
                 }
             ],
-            images: []
+            
+            // 이미지 3장 준비 가이드 참고
+            images: [
+                './images/kmac_1.jpg', // 분석 프로세스 or 피벗 과정 도식화
+                './images/kmac_2.jpg', // 워드클라우드 or 토픽 모델링 결과 그래프
+                './images/kmac_3.jpg'  // 4개 군집별 전략 장표
+            ]
         },
 
         // 5. 소상공인 구독 모델 (Data/Consulting)
@@ -286,8 +296,8 @@ window.DB = {
             icon: '🛵',
 
             overview: {
-                period: '2023.00 ~ 2023.00', // 기간 수정 필요
-                team: '팀 프로젝트(4명)',
+                period: '2024.07 ~ 2024.08', // 기간 수정 필요
+                team: '팀 프로젝트(2명)',
                 role: 'Main PM, 전략 기획, 디자인(100%)' // 역할 구체화
             },
             
