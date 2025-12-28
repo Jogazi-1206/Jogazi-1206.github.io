@@ -92,7 +92,7 @@ window.DB = {
 
             overview: {
                 period: '2025.08 ~ 2025.11',
-                team: 'Business Dev (PM/Dev 1인)',
+                team: 'Business Dev',
                 role: '기획, 개발, 고객 커뮤니케이션'
             },
             
@@ -131,7 +131,7 @@ window.DB = {
             icon: '⚡',
 
             overview: {
-                period: '2025.09 ~ 2025.10',
+                period: '2025.10 ~ 2025.12',
                 team: 'Business Dev (개인 프로젝트)',
                 role: '프로세스 설계 및 개발'
             },
