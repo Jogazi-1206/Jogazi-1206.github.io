@@ -37,7 +37,7 @@ window.DB = {
                 }
             ],
             // [수정됨] 따옴표 누락 수정
-            images: ['./images/crevisse-dqm.jpg'] 
+            images: [] 
         },
         {
             id: 'sustinvest',
@@ -117,7 +117,7 @@ window.DB = {
                     desc: '20페이지 분량의 품질 진단 보고서 생성을 코드로 자동화하여 작업 시간을 획기적으로 단축. 성공적인 PoC를 통해 고객사 계약 체결 및 실제 매출 확보.'
                 }
             ],
-            images: [] 
+            images: ['./images/crevisse-dqm.jpg'] 
         },
 
         // [New 2] KISA 스팸 신고 자동화
@@ -157,7 +157,7 @@ window.DB = {
                     desc: '고객사가 메일 회신 대신 직접 접속하여 소명 내용을 입력할 수 있는 [고객 전용 Web App]을 개발. 입력 데이터가 즉시 DB에 동기화되도록 하여 커뮤니케이션 비용 제로화.'
                 }
             ],
-            images: [] 
+            images: ['./images/crevisse-kisa.jpg'] 
         },
 
         // 3. 야놀자 (Strategy)
