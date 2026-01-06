@@ -3,8 +3,8 @@ window.DB = {
         {
             id: 'crevisse',
             company: 'Crevisse Partners',
-            role: 'SaaS 사업개발 & 데이터 엔지니어링 인턴',
-            summary: '신규 비즈니스 전략 수립 및 사내 데이터 인프라(Snowflake) 구축 총괄.',
+            role: 'SaaS 사업개발 & 데이터 인턴',
+            summary: '신규 비즈니스 전략 수립 및 사내 데이터 인프라 구축 총괄.',
             tags: ['Snowflake', 'Streamlit', 'SaaS Strategy', 'Salesforce'],
             
             overview: {
@@ -13,11 +13,11 @@ window.DB = {
                 role: 'Intern (Full-stack Support)'
             },
             
-            keyResult: '🚀 Spreadsheet → Snowflake 데이터 이관 및 실시간 매출 대시보드(Streamlit) 구축',
+            keyResult: '🚀 Spreadsheet → Snowflake 데이터 이관 및 실시간 매출 대시보드 구축',
             
             catchphrase: '"데이터 파이프라인 구축부터 신규 사업 전략까지, A to Z를 경험하다"',
             
-            description_new: "SaaS 비즈니스의 성장을 위해 기술(Tech)과 사업(Biz) 양쪽에서 문제를 해결했습니다. 수동으로 관리되던 매출 데이터를 Snowflake로 이관하여 데이터 인프라를 구축했고, 신규 비즈니스 모델(DQM)과 업무 자동화(KISA) 프로젝트를 주도하여 매출과 효율을 동시에 잡았습니다.",
+            description_new: "SaaS 비즈니스의 성장을 위해 기술과 사업 양쪽에서 문제를 해결했습니다. 수동으로 관리되던 매출 데이터를 Snowflake로 이관하여 데이터 인프라를 구축했고, 신규 비즈니스 모델과 업무 자동화 프로젝트를 주도하여 매출과 효율을 동시에 잡았습니다.",
             
             problemSolving: [
                 {
@@ -28,7 +28,7 @@ window.DB = {
                 {
                     title: 'SaaS Strategy',
                     keyword: 'Salesforce & Market Research',
-                    desc: 'Salesforce(Agentforce) 도입을 위한 PoC를 수행하여 젠데스크 데이터 마이그레이션 전략을 수립. 또한, 레거시 제품 고객의 전환(Migration) 유도를 위해 글로벌 SaaS 선도 기업들의 GTM 전략을 벤치마킹하여 제안.'
+                    desc: 'Salesforce 도입을 위한 PoC를 수행하여 젠데스크 데이터 마이그레이션 전략을 수립. 또한, 레거시 제품 고객의 전환 유도를 위해 글로벌 SaaS 선도 기업들의 GTM 전략을 벤치마킹하여 제안.'
                 },
                 {
                     title: 'Key Projects',
@@ -52,17 +52,17 @@ window.DB = {
                 role: 'Research Intern'
             },
             
-            keyResult: '⚡ 13,500건 데이터 구축 및 Python 자동화, 전략 리서치(수은, 벤치마킹) 참여',
+            keyResult: '⚡ 13,500건 데이터 구축 및 Python 자동화, 전략 리서치 참여',
             
             catchphrase: '"단순 수집을 넘어, 프로세스를 혁신하고 인사이트를 더하다"',
             
-            description_new: "초기엔 ESG 데이터 구축 업무로 시작했으나, 업무 효율화(Python)와 데이터 정합성 개선 성과를 인정받아 심화 과제(전략 리서치, 수출입은행 프로젝트)까지 수행 범위를 주도적으로 확장했습니다.",
+            description_new: "초기엔 ESG 데이터 구축 업무로 시작했으나, 업무 효율화와 데이터 정합성 개선 성과를 인정받아 심화 과제(전략 리서치, 수출입은행 프로젝트)까지 수행 범위를 주도적으로 확장했습니다.",
             
             problemSolving: [
                 {
                     title: '데이터 구축',
                     keyword: 'Data Integrity',
-                    desc: '150개 상장사의 S/G 지표 13,500건을 전수 조사하고, DART 공시와 교차 검증(Cross-validation)하여 결함 없는 대규모 ESG 데이터베이스 구축.'
+                    desc: '150개 상장사의 S/G 지표 13,500건을 전수 조사하고, DART 공시와 교차 검증하여 결함 없는 대규모 ESG 데이터베이스 구축.'
                 },
                 {
                     title: '업무 혁신',
@@ -149,7 +149,7 @@ window.DB = {
                 {
                     title: '개발', 
                     keyword: 'GAS & Parsing',
-                    desc: 'Google Apps Script로 KISA 신고 메일을 파싱하여 DB(Spreadsheet)에 적재하고, 매주 월요일 고객사별 내역을 API로 자동 발송하는 로직 구현.'
+                    desc: 'Google Apps Script로 KISA 신고 메일을 파싱하여 DB에 적재하고, 매주 월요일 고객사별 내역을 API로 자동 발송하는 로직 구현.'
                 },
                 {
                     title: '구현', 
@@ -176,7 +176,7 @@ window.DB = {
                 role: '전략 기획, UI/UX 디자인'
             },
             
-            keyResult: '💡 공공(Visit Korea)과 민간(야놀자)의 강점을 결합한 "PPP 비즈니스 모델" 정립',
+            keyResult: '💡 공공과 민간의 강점을 결합한 "PPP 비즈니스 모델" 정립',
             catchphrase: '"인증·결제 장벽을 넘어, 한국 여행을 하나의 앱으로"',
             description_new: "방한 관광객이 겪는 가장 큰 어려움인 '본인 인증'과 '결제 시스템'의 장벽을 해결하기 위해, 공공 데이터와 민간 기술력을 결합한 통합 슈퍼앱 모델을 제안했습니다.",
             
@@ -189,7 +189,7 @@ window.DB = {
                 {
                     title: '전략 수립',
                     keyword: 'PPP Ecosystem',
-                    desc: '공공(Visit Korea)의 데이터 신뢰성과 민간(야놀자)의 기술/플랫폼을 결합하여, 하나의 앱에서 예약부터 MaaS(교통)까지 해결하는 협력 생태계 설계.'
+                    desc: '공공의 데이터 신뢰성과 민간의 기술/플랫폼을 결합하여, 하나의 앱에서 예약부터 MaaS까지 해결하는 협력 생태계 설계.'
                 },
                 {
                     title: '솔루션',
@@ -220,8 +220,8 @@ window.DB = {
                 role: 'Quant Developer & Analyst'
             },
             
-            keyResult: '📊 급등주 패턴을 학습한 "이진 분류(Binary Classification) 모델" 구축 및 핵심 변수 발굴',
-            catchphrase: '"감(Gut)이 아닌 데이터(Data)로 투자의 승률을 높이다"',
+            keyResult: '📊 급등주 패턴을 학습한 "이진 분류 모델" 구축 및 핵심 변수 발굴',
+            catchphrase: '"감이 아닌 데이터로 투자의 승률을 높이다"',
             description_new: "주식 시장의 수많은 보조 지표 중, 실제 '급등(Surge)'과 통계적 유의성이 높은 지표를 선별하기 위해 시작했습니다. 과거 데이터를 전수 조사하여 승리하는 패턴을 학습시키고, 상승 여부(1/0)를 예측하는 자동화 모델을 구현했습니다.",
             
             problemSolving: [
@@ -233,7 +233,7 @@ window.DB = {
                 {
                     title: '분석',
                     keyword: 'Feature Importance',
-                    desc: '과거 급등 구간의 데이터를 역추적(Back-testing)하여, 실제 주가 상승에 가장 큰 영향을 미친 "핵심 지표(Key Feature)"가 무엇인지 통계적으로 규명.'
+                    desc: '과거 급등 구간의 데이터를 역추적하여, 실제 주가 상승에 가장 큰 영향을 미친 "핵심 지표"가 무엇인지 통계적으로 규명.'
                 },
                 {
                     title: '모델링',
@@ -254,7 +254,7 @@ window.DB = {
             type: 'data',
             title: '리뷰 유용성 예측 AI 모델',
             category: '경영과학회 AI/OR (장려상)',
-            summary: '딥러닝(CNN)을 활용하여 배달 앱 리뷰의 실질적 도움 여부(Usefulness)를 예측하는 모델 개발.',
+            summary: '딥러닝(CNN)을 활용하여 배달 앱 리뷰의 실질적 도움 여부를 예측하는 모델 개발.',
             tags: ['Deep Learning', 'CNN', 'Python'],
             icon: '🤖',
 
@@ -272,22 +272,22 @@ window.DB = {
                 {
                     title: '문제 정의',
                     keyword: 'Filtering Failure',
-                    desc: '기존 배달 앱의 최신순/별점순 정렬은 영양가 없는 짧은 글이나 스팸성 리뷰를 상단에 노출시켜, 사용자의 정보 탐색 비용을 높이는 문제(Pain Point) 발견.'
+                    desc: '기존 배달 앱의 최신순/별점순 정렬은 영양가 없는 짧은 글이나 스팸성 리뷰를 상단에 노출시켜, 사용자의 정보 탐색 비용을 높이는 문제 발견.'
                 },
                 {
                     title: '리서치',
                     keyword: 'Strategic Pivot',
-                    desc: '초기 단순 텍스트 분류 시도 실패 후, 문헌 조사를 통해 리뷰의 가치를 판단하는 핵심 지표가 "유용성(Helpfulness)"임을 도출하고 예측 모델로 방향 전환(Pivot).'
+                    desc: '초기 단순 텍스트 분류 시도 실패 후, 문헌 조사를 통해 리뷰의 가치를 판단하는 핵심 지표가 "유용성"임을 도출하고 예측 모델로 방향 전환.'
                 },
                 {
                     title: '모델링',
                     keyword: 'Hybrid CNN',
-                    desc: '텍스트 임베딩(Word2Vec)을 CNN에 학습시키는 동시에, "가독성, 주관성, 감성 점수"라는 3가지 정량적 파생 변수를 결합하여 모델의 예측력을 극대화.'
+                    desc: '텍스트 임베딩을 CNN에 학습시키는 동시에, "가독성, 주관성, 감성 점수"라는 3가지 정량적 파생 변수를 결합하여 모델의 예측력을 극대화.'
                 },
                 {
                     title: '검증',
                     keyword: 'Quantitative Result',
-                    desc: '동일 데이터셋 기준 머신러닝(SVM, RF) 대비 정확도(+0.15)와 정밀도(+0.14)가 대폭 향상된 0.76을 기록하며 딥러닝 도입의 타당성 입증.'
+                    desc: '동일 데이터셋 기준 머신러닝대비 정확도(+0.15)와 정밀도(+0.14)가 대폭 향상된 0.76을 기록하며 딥러닝 도입의 타당성 입증.'
                 }
             ],
             images: [
@@ -303,7 +303,7 @@ window.DB = {
             type: 'data',
             title: '파인다이닝 리뷰 분석 전략',
             category: 'KMAC 경영혁신 공모전',
-            summary: '리뷰 데이터의 텍스트 마이닝(BERTopic)을 통해 파인다이닝의 핵심 성공 요인을 규명하고 차별화 전략 도출.',
+            summary: '리뷰 데이터의 텍스트 마이닝을 통해 파인다이닝의 핵심 성공 요인을 규명하고 차별화 전략 도출.',
             tags: ['Text Mining', 'BERTopic', 'Clustering'],
             icon: '🍽️',
 
@@ -315,7 +315,7 @@ window.DB = {
             
             keyResult: '💡 텍스트 마이닝으로 "맛"과 "분위기"의 가치 차이를 정량화하여 4가지 맞춤 전략 도출',
             catchphrase: '"경험을 팝니다: 파인다이닝과 일반 식당의 결정적 차이"',
-            description_new: "초기 기획 단계에서 데이터 부족 문제를 발견하고 빠르게 주제를 전환(Pivot)하는 결단력을 발휘했습니다. 오픈 리뷰 데이터를 활용하여, 파인다이닝 소비자는 '맛'보다 '경험과 분위기'에 민감하다는 사실을 데이터로 증명했습니다.",
+            description_new: "초기 기획 단계에서 데이터 부족 문제를 발견하고 빠르게 주제를 전환하는 결단력을 발휘했습니다. 오픈 리뷰 데이터를 활용하여, 파인다이닝 소비자는 '맛'보다 '경험과 분위기'에 민감하다는 사실을 데이터로 증명했습니다.",
             
             problemSolving: [
                 {
@@ -326,12 +326,12 @@ window.DB = {
                 {
                     title: '분석 기술',
                     keyword: 'BERTopic & NLP',
-                    desc: '딥러닝 기반 토픽 모델링(BERTopic)과 감성 분석을 수행하여, 일반 식당은 "맛/친절"이, 파인다이닝은 "분위기/경험"이 핵심 키워드임을 도출.'
+                    desc: '딥러닝 기반 토픽 모델링과 감성 분석을 수행하여, 일반 식당은 "맛/친절"이, 파인다이닝은 "분위기/경험"이 핵심 키워드임을 도출.'
                 },
                 {
                     title: '전략 도출',
                     keyword: 'Segmentation',
-                    desc: '소비자 특성에 따라 4개의 군집(Cluster)으로 세분화하고, 각 타겟의 니즈(가성비 vs 가심비 등)에 맞춘 구체적인 마케팅 전략 수립.'
+                    desc: '소비자 특성에 따라 4개의 군집으로 세분화하고, 각 타겟의 니즈(가성비 vs 가심비 등)에 맞춘 구체적인 마케팅 전략 수립.'
                 }
             ],
             images: [
@@ -401,7 +401,7 @@ window.DB = {
                 role: 'Main PM, 전략 기획, 디자인(100%)'
             },
             
-            keyResult: '🎨 "미니멀 모빌리티" 컨셉 도출 및 앱/홍보물(Figma) 직접 제작',
+            keyResult: '🎨 "미니멀 모빌리티" 컨셉 도출 및 앱/홍보물 직접 제작',
             catchphrase: '"배달 오토바이의 편견을 깨다: 도심형 미니멀 모빌리티"',
             description_new: "전기이륜차의 부정적 이미지(배달/위험)를 탈피하기 위해, 2030 세대를 타겟으로 한 '미니멀 모빌리티'라는 새로운 포지셔닝을 제안하고 디자인까지 직접 수행했습니다.",
             
@@ -446,7 +446,7 @@ window.DB = {
             
             keyResult: '🤝 은퇴 예정자의 노하우를 스타트업에 이식하는 "AI 고문 매칭" 및 역량 평가 모델 설계',
             catchphrase: '"단순 이력서 매칭을 넘어, 실전 해결 역량을 잇다"',
-            description_new: "대기업 은퇴 예정자의 전문성이 사장되는 것을 막고, 경험이 절실한 초기 스타트업에 '경영 고문'으로 연결하는 상생 플랫폼입니다. AI가 생성한 '가상 비즈니스 케이스'를 통해 시니어의 실무 역량(Soft/Hard Skill)을 정량적으로 검증하는 프로세스를 설계했습니다.",
+            description_new: "대기업 은퇴 예정자의 전문성이 사장되는 것을 막고, 경험이 절실한 초기 스타트업에 '경영 고문'으로 연결하는 상생 플랫폼입니다. AI가 생성한 '가상 비즈니스 케이스'를 통해 시니어의 실무 역량을 정량적으로 검증하는 프로세스를 설계했습니다.",
             
             problemSolving: [
                 {
@@ -485,7 +485,7 @@ window.DB = {
             overview: {
                 period: '2024.03 ~ 2025.02',
                 team: 'BACS',
-                role: '부학회장 (Vice President)'
+                role: '부학회장'
             },
             
             keyResult: '🚀 관심사별 "팀 서브 세션" 신설 주도 및 외부 공모전 2회 참가',
@@ -496,7 +496,7 @@ window.DB = {
                 {
                     title: '컨설팅 세션',
                     keyword: 'Logical Thinking',
-                    desc: '이마트(부진 원인), 넷플릭스(신사업), 현대카드(타겟팅) 등 실제 기업 사례를 리서치하여, 경영 전략 프레임워크에 맞춰 분석, 논리적인 전략 방향성을 도출.'
+                    desc: '이마트, 넷플릭스, 현대카드 등 실제 기업 사례를 리서치하여, 경영 전략 프레임워크에 맞춰 분석, 논리적인 전략 방향성을 도출.'
                 },
                 {
                     title: '데이터 분석',
@@ -506,7 +506,7 @@ window.DB = {
                 {
                     title: 'ML & 딥러닝',
                     keyword: 'Predictive Modeling',
-                    desc: 'HR 승진 예측(Random Forest, 정확도 93%) 및 신용카드 이탈률 분석(Clustering) 프로젝트를 수행하고, CNN 등 딥러닝 모델을 학습하여 외부 공모전 활용.'
+                    desc: 'HR 승진 예측(Random Forest, 정확도 93%) 및 신용카드 이탈률 분석프로젝트를 수행하고, CNN 등 딥러닝 모델을 학습하여 외부 공모전 활용.'
                 },
                 {
                     title: '리더십',
@@ -538,7 +538,7 @@ window.DB = {
             
             keyResult: '🥉 교내 학술 공모전 3등 | CBDC 데이터 가시성을 활용한 "초개인화 보험 추천" BM 수립',
             catchphrase: '"금융의 미래 CBDC, 투명해진 결제 데이터로 보험의 사각지대를 없애다"',
-            description_new: "중앙은행 디지털 화폐(CBDC)가 상용화될 미래 시나리오를 분석했습니다. 모든 결제 데이터가 투명해지는 변화 속에서, 정보 비대칭 문제를 겪는 보험 산업(카카오페이 손해보험)에 '데이터 기반 맞춤형 추천 솔루션'이라는 새로운 기회를 제안했습니다.",
+            description_new: "중앙은행 디지털 화폐가 상용화될 미래 시나리오를 분석했습니다. 모든 결제 데이터가 투명해지는 변화 속에서, 정보 비대칭 문제를 겪는 보험 산업(카카오페이 손해보험)에 '데이터 기반 맞춤형 추천 솔루션'이라는 새로운 기회를 제안했습니다.",
             
             problemSolving: [
                 {
