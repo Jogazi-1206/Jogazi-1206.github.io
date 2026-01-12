@@ -156,7 +156,7 @@ window.DB = {
             summary: '기술적 지표와 과거 데이터의 상관관계를 분석하여 주가 급등 시점을 포착하는 머신러닝 분류 모델 개발.',
             tags: ['Quant Trading', 'Machine Learning', 'Feature Importance'],
             icon: '📈',
-            overview: { period: '2023.08 ~ 2023.11', team: '개인 프로젝트', role: 'Quant Developer & Analyst' },
+            overview: { period: '2025.10 ~ 2025.12', team: '개인 프로젝트', role: 'Quant Developer & Analyst' },
             keyResult: '📈 확신도 70% 이상 구간에서 승률 84.3% 달성 및 핵심 지표 발굴',
             catchphrase: '"감이 아닌 데이터로 투자의 승률을 높이다"',
             description_new: "개인 투자자의 뇌동매매를 방지하기 위해, 거시경제 지표와 기술적 분석을 결합한 퀀트 알고리즘을 설계했습니다. S&P500 10년 치 데이터를 머신러닝으로 학습시켜 객관적인 매수 시그널을 제공하는 모델을 구현했습니다.",
