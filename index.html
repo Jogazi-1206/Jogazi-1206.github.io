@@ -331,7 +331,11 @@
                                             {item.problemSolving.map((step, idx) => (
                                                 <div key={idx} className="relative pl-4 border-l-2 border-slate-200 last:border-0">
                                                     <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-brand-200"></div>
-                                                    <div className="mb-1"><span className="text-xs font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded-md mr-2">{step.title}</span><span className="font-bold text-navy-900 text-sm">{step.keyword}</span></div>
+                                                    <div className="mb-1">
+                                                        {/* [수정됨] 폰트 크기 확대 text-xs -> text-sm, 패딩 증가 */}
+                                                        <span className="text-sm font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded-md mr-2">{step.title}</span>
+                                                        <span className="font-bold text-navy-900 text-sm">{step.keyword}</span>
+                                                    </div>
                                                     <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
                                                 </div>
                                             ))}
