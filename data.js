@@ -19,31 +19,43 @@ window.DB = {
                 role: 'Intern (Full-stack Support)'
             },
             
-            keyResult: '🚀 Spreadsheet → Snowflake 데이터 이관 및 실시간 매출 대시보드 구축',
+            keyResult: '🚀 신규 솔루션으로 매출 창출 & 데이터 리포팅 리소스 100% 절감',
             
-            catchphrase: '"데이터 파이프라인 구축부터 신규 사업 전략까지, A to Z를 경험하다"',
+            catchphrase: '"비즈니스 기회를 기술로 구현하여 실제 매출과 운영 효율을 모두 잡아낸 경험"',
             
-            description_new: "SaaS 비즈니스의 성장을 위해 기술과 사업 양쪽에서 문제를 해결했습니다. 수동으로 관리되던 매출 데이터를 Snowflake로 이관하여 데이터 인프라를 구축했고, 신규 비즈니스 모델과 업무 자동화 프로젝트를 주도하여 매출과 효율을 동시에 잡았습니다.",
+            description_new: "SaaS 사업개발팀에서 단순 업무 수행을 넘어, Python과 SQL을 활용해 사내 데이터 인프라를 직접 구축했습니다. 또한 고객사의 페인 포인트를 해결하는 솔루션(DQM, 자동화)을 기획/개발하여 회사의 신규 매출원까지 창출했습니다. \n\n 🚀 **대표 프로젝트:** [데이터 품질 관리 솔루션], [KISA 스팸 신고 자동화]",
             
-            problemSolving: [
+            // [NEW] 하위 프로젝트 구조 도입
+            subProjects: [
                 {
-                    title: 'Data Ops',
-                    keyword: 'Snowflake & Streamlit',
-                    desc: '기존 구글 시트 기반의 매출 데이터를 Snowflake로 이관하여 대용량 처리 기반을 마련. Python Streamlit으로 실시간 매출 대시보드를 직접 개발하여, 데이터 집계 시간을 단축하고 휴먼 에러를 0%로 제거.'
+                    title: '1. 📊 클라우드 매출 데이터 대시보드 구축',
+                    content: [
+                        { step: '문제 정의', desc: '매출 데이터 대용량화로 인한 스프레드시트 연산 속도 저하 및 수기 입력 과정에서의 휴먼 에러 발생 위험 증가.' },
+                        { step: '가설 수립', desc: '원천 데이터를 Snowflake로 중앙화하고 집계 과정을 코드로 자동화한다면, 데이터 정합성을 확보하고 리포팅 리소스를 제로화할 수 있을 것.' },
+                        { step: '액션 및 검증', desc: 'Python으로 2년치 데이터 전처리 후 이관, SQL 기반 ELT 파이프라인 구축, Streamlit으로 실시간 웹 대시보드 개발 및 배포.' },
+                        { step: '결과', desc: '수동 집계 프로세스 시스템화로 휴먼 에러율 원천 차단 및 실시간 데이터 조회 환경 구축.' }
+                    ]
                 },
                 {
-                    title: 'SaaS Strategy',
-                    keyword: 'Salesforce & Market Research',
-                    desc: 'Salesforce 도입을 위한 PoC를 수행하여 젠데스크 데이터 마이그레이션 전략을 수립. 또한, 레거시 제품 고객의 전환 유도를 위해 글로벌 SaaS 선도 기업들의 GTM 전략을 벤치마킹하여 제안.'
+                    title: '2. ☁️ Salesforce 도입을 위한 PoC',
+                    content: [
+                        { step: '문제 정의', desc: '전체 CS 문의 중 50% 이상을 차지하는 단순 반복 문의로 인한 운영 리소스 낭비 해결을 위해 AI Agent 도입 검토.' },
+                        { step: '데이터 분석', desc: 'Zendesk 티켓 이력 분석을 통해 AI 자동 응대가 가능한 문의 유형을 분류하고 학습 데이터 이관 시뮬레이션 수행.' },
+                        { step: '기술 검증', desc: 'Salesforce Trial 환경 구축 및 Zendesk 데이터 이관 테스트 완료, Agentforce 학습을 위한 지식 데이터 구조화 전략 수립.' }
+                    ]
                 },
                 {
-                    title: 'Key Projects',
-                    keyword: 'See Project Section',
-                    desc: '회사의 신규 수익원이 된 [데이터 품질 관리(DQM) 솔루션]과 업무 시간을 90% 단축한 [KISA 스팸 신고 자동화] 프로젝트를 리딩했습니다. (상세 내용은 Project 섹션 참조)'
+                    title: '3. 🔎 전략 리서치',
+                    content: [
+                        { step: '레거시 전환', desc: '글로벌 선도 SaaS 기업 벤치마킹을 통해, v1 고객의 이탈을 방지하고 v2로 자연스럽게 이동시키기 위한 단계별 전환 시나리오 및 커뮤니케이션 전략 제안.' },
+                        { step: '신규 시장 분석', desc: 'AI 업무 자동화 니즈 증가에 대응하기 위해 국내 솔루션 기업을 조사하고, 자사 개발 역량과 시장 내 기존 솔루션을 비교 분석하여 진입 전략 도출.' }
+                    ]
                 }
             ],
+            
             images: [] 
         },
+        // ... (나머지 항목들은 기존과 동일) ...
         {
             id: 'sustinvest',
             company: 'Sustinvest',
