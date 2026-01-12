@@ -1,17 +1,20 @@
 /**
  * 포트폴리오 데이터 (Content)
- * 수정이 필요하면 이 파일만 고치면 됩니다.
+ * [최종 수정 완료]
+ * - 삭제된 프로젝트: 전기이륜차, 소상공인 구독, 리더스오브그린, 교내 ESG
+ * - 남은 프로젝트: 핵심 역량(Data/Tech, Strategy) 위주의 고밀도 프로젝트 9개
  */
 
 window.DB = {
     experience: [
+        // 1. 크레비스 파트너스
         {
             id: 'crevisse',
             company: 'Crevisse Partners',
             role: 'SaaS 사업개발 & 데이터 인턴',
             period: '2025.07 — 2025.12',
-            summary: '신규 비즈니스 전략 수립 및 사내 데이터 인프라 구축 총괄.',
-            tags: ['Snowflake', 'Streamlit', 'SaaS Strategy', 'Salesforce'],
+            summary: '사내 데이터 인프라 구축 및 고객 솔루션 개발로 매출/효율 동시 혁신.',
+            tags: ['Snowflake', 'Streamlit', 'Salesforce', 'Python', 'SQL'],
             
             overview: {
                 period: '2025.07 — 2025.12',
@@ -21,11 +24,10 @@ window.DB = {
             
             keyResult: '🚀 신규 솔루션으로 매출 창출 & 데이터 리포팅 리소스 100% 절감',
             
-            catchphrase: '"비즈니스 기회를 기술로 구현하여 실제 매출과 운영 효율을 모두 잡아낸 경험"',
+            catchphrase: '"비즈니스 기회를 기술로 구현하여 실제 매출과 운영 효율을 모두 잡다"',
             
-            description_new: "SaaS 사업개발팀에서 단순 업무 수행을 넘어, Python과 SQL을 활용해 사내 데이터 인프라를 직접 구축했습니다. 또한 고객사의 페인 포인트를 해결하는 솔루션(DQM, 자동화)을 기획/개발하여 회사의 신규 매출원까지 창출했습니다. \n\n 🚀 **대표 프로젝트:** [데이터 품질 관리 솔루션], [KISA 스팸 신고 자동화]",
+            description_new: "SaaS 사업개발팀에서 단순 업무 수행을 넘어, Python과 SQL을 활용해 사내 데이터 인프라를 직접 구축했습니다. 또한 고객사의 페인 포인트를 해결하는 솔루션(DQM, 자동화)을 기획/개발하여 회사의 신규 매출원까지 창출했습니다.",
             
-            // [NEW] 하위 프로젝트 구조 도입
             subProjects: [
                 {
                     title: '1. 📊 클라우드 매출 데이터 대시보드 구축',
@@ -52,45 +54,42 @@ window.DB = {
                     ]
                 }
             ],
-            
             images: [] 
         },
-        // ... (나머지 항목들은 기존과 동일) ...
+        // 2. 서스틴베스트
         {
             id: 'sustinvest',
             company: 'Sustinvest',
             role: 'ESG 데이터 리서처 (인턴)',
             period: '2025.04 — 2025.06',
-            summary: '상장사 ESG 데이터 구축 자동화 및 산업별 전략 리서치 수행.',
+            summary: '10,000건의 비정형 데이터를 정량화하고, 반복 수집 업무를 자동화.',
             tags: ['ESG Analysis', 'Python', 'Web Crawling', 'Strategic Research'],
-
-            overview: {
-                period: '2025.04 — 2025.05',
-                team: 'Research & Data 본부',
-                role: 'Research Intern'
-            },
-            
-            keyResult: '⚡ 13,500건 데이터 구축 및 Python 자동화, 전략 리서치 참여',
-            
-            catchphrase: '"단순 수집을 넘어, 프로세스를 혁신하고 인사이트를 더하다"',
-            
-            description_new: "초기엔 ESG 데이터 구축 업무로 시작했으나, 업무 효율화와 데이터 정합성 개선 성과를 인정받아 심화 과제(전략 리서치, 수출입은행 프로젝트)까지 수행 범위를 주도적으로 확장했습니다.",
-            
-            problemSolving: [
+            overview: { period: '2025.04 — 2025.06', team: 'Research & Data 본부', role: 'Research Intern' },
+            keyResult: '⚡ 10,000건 데이터 구축 및 Python 자동화 프로토타입 구현',
+            catchphrase: '"10,000건의 비정형 데이터를 정량화하고, 반복 수집 업무를 자동화하다"',
+            description_new: "ESG 평가기관에서 상장사 데이터 구축 업무를 수행하며 데이터 정합성의 중요성을 체득했습니다. 특히 단순 반복되던 보고서 수집 업무에서 Python 크롤러 도입을 제안하고 프로토타입을 구현하여 팀 내 업무 효율화 가능성을 증명했습니다.",
+            subProjects: [
                 {
-                    title: '데이터 구축',
-                    keyword: 'Data Integrity',
-                    desc: '150개 상장사의 S/G 지표 13,500건을 전수 조사하고, DART 공시와 교차 검증하여 결함 없는 대규모 ESG 데이터베이스 구축.'
+                    title: '🤖 SR 보고서 수집 자동화 및 키워드 매핑',
+                    content: [
+                        { step: '문제정의', desc: '평가 시즌마다 수백 개의 지속가능경영보고서와 인증서를 수동으로 다운로드하고 분류하는 과정에서 단순 반복 업무 과중.' },
+                        { step: '액션', desc: 'Python을 활용하여, 1) 지속가능경영보고서 속 키워드별 매칭을 통한 스크립트 제작, 2) 홈페이지에서 인증서를 찾을 수 있는 크롤러 기능 프로토타입 설계.' },
+                        { step: '결과', desc: '기존 수동 프로세스 대비 문서 수집 시간 단축 가능성 확인 및 팀 내 데이터 수집 가이드라인 개선 아이디어 제안.' }
+                    ]
                 },
                 {
-                    title: '업무 혁신',
-                    keyword: 'Python & Codebook',
-                    desc: '반복되는 인증서 수집 업무를 Python 크롤러로 자동화 설계하고, 지표별 빈출 키워드를 분석해 코드북(가이드라인)을 개선하여 팀 전체 효율성 증대.'
+                    title: '📊 상장사 ESG 데이터 구축 및 클렌징',
+                    content: [
+                        { step: '업무 내용', desc: '100개 상장사의 90여개 ESG 정성 지표를 전수 조사하여 총 10,000건 이상의 ESG DB를 구축.' },
+                        { step: '성과', desc: 'DART 공시와 보고서 간의 불일치 데이터를 교차 검증하여 결함률 0%를 목표로 정합성 확보. 대용량 데이터 핸들링 및 엑셀 데이터 관리 역량 강화.' }
+                    ]
                 },
                 {
-                    title: '전략 리서치',
-                    keyword: 'Insight & Project',
-                    desc: '역량을 인정받아 수출입은행 GP 선정 기준 수립, 4대 핵심 산업(배터리/조선 등) 벤치마킹 등 고난도 리서치 과제에 추가 투입되어 전략적 인사이트 제공.'
+                    title: '🌍 GP 선정을 위한 글로벌 PE ESG 동향 리서치',
+                    content: [
+                        { step: '업무 내용', desc: '한국수출입은행의 프로젝트에 참여하여, 해외 주요 LP/GP의 ESG 투자 가이드라인 및 평가 모델을 조사.' },
+                        { step: '성과', desc: '해외 선진 사례 벤치마킹을 통해 GP 선정 시 고려해야 할 핵심 ESG 평가지표 도출.' }
+                    ]
                 }
             ],
             images: []
@@ -99,6 +98,8 @@ window.DB = {
 
     projects: [
         // --- [Data & Tech] ---
+        
+        // 1. 데이터 품질 관리 (DQM)
         {
             id: 'crevisse-dqm',
             type: 'data-tech', 
@@ -107,38 +108,22 @@ window.DB = {
             summary: '고객사 데이터 진단/정제/보고서 생성을 위한 Python 기반 DQM 솔루션 개발.',
             tags: ['Python', 'TDD', 'Product Management', 'Revenue Generation'],
             icon: '💎',
-
-            overview: {
-                period: '2025.08 ~ 2025.11',
-                team: 'Business Dev',
-                role: '기획, 개발, 고객 커뮤니케이션'
-            },
-            
-            keyResult: '💰 신규 비즈니스 모델 발굴 및 솔루션 상용화로 실제 매출 발생',
-            catchphrase: '"비전공자가 만든 상용 소프트웨어: 기획부터 개발, 수익 창출까지"',
-            description_new: "고객사의 데이터 웨어하우스 도입 니즈를 포착하여, 선행 단계인 '데이터 품질 관리'를 신규 비즈니스 모델로 제안했습니다. 단순 컨설팅에 그치지 않고, 진단부터 정제, 보고서 생성까지 전 과정을 자동화하는 Python 솔루션을 직접 개발하여 납품했습니다.",
-            
+            overview: { period: '2025.08 ~ 2025.11', team: 'Business Dev', role: '기획, 개발, 고객 커뮤니케이션' },
+            keyResult: '💰 신규 SaaS 매출 창출 & 60만 건 데이터 처리/자동화',
+            catchphrase: '"데이터 웨어하우스 도입의 병목, \'품질 관리 자동화\'로 뚫다"',
+            description_new: "많은 고객사가 데이터 기반 의사결정을 위해 DW 도입을 원하지만, 원천 데이터의 오염(노이즈, 결측치) 문제로 인해 도입이 지연되는 현상을 발견했습니다. 이를 해결하기 위해 진단부터 정제, 리포팅까지의 전 과정을 자동화하는 Python 솔루션을 개발하여 신규 매출 파이프라인을 창출했습니다.",
             problemSolving: [
-                {
-                    title: '기획', 
-                    keyword: 'Biz Model',
-                    desc: '국내외 선도 기업 리서치를 통해 6가지 핵심 진단 필드를 정의하고, [진단 → 자동 정제 → 외부 데이터 매칭]으로 이어지는 3단계 품질 관리 아키텍처 설계.'
-                },
-                {
-                    title: '개발', 
-                    keyword: 'Python & TDD',
-                    desc: 'AI(Vibe Coding)를 활용해 개발하되, 비전공자의 한계를 극복하고자 100개 이상의 테스트 케이스(TDD)를 작성하여 코드의 무결성 검증. V1(개별 스크립트)에서 V2(통합 모듈)로 고도화.'
-                },
-                {
-                    title: '성과', 
-                    keyword: 'Report Automation',
-                    desc: '20페이지 분량의 품질 진단 보고서 생성을 코드로 자동화하여 작업 시간을 획기적으로 단축. 성공적인 PoC를 통해 고객사 계약 체결 및 실제 매출 확보.'
-                }
+                { title: '1. 문제 정의', keyword: '데이터 오염', desc: '고객사는 DW 도입을 희망하나, 원천 데이터의 노이즈와 결측치 문제로 인해 적재하더라도 유의미한 분석이 불가능한 "효율 저하" 상황 진단.' },
+                { title: '2. 가설 수립', keyword: '패키지 솔루션', desc: '복잡한 데이터 정제 과정을 표준화된 로직으로 자동화하여 패키지 솔루션으로 제공한다면, 고객의 DW 진입 장벽을 낮추면서도 단계적 계약을 유도할 수 있을 것.' },
+                { title: '3. 액션 (설계)', keyword: '표준 아키텍처', desc: '국내외 DQM 선도 기업을 벤치마킹하여, 이메일/주소 등 비즈니스 필수 6대 핵심 필드를 정의하고 [진단 → 자동 정제 → 리포팅]으로 이어지는 3단계 품질 관리 아키텍처 설계.' },
+                { title: '4. 액션 (개발)', keyword: 'Python & TDD', desc: 'AI(Vibe Coding)를 활용해 개발하되, 로직 신뢰성을 위해 100개 이상의 엣지 케이스(TDD)를 통과하는 코드를 구현. 진단 결과를 시각화된 PDF 보고서로 자동 생성하는 기능 구현.' },
+                { title: '5. 결과', keyword: '매출 & 자동화', desc: '실제 계약 체결을 통해 회사의 새로운 SaaS 부가 서비스 모델로 안착. 데이터 60만 건 진단 및 10만 건 정제를 자동 수행하며 고객 세그먼테이션 효율 증대.' },
+                { title: '6. 배운점', keyword: 'Insight', desc: '고도화된 AI 모델이 아니더라도, 고객의 가장 아픈 곳(Pain Point)을 긁어주는 솔루션이라면 충분히 비즈니스적으로 큰 임팩트를 낼 수 있음을 체득.' }
             ],
             images: ['./images/crevisse-dqm.jpg'] 
         },
 
-        // [New 2] KISA 스팸 신고 자동화
+        // 2. KISA 스팸 신고 자동화
         {
             id: 'crevisse-kisa',
             type: 'data-tech', 
@@ -147,38 +132,22 @@ window.DB = {
             summary: 'Google Apps Script와 Web App을 활용한 스팸 신고 처리 프로세스 100% 자동화.',
             tags: ['Google Apps Script', 'Web App', 'Automation', 'Process Innovation'],
             icon: '⚡',
-
-            overview: {
-                period: '2025.10 ~ 2025.12',
-                team: 'Business Dev (개인 프로젝트)',
-                role: '프로세스 설계 및 개발'
-            },
-            
-            keyResult: '⚙️ 수동 소명 업무 제거 및 고객사 전용 소명 Web App 구축',
-            catchphrase: '"반복되는 비효율을 코드로 삭제하다: 사내 DX 혁신"',
-            description_new: "매주 반복되는 스팸 신고 처리 업무(메일 수신 → 고객사 전달 → 소명 취합 → 회신)의 비효율을 해결하기 위해 시작했습니다. 단순 스크립트를 넘어, 고객사가 직접 소명할 수 있는 웹 애플리케이션(UI)까지 구현하여 담당자의 개입을 0으로 만들었습니다.",
-            
+            overview: { period: '2025.10 ~ 2025.12', team: 'Business Dev (개인 프로젝트)', role: '프로세스 설계 및 개발' },
+            keyResult: '⚙️ 담당자 개입 0회: 4단계 수동 프로세스를 100% 자동화',
+            catchphrase: '"매주 반복되던 비효율, 코드로 시스템을 만들어 삭제하다"',
+            description_new: "매주 반복되는 스팸 신고 처리 업무(메일 수신 → 고객사 전달 → 소명 취합 → 회신)의 4단계 과정을 수동으로 반복하는 비효율을 해결했습니다. Web App과 Bot을 활용한 자동화 파이프라인을 구축하여 담당자의 개입을 0으로 만들었습니다.",
             problemSolving: [
-                {
-                    title: '설계', 
-                    keyword: 'Pain Point',
-                    desc: '메일 수신부터 고객사 안내까지 4단계의 수동 프로세스를 분석하여, 사람의 개입 없이 데이터가 흐를 수 있는 완전 자동화 파이프라인 설계.'
-                },
-                {
-                    title: '개발', 
-                    keyword: 'GAS & Parsing',
-                    desc: 'Google Apps Script로 KISA 신고 메일을 파싱하여 DB에 적재하고, 매주 월요일 고객사별 내역을 API로 자동 발송하는 로직 구현.'
-                },
-                {
-                    title: '구현', 
-                    keyword: 'Web App UI',
-                    desc: '고객사가 메일 회신 대신 직접 접속하여 소명 내용을 입력할 수 있는 [고객 전용 Web App]을 개발. 입력 데이터가 즉시 DB에 동기화되도록 하여 커뮤니케이션 비용 제로화.'
-                }
+                { title: '1. 문제 정의', keyword: '비례적 비효율', desc: '신고 건수가 늘어날수록 업무 시간이 정비례해서 늘어나는 구조적 문제. 단순 복사/붙여넣기에 리소스가 낭비되고, 이메일 회신 대기 중 병목 발생.' },
+                { title: '2. 가설 수립', keyword: '완전 자동화', desc: '신고 내역 입력을 기계가 대신하고(DB 저장), 고객사가 이메일 회신 대신 웹 화면에서 직접 소명하게 만든다면 전 과정을 자동화할 수 있을 것.' },
+                { title: '3. 액션 (봇)', keyword: 'GAS Pipeline', desc: 'Gmail, 스프레드시트, 드라이브를 연결하는 봇을 개발. 메일 수신 시 엑셀을 파싱하여 DB에 적재하고, 이메일 API로 고객사에게 자동 알림 발송.' },
+                { title: '4. 액션 (앱)', keyword: 'Web App UI', desc: '고객사가 메일 회신 대신 직접 접속하여 소명 내용을 입력할 수 있는 [고객 전용 Web App]을 개발. 입력 데이터가 즉시 내부 DB와 동기화되도록 구현.' },
+                { title: '5. 결과', keyword: 'Zero Operation', desc: '담당자의 수동 개입 횟수 0회 달성. 클릭 몇 번으로 소명을 완료하여 고객 만족도가 증대되었으며, 수기 작성 오타 및 누락 사고 원천 차단.' },
+                { title: '6. 배운점', keyword: 'System Thinking', desc: '거창한 솔루션 없이 기존 툴을 코드로 연결하여 강력한 시스템을 구축. 건수가 10건이든 1,000건이든 업무량이 늘어나지 않는 시스템적 사고의 중요성 체득.' }
             ],
             images: ['./images/crevisse-kisa.jpg'] 
         },
 
-        // 4. 주식 예측 (Data)
+        // 3. 주식 예측 (Data)
         {
             id: 'stock-trading',
             type: 'data-tech', 
@@ -187,42 +156,22 @@ window.DB = {
             summary: '기술적 지표와 과거 데이터의 상관관계를 분석하여 주가 급등 시점을 포착하는 머신러닝 분류 모델 개발.',
             tags: ['Quant Trading', 'Machine Learning', 'Feature Importance'],
             icon: '📈',
-
-            overview: {
-                period: '2023.08 ~ 2023.11',
-                team: '개인 프로젝트',
-                role: 'Quant Developer & Analyst'
-            },
-            
-            keyResult: '📊 급등주 패턴을 학습한 "이진 분류 모델" 구축 및 핵심 변수 발굴',
+            overview: { period: '2023.08 ~ 2023.11', team: '개인 프로젝트', role: 'Quant Developer & Analyst' },
+            keyResult: '📈 확신도 70% 이상 구간에서 승률 84.3% 달성 및 핵심 지표 발굴',
             catchphrase: '"감이 아닌 데이터로 투자의 승률을 높이다"',
-            description_new: "주식 시장의 수많은 보조 지표 중, 실제 '급등(Surge)'과 통계적 유의성이 높은 지표를 선별하기 위해 시작했습니다. 과거 데이터를 전수 조사하여 승리하는 패턴을 학습시키고, 상승 여부(1/0)를 예측하는 자동화 모델을 구현했습니다.",
-            
+            description_new: "개인 투자자의 뇌동매매를 방지하기 위해, 거시경제 지표와 기술적 분석을 결합한 퀀트 알고리즘을 설계했습니다. S&P500 10년 치 데이터를 머신러닝으로 학습시켜 객관적인 매수 시그널을 제공하는 모델을 구현했습니다.",
             problemSolving: [
-                {
-                    title: '가설 수립',
-                    keyword: 'Quant Indicators',
-                    desc: '이동평균선, RSI, MACD, 볼린저밴드 등 다양한 기술적 지표를 선정하고, "특정 지표들의 시그널이 겹칠 때 주가가 급등한다"는 퀀트 가설 수립.'
-                },
-                {
-                    title: '분석',
-                    keyword: 'Feature Importance',
-                    desc: '과거 급등 구간의 데이터를 역추적하여, 실제 주가 상승에 가장 큰 영향을 미친 "핵심 지표"가 무엇인지 통계적으로 규명.'
-                },
-                {
-                    title: '모델링',
-                    keyword: 'Binary Learning',
-                    desc: '도출된 핵심 지표를 기반으로 상승(1)과 하락/보합(0)을 예측하는 머신러닝 분류 모델을 학습시키고, 지속적인 파라미터 튜닝으로 예측 정확도 고도화.'
-                }
+                { title: '1. 문제 정의', keyword: '뇌동매매 방지', desc: '시장 급등락에 휘둘리는 개인 투자자의 문제를 해결하고자, 뉴스나 감이 아닌 객관적 데이터로 매수/매도 시점을 판단하는 정량적 기준 마련.' },
+                { title: '2. 가설 수립', keyword: '비선형 패턴', desc: '인간이 발견하기 힘든 다양한 기술적 지표의 조합(비선형적 패턴)을 머신러닝이 학습한다면, 과거 급등 사례를 통해 현재의 상승 유망 종목을 필터링할 수 있을 것.' },
+                { title: '3. 액션 (데이터)', keyword: '70만 건 데이터', desc: '미국 S&P500 상위 300개 기업의 10년 치 데이터(약 700,000개)를 수집. 이동평균 이격도, RSI, ATR 등 20여 가지 파생 변수를 생성하여 학습 데이터셋 구축.' },
+                { title: '4. 액션 (모델링)', keyword: 'Random Forest', desc: '단순 등락이 아닌 "실질적 수익 구간(ATR 1.3배 상승)"을 타겟으로 라벨링하고, 랜덤 포레스트 알고리즘과 가중치 조정(Class Weight)을 통해 클래스 불균형 문제 해결.' },
+                { title: '5. 결과', keyword: '승률 84.3%', desc: '모델 확신도 70% 이상 구간에서 승률 84.3%를 기록. 단순 골든크로스보다 변동성 비율(ATR Ratio)과 장기 추세 이격도가 더 중요한 지표임을 통계적으로 확인.' },
+                { title: '6. 배운점', keyword: 'Precision Optimization', desc: '투자에서는 단순히 맞추는 것보다 "틀리지 않는 것"이 중요함을 깨닫고 정밀도(Precision)를 최적화. 실생활 문제를 데이터로 정의하고 해결하는 실행력 체득.' }
             ],
-            images: [
-                './images/stock-trading_1.jpg',
-                './images/stock-trading_2.jpg',
-                './images/stock-trading_3.jpg'
-            ]
+            images: ['./images/stock-trading_1.jpg', './images/stock-trading_2.jpg', './images/stock-trading_3.jpg']
         },
 
-        // 5. 리뷰 유용성 예측 (Data)
+        // 4. 리뷰 유용성 예측 (Data)
         {
             id: 'review-ai',
             type: 'data-tech', 
@@ -231,47 +180,22 @@ window.DB = {
             summary: '딥러닝(CNN)을 활용하여 배달 앱 리뷰의 실질적 도움 여부를 예측하는 모델 개발.',
             tags: ['Deep Learning', 'CNN', 'Python'],
             icon: '🤖',
-
-            overview: {
-                period: '2024.09 ~ 2024.11',
-                team: '팀 프로젝트(3명)',
-                role: 'Modeling & Logic Design'
-            },
-            
+            overview: { period: '2024.09 ~ 2024.11', team: '팀 프로젝트(3명)', role: 'Modeling & Logic Design' },
             keyResult: '🏆 경영과학회 장려상 | 정확도 0.76 달성 (ML 대비 15% 성능 향상)',
             catchphrase: '"단순 별점을 넘어, 진짜 도움이 되는 리뷰를 찾아내다"',
-            description_new: "기존의 정렬 방식(최신순/별점순)이 스팸성 리뷰를 걸러내지 못한다는 문제에서 출발했습니다. 텍스트의 맥락과 파생 변수를 결합한 딥러닝 모델로 리뷰의 '유용성'을 예측했습니다.",
-            
+            description_new: "기존 배달 앱의 단순 나열식 리뷰 시스템이 정보 탐색 효율을 떨어뜨린다는 문제에 착안했습니다. 텍스트의 맥락을 읽는 딥러닝(CNN) 모델을 도입하여 광고성 글을 걸러내고, 사용자에게 실질적 도움이 되는 '유용성'을 예측하는 알고리즘을 개발했습니다.",
             problemSolving: [
-                {
-                    title: '문제 정의',
-                    keyword: 'Filtering Failure',
-                    desc: '기존 배달 앱의 최신순/별점순 정렬은 영양가 없는 짧은 글이나 스팸성 리뷰를 상단에 노출시켜, 사용자의 정보 탐색 비용을 높이는 문제 발견.'
-                },
-                {
-                    title: '리서치',
-                    keyword: 'Strategic Pivot',
-                    desc: '초기 단순 텍스트 분류 시도 실패 후, 문헌 조사를 통해 리뷰의 가치를 판단하는 핵심 지표가 "유용성"임을 도출하고 예측 모델로 방향 전환.'
-                },
-                {
-                    title: '모델링',
-                    keyword: 'Hybrid CNN',
-                    desc: '텍스트 임베딩을 CNN에 학습시키는 동시에, "가독성, 주관성, 감성 점수"라는 3가지 정량적 파생 변수를 결합하여 모델의 예측력을 극대화.'
-                },
-                {
-                    title: '검증',
-                    keyword: 'Quantitative Result',
-                    desc: '동일 데이터셋 기준 머신러닝대비 정확도(+0.15)와 정밀도(+0.14)가 대폭 향상된 0.76을 기록하며 딥러닝 도입의 타당성 입증.'
-                }
+                { title: '1. 문제 정의', keyword: 'Information Overload', desc: '기존 리뷰 시스템(최신순/별점순)은 광고성 글이나 영양가 없는 리뷰를 걸러내지 못해 사용자의 정보 탐색 비용을 높이는 페인 포인트 발견.' },
+                { title: '2. 가설 수립', keyword: 'Deep Learning Approach', desc: '단순 키워드 매칭을 넘어 글의 맥락(Context)과 가독성/주관성 같은 파생 변수를 결합하여 딥러닝으로 학습시킨다면, "유용성" 예측 정확도를 획기적으로 높일 수 있을 것.' },
+                { title: '3. 액션 (전략)', keyword: 'Data Strategy', desc: '초기 크롤링 데이터 품질 문제 발생 시 오픈 데이터셋으로 신속하게 피봇(Pivot)하여 리소스를 확보하고, 가독성/감성 점수 등 다차원 파생 변수를 설계하여 모델 입력값 고도화.' },
+                { title: '4. 액션 (모델링)', keyword: 'Hybrid CNN', desc: '이미지 처리에 강한 CNN을 텍스트 분석에 응용하여 문장 내 단어들의 인접 패턴(맥락)을 학습시키고, 정량적 파생 변수와 결합한 하이브리드 모델 아키텍처 설계.' },
+                { title: '5. 결과', keyword: 'Performance Boost', desc: '동일 데이터셋 기준 기존 머신러닝 모델 대비 정확도 0.15(+15%p), 정밀도 0.14 향상을 기록하며 딥러닝 도입의 유효성을 정량적으로 입증.' },
+                { title: '6. 배운점', keyword: 'Execution & Growth', desc: '파이썬 비전공자로서 겪은 기술적 장벽을 두려움 없이 학습으로 돌파하며, 작은 문제라도 기술을 통해 직접 해결해보는 "실행력"의 가치를 체득.' }
             ],
-            images: [
-                './images/review-ai_1.jpg',
-                './images/review-ai_2.jpg',
-                './images/review-ai_3.jpg'
-            ]
+            images: ['./images/review-ai_1.jpg', './images/review-ai_2.jpg', './images/review-ai_3.jpg']
         },
 
-        // 6. 파인다이닝 분석 (Data)
+        // 5. 파인다이닝 분석 (Data)
         {
             id: 'kmac',
             type: 'data-tech', 
@@ -280,86 +204,24 @@ window.DB = {
             summary: '리뷰 데이터의 텍스트 마이닝을 통해 파인다이닝의 핵심 성공 요인을 규명하고 차별화 전략 도출.',
             tags: ['Text Mining', 'BERTopic', 'Clustering'],
             icon: '🍽️',
-
-            overview: {
-                period: '2024.08 ~ 2024.10',
-                team: '팀 프로젝트(2명)',
-                role: 'Main Data Analyst (전처리, 모델링)'
-            },
-            
-            keyResult: '💡 텍스트 마이닝으로 "맛"과 "분위기"의 가치 차이를 정량화하여 4가지 맞춤 전략 도출',
+            overview: { period: '2024.08 ~ 2024.10', team: '팀 프로젝트(2명)', role: 'Main Data Analyst (전처리, 모델링)' },
+            keyResult: '💡 딥러닝 기반 텍스트 마이닝으로 "맛"과 "경험"의 가치 차이 규명 및 4대 전략 도출',
             catchphrase: '"경험을 팝니다: 파인다이닝과 일반 식당의 결정적 차이"',
-            description_new: "초기 기획 단계에서 데이터 부족 문제를 발견하고 빠르게 주제를 전환하는 결단력을 발휘했습니다. 오픈 리뷰 데이터를 활용하여, 파인다이닝 소비자는 '맛'보다 '경험과 분위기'에 민감하다는 사실을 데이터로 증명했습니다.",
-            
+            description_new: "포화 상태인 외식업 시장에서 파인다이닝만의 생존 전략을 찾기 위해, 딥러닝 모델로 리뷰 데이터를 분석했습니다. 고객의 니즈가 단순 미식이 아닌 '경험'에 있음을 데이터로 증명하고, 소비자 성향에 따른 4가지 맞춤형 운영 전략을 수립했습니다.",
             problemSolving: [
-                {
-                    title: 'Agile Pivot',
-                    keyword: '데이터 검증',
-                    desc: '초기 주제(스타트업 평가)의 데이터 확보 불가능성을 빠르게 판단하고, 오픈 데이터 활용 전략으로 신속하게 선회하여 프로젝트 완주.'
-                },
-                {
-                    title: '분석 기술',
-                    keyword: 'BERTopic & NLP',
-                    desc: '딥러닝 기반 토픽 모델링과 감성 분석을 수행하여, 일반 식당은 "맛/친절"이, 파인다이닝은 "분위기/경험"이 핵심 키워드임을 도출.'
-                },
-                {
-                    title: '전략 도출',
-                    keyword: 'Segmentation',
-                    desc: '소비자 특성에 따라 4개의 군집으로 세분화하고, 각 타겟의 니즈(가성비 vs 가심비 등)에 맞춘 구체적인 마케팅 전략 수립.'
-                }
+                { title: '1. 문제 정의', keyword: '수익성 악화', desc: '높은 가격에도 불구하고 낮은 이윤과 높은 폐업률을 보이는 파인다이닝 시장의 문제를 해결하고자, 실제 고객의 목소리(리뷰)에서 차별화된 성공 전략을 도출하는 것을 목표로 설정.' },
+                { title: '2. 가설 수립', keyword: '경험 vs 맛', desc: '일반 식당은 "맛/가성비"가 중요하지만 파인다이닝은 "분위기/서비스" 등 미세한 경험 요소가 핵심일 것이며, 고객마다 원하는 경험(니즈)이 다를 것이라는 가설 수립.' },
+                { title: '3. 액션 (분석)', keyword: 'NLP & BERTopic', desc: '오픈 리뷰 데이터 수만 건을 수집/전처리하고, 문맥을 파악하는 딥러닝 기반 토픽 모델링(BERTopic)을 활용하여 일반 식당과 파인다이닝의 핵심 리뷰 토픽을 비교 분석.' },
+                { title: '4. 액션 (모델링)', keyword: 'Clustering', desc: '비지도 학습 기반의 군집 분석을 수행하여 리뷰 키워드와 감성 점수를 변수로 활용, 파인다이닝 소비자를 4가지 주요 페르소나(단순 미식, 과시형 등)로 세분화.' },
+                { title: '5. 결과', keyword: '4대 전략', desc: '파인다이닝은 "조명/스토리텔링" 등 경험적 키워드가 감성 점수에 더 큰 영향을 미침을 확인. 도출된 4가지 고객 군집별로 CRM 관리, 체험형 이벤트 등 데이터 기반 맞춤 전략 제안.' },
+                { title: '6. 배운점', keyword: 'Unstructured Data', desc: '정형화된 매출 데이터보다 비정형 텍스트 데이터 속에 고객의 진짜 의도가 숨어있음을 발견하고, 이를 정량화하여 비즈니스 인사이트로 연결하는 분석 역량 체득.' }
             ],
-            images: [
-                './images/kmac_1.jpg',
-                './images/kmac_2.jpg',
-                './images/kmac_3.jpg'
-            ]
-        },
-
-        // 7. 소상공인 구독 모델 (Data)
-        {
-            id: 'subscription',
-            type: 'data-tech', 
-            title: '소상공인 매출 증대 구독 전략',
-            category: '소상공인 컨설팅 프로젝트',
-            summary: '오프라인 상권의 한계를 극복하기 위해 리뷰 데이터를 분석하여 "정기 구독" 비즈니스 모델로 전환 제안.',
-            tags: ['Text Mining', 'Clustering', 'Business Pivot'],
-            icon: '🏪',
-
-            overview: {
-                period: '2023.10 ~ 2023.11',
-                team: '팀 프로젝트(2명)',
-                role: 'Data Analyst (데이터 분석 총괄)'
-            },
-            
-            keyResult: '💡 "오프라인의 한계 극복": 텍스트 마이닝으로 잠재된 "구독 수요" 발견 및 BM 전환',
-            catchphrase: '"죽은 상권의 건강 주스 가게, 데이터로 구독 경제를 입히다"',
-            description_new: "유동인구가 적은 불리한 입지 조건으로 고전하던 건강 주스 매장의 매출 증대를 위해, 리뷰 텍스트 속에 숨겨진 '고객의 진짜 니즈'를 발굴하고 온라인 정기 구독 모델을 제안했습니다.",
-            
-            problemSolving: [
-                {
-                    title: '진단',
-                    keyword: 'Location Risk',
-                    desc: '상권 데이터 분석 결과, 타 밀집 지역 대비 유동인구가 현저히 적어 "오프라인 방문객 유치"만으로는 성장에 한계가 있음을 냉철하게 진단.'
-                },
-                {
-                    title: '발굴',
-                    keyword: 'Text Mining',
-                    desc: '3개 채널의 고객 리뷰를 분석하여, 특정 메뉴(프룬주스)에 대한 충성도와 "매일 마시고 싶다(정기 구독)"는 반복된 잠재 니즈를 텍스트 마이닝으로 포착.'
-                },
-                {
-                    title: '검증',
-                    keyword: 'Clustering & Learning',
-                    desc: '비전공자의 기술적 한계를 극복하기 위해 생성형 AI와 관련 강의로 군집 분석(Clustering)을 독학. 고객군을 정량적으로 분류하여 구독 서비스의 타당성을 입증.'
-                }
-            ],
-            images: [
-                './images/subscription_1.jpg',
-                './images/subscription_2.jpg',
-                './images/subscription_3.jpg'
-            ]
+            images: ['./images/kmac_1.jpg', './images/kmac_2.jpg', './images/kmac_3.jpg']
         },
 
         // --- [Strategy & Planning] ---
+        
+        // 6. 야놀자
         {
             id: 'yanolja',
             type: 'strategy-planning', 
@@ -368,258 +230,89 @@ window.DB = {
             summary: '파편화된 방한 관광 경험을 해결하기 위한 민관 협력 기반의 AI 슈퍼앱 전략 수립.',
             tags: ['Strategy', 'Figma', 'Public-Private Partnership'],
             icon: '🌏',
-
-            overview: {
-                period: '2024.06 ~ 2024.07',
-                team: '팀 KHUPER (4명)',
-                role: '전략 기획, UI/UX 디자인'
-            },
-            
-            keyResult: '💡 공공과 민간의 강점을 결합한 "PPP 비즈니스 모델" 정립',
-            catchphrase: '"인증·결제 장벽을 넘어, 한국 여행을 하나의 앱으로"',
-            description_new: "방한 관광객이 겪는 가장 큰 어려움인 '본인 인증'과 '결제 시스템'의 장벽을 해결하기 위해, 공공 데이터와 민간 기술력을 결합한 통합 슈퍼앱 모델을 제안했습니다.",
-            
+            overview: { period: '2024.06 ~ 2024.07', team: '팀 KHUPER (4명)', role: '전략 기획, UI/UX 디자인' },
+            keyResult: '💡 공공과 민간의 강점을 결합한 "민관 협력 비즈니스 모델" 수립',
+            catchphrase: '"파편화된 방한 관광, 결제부터 예약까지 하나의 앱으로 잇다"',
+            description_new: "방한 관광객이 지도, 결제, 예약 등을 위해 평균 5~6개의 앱을 설치해야 하는 '디지털 파편화' 문제를 해결하고자 했습니다. 입국부터 출국까지의 모든 경험을 하나의 앱(Super App)으로 통합하고, 공공의 신뢰성과 민간의 기술력을 결합한 비즈니스 모델을 기획했습니다.",
             problemSolving: [
-                {
-                    title: 'Pain Point',
-                    keyword: '디지털 경험의 단절',
-                    desc: '시장 분석 결과, 외국인 관광객은 한국 전화번호 인증 불가로 예약/결제에 실패하고, 구글맵 대신 불친절한 로컬 앱을 써야 하는 "이중고"를 겪고 있음을 규명.'
-                },
-                {
-                    title: '전략 수립',
-                    keyword: 'PPP Ecosystem',
-                    desc: '공공의 데이터 신뢰성과 민간의 기술/플랫폼을 결합하여, 하나의 앱에서 예약부터 MaaS까지 해결하는 협력 생태계 설계.'
-                },
-                {
-                    title: '솔루션',
-                    keyword: 'Barrier-Free UX',
-                    desc: '외국인 전용 간편 결제, 알러지/비건을 위한 바코드 성분 번역, AI 맞춤 코스 추천 등 실질적 편의 기능을 Figma로 구체화하여 구현.'
-                }
+                { title: '1. 문제 정의', keyword: 'Digital Fragmentation', desc: '관광객이 겪는 복잡한 인증 절차와 파편화된 앱 환경(지도/결제/예약 분절)이 소비를 가로막는 진입 장벽임을 정의하고, 단 하나의 앱으로 모든 경험을 해결하는 플랫폼 목표 설정.' },
+                { title: '2. 솔루션', keyword: 'Hyper-personalization', desc: 'AI 기반 개인화 코스 추천, 환전 없는 로컬 간편 결제 내재화, 카메라(OCR)를 이용한 할랄/비건/알러지 음식 성분 분석 등 식문화 장벽 해소 기능 기획.' },
+                { title: '3. 비즈니스 모델', keyword: 'PPP Model', desc: '민간(야놀자)의 트랜잭션 기술/UI 역량과 공공(Visit Korea)의 관광 데이터/인프라를 결합한 협력 모델 수립. 결제 데이터를 활용한 타겟 마케팅 및 데이터 판매 BM 제시.' },
+                { title: '4. 액션 (분석)', keyword: 'Market Analysis', desc: '야놀자 리서치 보고서와 학술 논문 등을 분석하여, 글로벌 트래블 테크의 핵심이 "초개인화"임을 도출하고 이를 전략 수립의 논리적 근거로 활용.' },
+                { title: '5. 액션 (구현)', keyword: 'Figma Prototyping', desc: '기획한 슈퍼앱의 핵심 기능이 실제 환경에서 어떻게 구동될지 보여주는 User Flow를 설계하고, Figma로 시각화하여 서비스의 실현 가능성을 검증.' },
+                { title: '6. 배운점', keyword: 'Essence of Strategy', desc: '전략이란 거창한 문제를 푸는 것이 아니라, 치밀한 리서치를 통해 발견한 고객의 페인 포인트를 "어떻게 가장 쉽게 해결할지" 결정하는 과정임을 체득.' }
             ],
-            images: [
-                './images/yanolja_1.jpg',
-                './images/yanolja_2.jpg',
-                './images/yanolja_3.jpg'
-            ]
+            images: ['./images/yanolja_1.jpg', './images/yanolja_2.jpg', './images/yanolja_3.jpg']
         },
 
-        // 8. 전기이륜차 마케팅 (Strategy)
-        {
-            id: 'lg-ensol',
-            type: 'strategy-planning', 
-            title: '전기이륜차 마케팅 전략',
-            category: 'LG엔솔 BSS 공모전',
-            summary: '전기이륜차 인식 개선을 위한 \'미니멀 모빌리티\' 리브랜딩 및 시각화.',
-            tags: ['Marketing', 'Branding', 'Figma'],
-            icon: '🛵',
-
-            overview: {
-                period: '2024.07 ~ 2024.08',
-                team: '팀 프로젝트(2명)',
-                role: 'Main PM, 전략 기획, 디자인(100%)'
-            },
-            
-            keyResult: '🎨 "미니멀 모빌리티" 컨셉 도출 및 앱/홍보물 직접 제작',
-            catchphrase: '"배달 오토바이의 편견을 깨다: 도심형 미니멀 모빌리티"',
-            description_new: "전기이륜차의 부정적 이미지(배달/위험)를 탈피하기 위해, 2030 세대를 타겟으로 한 '미니멀 모빌리티'라는 새로운 포지셔닝을 제안하고 디자인까지 직접 수행했습니다.",
-            
-            problemSolving: [
-                {
-                    title: '데이터 분석',
-                    keyword: 'Own Survey',
-                    desc: '자체 설문조사를 직접 설계/수행하여, 소비자들이 전기이륜차를 기피하는 핵심 원인이 성능이 아닌 "배달용 오토바이"라는 낙인 효과임을 규명.'
-                },
-                {
-                    title: '전략 수립',
-                    keyword: 'Re-branding',
-                    desc: '기존 오토바이의 문법을 버리고 "가볍고 스마트한 이동수단(Minimal Mobility)"으로 재정의. 타겟을 직장인(B2B/경제성)과 대학생(B2C/힙함)으로 이원화하여 공략.'
-                },
-                {
-                    title: '실행',
-                    keyword: 'Visual Making',
-                    desc: '기획한 전략의 설득력을 높이기 위해 Figma를 활용하여 BSS 앱 UI, 홍보 포스터, 팜플렛 등 마케팅 에셋(Asset) 전체를 직접 제작 및 시각화.'
-                }
-            ],
-            images: [
-                './images/lg-ensol_1.jpg',
-                './images/lg-ensol_2.jpg'
-            ]
-        },
-
-        // 9. 시니어 인재 매칭 (Strategy)
+        // 7. 시니어 인재 매칭
         {
             id: 'fastcampus',
             type: 'strategy-planning', 
             title: '시니어 인재 매칭 플랫폼',
             category: '패스트캠퍼스 AI 공모전',
-            summary: '대기업 은퇴 예정 인력을 스타트업 고문으로 매칭하는 AI 플랫폼 기획.',
+            summary: '대기업 은퇴 예정 인력을 중소기업 고문으로 매칭하는 AI 플랫폼 기획.',
             tags: ['AI Planning', 'Social Impact', 'Synthetic Data'],
             icon: '👴',
-
-            overview: {
-                period: '2024.11 ~ 2024.12',
-                team: '팀 프로젝트(3명)',
-                role: 'Service Planner (기획 총괄)'
-            },
-            
-            keyResult: '🤝 은퇴 예정자의 노하우를 스타트업에 이식하는 "AI 고문 매칭" 및 역량 평가 모델 설계',
-            catchphrase: '"단순 이력서 매칭을 넘어, 실전 해결 역량을 잇다"',
-            description_new: "대기업 은퇴 예정자의 전문성이 사장되는 것을 막고, 경험이 절실한 초기 스타트업에 '경영 고문'으로 연결하는 상생 플랫폼입니다. AI가 생성한 '가상 비즈니스 케이스'를 통해 시니어의 실무 역량을 정량적으로 검증하는 프로세스를 설계했습니다.",
-            
+            overview: { period: '2024.11 ~ 2024.12', team: '팀 프로젝트(3명)', role: 'Service Planner (기획 총괄)' },
+            keyResult: '🤝 5060 전문 인력과 중소기업을 잇는 "AI 기반 역량 평가 및 매칭 솔루션" 기획',
+            catchphrase: '"대기업의 인력 부담과 중소기업의 구인난, \'데이터\'로 연결하다"',
+            description_new: "대기업의 고비용 인력 구조와 중소기업의 전문성 부재 문제를 동시에 해결하기 위한 B2B 매칭 플랫폼입니다. 단순 이력서 매칭을 넘어, 합성 데이터와 NLP를 활용한 '비즈니스 케이스 평가 모델'로 시니어의 실무 역량을 정량적으로 검증하는 솔루션을 설계했습니다.",
             problemSolving: [
-                {
-                    title: '문제 정의',
-                    keyword: 'Black Box Hiring',
-                    desc: '기존 재취업 시장은 이력서 위주의 단순 매칭으로, 스타트업이 요구하는 "실질적 문제 해결 능력"과 "조직 융화력"을 사전에 검증하기 어렵다는 구조적 한계 발견.'
-                },
-                {
-                    title: '솔루션',
-                    keyword: 'Virtual Biz Case',
-                    desc: 'AI가 지원자의 전문 분야에 맞춰 생성한 "가상 비즈니스 시나리오"를 수행하게 하고, 해결 과정을 분석하여 단순 경력이 아닌 "현재의 실무 역량"을 점수화하는 평가 모델 구축.'
-                },
-                {
-                    title: '기술 전략',
-                    keyword: 'Synthetic Data',
-                    desc: '서비스 초기 학습 데이터 부족(Cold Start) 문제를 해결하기 위해, 팔란티어 사례를 벤치마킹하여 "합성 데이터"로 다양한 비즈니스 케이스를 무한 생성하는 기술적 파이프라인 제안.'
-                }
+                { title: '1. 문제 정의', keyword: '인력 미스매치', desc: '대기업(고비용 인력 부담), 중소기업(숙련 인재 구인난), 시니어(단순 노무직 이탈) 3자 간의 페인 포인트를 분석하여 노동 시장의 구조적 비효율 발견.' },
+                { title: '2. 해결 방안', keyword: 'B2B SaaS', desc: '디지털 리터러시가 낮은 시니어를 대신해 기업 인사팀이 주도하는 B2B 모델 설계. 가상의 비즈니스 케이스 해결 과정을 통해 문제 해결력을 정량 평가하는 방식 도입.' },
+                { title: '3. 핵심 기술 (AI)', keyword: 'Synthetic Data & NLP', desc: '초기 학습 데이터 부족을 "합성 데이터(Mostly AI)" 생성으로 해결하고, 기업 상황에 맞는 맞춤형 문제를 생성/분석하는 NLP 모델을 설계하여 기술적 장벽 돌파.' },
+                { title: '4. 핵심 기술 (매칭)', keyword: 'Hybrid RecSys', desc: '협업 필터링과 콘텐츠 기반 필터링을 결합한 "하이브리드 추천 시스템"을 설계하여, 직무 적합도뿐만 아니라 기업 문화 적합도까지 고려한 최적 매칭 구현.' },
+                { title: '5. 서비스 프로세스', keyword: 'Pipeline Design', desc: '[AI 모델 구축 → 후보 선별 → 가상 케이스 평가 → 리포트 제공 → 면접]으로 이어지는 채용 연계 파이프라인을 정립하여 인건비 절감 및 선순환 구조 기대효과 제시.' },
+                { title: '6. 배운점', keyword: 'Tech Flexibility', desc: '데이터 부족이라는 현실적 장벽을 신기술(합성 데이터)로 유연하게 해결하는 방법을 익히고, 두 가지 사회 문제를 엮어서 해결하는 새로운 접근 방식(System Thinking)을 체득.' }
             ],
-            images: [
-                './images/fastcampus_1.jpg',
-                './images/fastcampus_2.jpg',
-                './images/fastcampus_3.jpg'
-            ]
+            images: ['./images/fastcampus_1.jpg', './images/fastcampus_2.jpg', './images/fastcampus_3.jpg']
         },
 
-        // 10. BACS 학회 (School)
+        // 8. BACS 학회
         {
             id: 'bacs',
-            type: 'strategy-planning', // 변경됨 (학교 활동 -> 전략/기획으로 편입)
+            type: 'strategy-planning', 
             title: '경영전략학회 BACS 활동',
             category: 'Academic Society',
-            summary: '9기 부학회장 역임. 팀 프로젝트 중심의 전략 도출, 데이터 분석 수행.',
-            tags: ['Leadership', 'Business Strategy', 'Data Analytics', 'Machine Learning'],
+            summary: '9기 부학회장 역임. 경영 전략 수립부터 데이터 분석, 머신러닝까지 폭넓은 실무 역량 배양.',
+            tags: ['Business Strategy', 'Data Analytics', 'Machine Learning', 'Leadership'],
             icon: '🎓',
-
-            overview: {
-                period: '2024.03 ~ 2025.02',
-                team: 'BACS',
-                role: '부학회장'
-            },
-            
-            keyResult: '🚀 관심사별 "팀 서브 세션" 신설 주도 및 외부 공모전 2회 참가',
-            catchphrase: '"전략과 데이터를 아우르는 융합형 인재로 성장하다"',
-            description_new: "경영 전략 수립부터 데이터 분석, 머신러닝 모델링까지 비즈니스와 기술을 폭넓게 학습했습니다. 특히 부학회장으로서 '팀 프로젝트 중심의 서브 세션'을 도입하여 학회의 실무 역량을 한 단계 끌어올렸습니다.",
-            
+            overview: { period: '2024.03 ~ 2025.02', team: 'BACS 9기', role: '부학회장 (Vice President)' },
+            keyResult: '🚀 HR 승진 예측 모델 정확도 93% 달성 및 프로젝트 중심 커리큘럼 도입',
+            catchphrase: '"Business와 Tech를 잇는 융합형 인재로 성장하다"',
+            description_new: "경영 전략 수립부터 데이터 분석, 머신러닝 모델링까지 비즈니스와 기술을 폭넓게 학습했습니다. 특히 부학회장으로서 기존 이론 중심 커리큘럼의 한계를 보완하기 위해 '프로젝트 중심의 커리큘럼'을 직접 기획하고 운영하였습니다.",
             problemSolving: [
-                {
-                    title: '컨설팅 세션',
-                    keyword: 'Logical Thinking',
-                    desc: '이마트, 넷플릭스, 현대카드 등 실제 기업 사례를 리서치하여, 경영 전략 프레임워크에 맞춰 분석, 논리적인 전략 방향성을 도출.'
-                },
-                {
-                    title: '데이터 분석',
-                    keyword: 'Python & Stats',
-                    desc: 'Python을 활용해 고객 데이터를 시각화하고, T-test 등 통계적 검정 기법을 적용하여 데이터 기반의 의사결정 근거 마련.'
-                },
-                {
-                    title: 'ML & 딥러닝',
-                    keyword: 'Predictive Modeling',
-                    desc: 'HR 승진 예측(Random Forest, 정확도 93%) 및 신용카드 이탈률 분석프로젝트를 수행하고, CNN 등 딥러닝 모델을 학습하여 외부 공모전 활용.'
-                },
-                {
-                    title: '리더십',
-                    keyword: 'Operation & Planning',
-                    desc: '부학회장으로서 기존 이론 중심 커리큘럼의 한계를 보완하기 위해 "관심사별 팀 서브 세션"을 신규 기획 및 도입하여 학회원들의 자발적 프로젝트 참여를 유도.'
-                }
+                { title: '1. 전략 수립', keyword: 'Logical Thinking', desc: '이마트, 현대카드 등 실제 기업의 재무제표와 데이터를 분석하여 페인포인트의 근본 원인을 파악하고, 경영 전략 프레임워크에 맞춰 논리적인 턴어라운드 전략을 도출.' },
+                { title: '2. 데이터 분석', keyword: 'Python & Stats', desc: 'Python EDA로 단순 평균 뒤에 숨겨진 행동 패턴을 시각화하고, T-test를 통해 프로모션 반응 집단 간의 차이가 통계적으로 유의미함을 입증.' },
+                { title: '3. ML 모델링', keyword: 'Predictive Modeling', desc: 'HR 승진 예측(Random Forest) 시 SMOTE로 불균형 데이터를 처리하여 정확도 93%를 달성하고, 소비 패턴 군집 분석을 통해 개인화된 보상 전략을 제안.' },
+                { title: '4. 리더십', keyword: 'Curriculum Design', desc: '부학회장으로서 이론 중심 학습의 한계를 극복하고자 "관심사별 팀 서브 세션"을 신규 기획 및 도입하여 학회원들의 자발적 프로젝트 참여와 실무 역량 강화를 주도.' }
             ],
-            images: [
-                './images/bacs_1.jpg',
-                './images/bacs_2.jpg'
-            ]
+            images: ['./images/bacs_1.jpg', './images/bacs_2.jpg']
         },
 
-        // 11. 아카데미쿠스 (School)
+        // 9. CBDC 보험 혁신 (아카데미쿠스)
         {
             id: 'academicus',
-            type: 'strategy-planning', // 변경됨
+            type: 'strategy-planning',
             title: 'CBDC 기반 보험 혁신 전략',
             category: '아카데미쿠스 학술 공모전 (3등)',
             summary: 'CBDC 완전 도입 시나리오 분석을 통해, 결제 데이터 기반의 초개인화 보험 추천 솔루션 제안.',
             tags: ['Fintech', 'CBDC', 'Data Strategy', 'Figma'],
             icon: '🥉',
-
-            overview: {
-                period: '2024.09 ~ 2024.11',
-                team: '팀 프로젝트(4명)',
-                role: 'Strategic Planning & UX Design'
-            },
-            
+            overview: { period: '2024.09 ~ 2024.11', team: '팀 프로젝트(4명)', role: 'Strategic Planning & UX Design' },
             keyResult: '🥉 교내 학술 공모전 3등 | CBDC 데이터 가시성을 활용한 "초개인화 보험 추천" BM 수립',
-            catchphrase: '"금융의 미래 CBDC, 투명해진 결제 데이터로 보험의 사각지대를 없애다"',
-            description_new: "중앙은행 디지털 화폐가 상용화될 미래 시나리오를 분석했습니다. 모든 결제 데이터가 투명해지는 변화 속에서, 정보 비대칭 문제를 겪는 보험 산업(카카오페이 손해보험)에 '데이터 기반 맞춤형 추천 솔루션'이라는 새로운 기회를 제안했습니다.",
-            
+            catchphrase: '"투명해진 결제 데이터, 보험의 사각지대를 없애다"',
+            description_new: "현금 없는 사회, CBDC가 완전 도입된다면 보험 산업은 어떻게 변할까? 라는 질문에서 시작했습니다. 모든 자금 흐름이 투명해지는 미래 시나리오를 분석하여, 정보 비대칭 문제를 해결하고 고객 리스크를 정밀하게 예측하는 카카오페이 손해보험의 신규 비즈니스 모델을 제안했습니다.",
             problemSolving: [
-                {
-                    title: '시나리오 분석',
-                    keyword: 'Future Landscape',
-                    desc: 'CBDC "완전 도입" 시나리오를 설정하고, 금융 흐름의 투명성이 가져올 변화를 예측. 결제 데이터의 가시화가 보험업계의 난제인 "정보 비대칭"을 해결할 핵심 열쇠임을 도출.'
-                },
-                {
-                    title: '솔루션',
-                    keyword: 'Hyper-personalization',
-                    desc: '카카오페이 손해보험을 타겟으로, CBDC 결제 데이터와 마이데이터를 결합한 딥러닝 추천 알고리즘을 기획. 고객의 소비/지출 패턴을 분석해 최적의 보험 상품을 자동 매칭하는 시스템 설계.'
-                },
-                {
-                    title: '구체화',
-                    keyword: 'Figma UX',
-                    desc: '금융 앱(토스)을 벤치마킹하여, 어려운 보험 상품을 직관적으로 보여주는 UI/UX를 Figma로 프로토타이핑하여 제안서의 설득력을 시각적으로 강화.'
-                }
+                { title: '1. 문제 정의', keyword: '정보 비대칭', desc: '기존 보험 시장은 고객 정보를 다 알지 못해 발생하는 "역선택" 문제와, 니즈가 없는 상품 권유로 인한 "높은 해지율" 문제에 직면해 있음을 포착.' },
+                { title: '2. 가설 수립', keyword: '데이터 투명성', desc: 'CBDC 환경에서는 소득/지출 데이터가 투명해지므로, 이를 마이데이터와 결합하면 고객보다 더 정확하게 리스크를 예측하고 초개인화 상품을 추천할 수 있을 것.' },
+                { title: '3. 액션 (전략)', keyword: 'Scenario Planning', desc: 'CBDC "완전 도입" 시나리오를 가정하여, 모든 결제 데이터가 디지털화되는 환경이 보험업계의 난제(정보 부족)를 해결할 핵심 기회임을 분석하고 타겟 기업(카카오페이) 선정.' },
+                { title: '4. 액션 (기획)', keyword: 'AI RecSys & UX', desc: '결제 로그 기반의 딥러닝 추천 알고리즘을 기획하고, 토스(Toss)를 벤치마킹하여 복잡한 보험 가입을 "상황 기반 카드 추천"으로 단순화한 모바일 앱 프로토타입(Figma) 제작.' },
+                { title: '5. 결과', keyword: 'Logical Thinking', desc: '추상적인 미래 기술(CBDC)을 보험업계의 실질적인 비즈니스 모델로 구체화한 논리력을 인정받아 학술 공모전 3등 수상.' },
+                { title: '6. 배운점', keyword: 'Macro View', desc: '당장 눈앞의 기술뿐만 아니라, 5~10년 뒤 금융 인프라 변화가 기업에 미칠 리스크와 기회를 내다보는 거시적 안목과, 이를 고객 언어(UX)로 전달하는 것의 중요성을 체득.' }
             ],
-            images: [
-                './images/academicus_1.jpg',
-                './images/academicus_2.jpg',
-                './images/academicus_3.jpg'
-            ]
-        },
-
-        // 12. 교내 ESG 경진대회 (School)
-        {
-            id: 'esg-contest-school',
-            type: 'strategy-planning', // 변경됨
-            title: '교내 ESG 경진대회',
-            category: 'Academic Contest (우수상)',
-            summary: '유학생들의 학교 적응을 돕기 위한 \'유학생 전담 또래 코칭\' 프로그램 제안.',
-            tags: ['ESG', 'Idea', 'Campus'],
-            icon: '🏫',
-
-            overview: {
-                period: '2023.10 ~ 2023.12',
-                team: '팀 프로젝트(4명)',
-                role: 'Idea Proposal'
-            },
-            
-            keyResult: '🏅 교내 ESG 아이디어 경진대회 [우수상] 수상',
-            catchphrase: '"글로벌 캠퍼스를 위한 따뜻한 연결고리"',
-            description_new: "급증하는 외국인 유학생들이 언어와 문화 장벽으로 겪는 어려움을 해결하기 위해, 한국인 재학생과 1:1로 매칭되는 멘토링 시스템을 제안했습니다.",
-            
-            problemSolving: [
-                {
-                    title: '공감',
-                    keyword: 'Interview',
-                    desc: '실제 유학생 심층 인터뷰를 통해 학업적 어려움보다 정서적 고립감이 더 큰 문제임을 발견.'
-                },
-                {
-                    title: '벤치마킹',
-                    keyword: 'Peer Coaching',
-                    desc: '기존의 학습 중심 튜터링과 달리, 생활 적응과 네트워킹에 초점을 맞춘 "전담 또래 코칭" 모델 설계.'
-                },
-                {
-                    title: '기대효과',
-                    keyword: 'Social Value',
-                    desc: '유학생 중도 이탈률 감소 및 캠퍼스 다양성 증진이라는 사회적 가치(S) 창출 효과 제시.'
-                }
-            ],
-            images: []
+            images: ['./images/academicus_1.jpg', './images/academicus_2.jpg', './images/academicus_3.jpg']
         }
     ]
 };
